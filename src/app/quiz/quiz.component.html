@@ -1,0 +1,43 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document" id="quiz-document">
+    <br>
+    <mat-card id="checkboxes-card">
+        <div id="checkboxes">
+            <div class="subject-checkbox" *ngFor="let subject of subjects">
+                <mat-checkbox [(ngModel)] = "subject.isActive" (change)=getSelectedSubjects(subject)>{{ subject.topic }}</mat-checkbox>
+            </div>
+        </div>
+        <div id="submit-button">
+            <button class="quiz-button" mat-raised-button (click)="getQuizQuestions()">Submit</button>
+        </div>
+    </mat-card>
+    <br>
+    <mat-card id="flash-card">     
+        <div id="flash-card-body"> 
+            <div id="maincontainer">
+                <div id="thecard"> 
+                    <div id="thefront">
+                        <div id="front-question"><p>{{ activeQuestion.question }}</p></div>
+                        <div id="front-answer-textarea">
+                            <div>
+                                <mat-form-field appearance="fill" style="float: left; width: 90%; margin-left:5%;">
+                                    <textarea matInput rows="7" style="width: 100%; max-width: 100%; background-color: rgba(255, 255, 255, 0.5); border: 1px soild #fff;" placeholder="Type your answer" [(ngModel)]="activeAnswer"></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>          
+                    <div id="theback">
+                        <!-- <div class="card-heading"><p>Answer</p></div> -->
+                        <div class="card-body"><p>{{ activeQuestion.answer }}</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="flash-card-navigation">
+            <button mat-raised-button class="quiz-button" (click)="nextQuestion()">Next <mat-icon>arrow_forward</mat-icon></button>
+            <button mat-raised-button class="quiz-button" (click)="submitAnswer()">Submit</button>
+            <button mat-raised-button class="quiz-button" (click)="revealAnswer()">Reveal Answer</button>
+            <button mat-raised-button class="quiz-button" (click)="backQuestion()"><mat-icon>arrow_back</mat-icon> Back</button>
+        </div>
+    </mat-card>
+</div>

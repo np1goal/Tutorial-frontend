@@ -1,0 +1,171 @@
+<script src="https://threejs.org/build/three.js"></script>
+
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="threejs-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="threejs-tutorial#scene"><span class="button-text">Scene</span></a>
+        <a class="nav-link" href="threejs-tutorial#camera"><span class="button-text">Camera</span></a>
+        <a class="nav-link" href="threejs-tutorial#rendered"><span class="button-text">Renderer</span></a>
+        <a class="nav-link" href="threejs-tutorial#boxgeometry"><span class="button-text">BoxGeometry</span></a>
+        <a class="nav-link" href="threejs-tutorial#camera-position"><span class="button-text">Camera Position</span></a>
+        <a class="nav-link" href="threejs-tutorial#animation"><span class="button-text">Animation</span></a>
+        <a class="nav-link" href="threejs-tutorial#buffergeometry-geometry"><span class="button-text">BufferGeometry vs Geometry</span></a>
+        <a class="nav-link" href="threejs-tutorial#geometry-types"><span class="button-text">Geometry Types</span></a>
+        <a class="nav-link" href="threejs-tutorial#all-demos"><span class="button-text">All Demos</span></a>
+    </div>
+    <div class="body">
+        <h1 class="subject-title">&nbsp;Javascript DOM</h1>
+        <hr>
+
+        <div class="section-body" id="introduction"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Introduction</u></h2>
+                <p>In this Tutorial, we will be referring to different demos to understand concepts.</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="scene"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Scene</u></h2>
+                <p>Refer <a routerLink="threejs-basic">Basic Demo</a></p>
+                <p>We first start with creating a scene. This is where our 3D objects will be displayed.</p>
+                <code>var scene = new THREE.Scene();</code><br>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="scene"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Camera</u></h2>
+                <p>Refer <a routerLink="threejs-basic">Basic Demo</a></p>
+                <ul> 
+                    <li>There are differnet types of camera like : </li>
+                    <li><u>ArrayCamera, CubeArray, OrthographicCamera, Perspective and StereoCamera </u></li>
+                    <li>here we are using PerspectiveCamera. </li>
+                    <li>Params of PerspectiveCamera are : </li>
+                    <li><b>Field of View in degrees, Aspect Ratio, near clipping plane and far clipping plane</b></li>
+                    <li>(objects further away from the camera than the value of far or closer than near won't be rendered)</li>
+                </ul>
+                <code>var cam = new THREE.Camera</code>><br>
+                <code>var camera = new THREE.PerspectiveCamera( 80, window.innerWidth/window.innerHeight, 0.1, 1000 );</code><br>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="renderer"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Renderer</u></h2>
+                <p>Refer <a routerLink="threejs-basic">Basic Demo</a></p>
+                <p>Renderer is where the magic happens. So, first renderer instance is created.</p>
+                <p><b>setSize()</b> sets the size of redenred frame. Here it is entire frame.</p>
+                <code>var renderer = new THREE.WebGLRenderer();</code><br>
+                <code>renderer.setSize( window.innerWidth, window.innerHeight);</code><br>
+                <code>document.body.appendChild( renderer.domElement );</code>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="boxgeometry"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>BoxGeometry</u></h2>
+                <p>Refer <a routerLink="threejs-basic">Basic Demo</a></p>
+                <ul>
+                    <li>BoxGeometry is required to create a cube of left, width and height 2.</li>
+                    <li>Three.js provides with different materials however here we have chosen MeshBasicMaterial.</li>
+                    <li>Mesh is an object that takes geometry and applies material.</li>
+                    <li>The mesh is then added to the scene. The addition is according to the coordinate (0,0,0);</li>
+                    <li>cube.position.set() can be set w.r.t. center of object</li>
+                    <li>cube2.rotation.y = 10 statically rotates cube in direction y for 10 units</li>
+                </ul>
+                <code>var geometry = new THREE.BoxGeometry( 2, 2, 2 ); </code><br>
+                <code>var material = new THREE.MeshBasicMaterial( &123; color: 0xff0000 &125; );</code><br>
+                <code>var cube = new THREE.Mesh( geometry, material );</code><br>
+                <code>scene.add( cube );</code><br>
+                <code>cube.position.set(1,1,0);</code><br>
+                <br>
+                <code>var geometry = new THREE.BoxGeometry( 2, 2, 2 ); </code><br>
+                <code>var material = new THREE.MeshBasicMaterial( &123; color: 0x0000ff &125; );</code><br>
+                <code>var cube2 = new THREE.Mesh( geometry, material );</code><br>
+                <code>scene.add( cube2 );</code><br>
+                <code>cube2.rotation.y = 10;</code><br>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="camera-position"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Camera Position</u></h2>
+                <p>Refer <a routerLink="threejs-basic">Basic Demo</a></p>
+                <p>Since, the mesh is at 0,0,0 the camera is position outside with x=0, y=0, z=5 position</p>
+                <code>camera.position.z = 10;</code><br>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="animation"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Animation</u></h2>
+                <p>Refer <a routerLink="threejs-basic">Basic Demo</a></p>
+                <p>requestAnimationFrame() is better than setInterval as it pauses when the navigates to another browser.</p>
+                <code>var animate = function () &#123;</code><br>
+                <code>&nbsp;&nbsp;requestAnimationFrame( animate );</code><br>
+                <code>&nbsp;&nbsp;// cube.rotation.x += 0.1;</code><br>
+                <code>&nbsp;&nbsp;cube.rotation.y += 0.1;</code><br>
+                <code>&nbsp;&nbsp;renderer.render( scene, camera );</code><br>
+                <code>&#125;;</code><br>
+                <code>animate();</code><br>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="buffergeometry-geometry"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>BufferGeometry vs Geometry</u></h2>
+                <p>The basic difference is that BufferGeometry doesnot have access to some attributes and vertices.</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="buffergeometry-geometry"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Geometry Types</u></h2>
+                <p><a routerLink="threejs-geometry-types">Geometry Types</a></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ambient-light"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Ambient Light</u></h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="directional-light"> 
+                <div class="section-content">
+                    <h2 class="section-title"><u>Directional Light</u></h2>
+                </div>
+            </div>
+            <hr>
+
+        <div class="section-body" id="all-demos"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>All Demos</u></h2>
+                <p><a routerLink="threejs-basic">Basic Demo</a></p>
+                <p><a routerLink="threejs-geometry-types">Geometry Types</a></p>
+                <p><a routerLink="threejs-rain-effect">Rain Effect</a></p>
+                <p><a routerLink="threejs-rain-effect">Chandelier</a></p>
+                <p><a routerLink="threejs-background-lines">Background Lines</a></p>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+.notes-document {
+    padding-top: 4%;
+    display: grid;
+    grid-template-columns: 1vw 15vw 2vw auto 1vw;
+    grid-template-areas: ". sidebar-nav . body .";
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.subject-title {
+    color: white;
+}
+
+.notes-sidebar-nav {
+    grid-area: sidebar-nav;
+    background-color: transparent;
+    height: 100vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 1%;
+}
+
+.nav-link {
+    background-color: white;
+    color: black;
+    padding: 10% 10%;
+    text-align: center;
+    border: 3px solid rgba(2,0,36,1);
+    text-decoration: none;
+    display: block;
+}
+
+.button-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;   
+    text-overflow: ellipsis;
+}
+
+.body {
+    grid-area: body;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.section-title {
+    color: rgba(2,0,36,1);
+}
+
+.section-body {
+    line-height: 1.3;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1vw auto 1vw;
+    grid-template-areas: ". section-content .";
+}
+
+.section-content {
+    grid-area: section-content;
+}
+
+.sub-section {
+    margin-left: 2%;
+}
+
+.space {
+    height: 5vh;
+}
+
+code {
+    background-color: lightgray;
+    font-size: 1.2em;
+}
+
+.code-inline {
+    font-size: 1.1em;
+    color: maroon;
+}
+
+.note {
+    color: blue;
+    border: 5px double black;
+}
+
+.exception {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+}

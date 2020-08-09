@@ -1,0 +1,174 @@
+#home-document {
+    display: grid;
+    grid-template-rows: auto 25% 5% 25% auto;
+    grid-template-areas:    '.'
+                            'welcome-section'
+                            '.'
+                            'activity'
+                            '.';
+}
+
+#welcome-section {
+    grid-area: welcome-section;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+#back-button {
+    visibility: hidden;
+    height: 64px;
+    width: 64px;
+    padding: 0 0;
+    margin-right: 55%;
+    font-size: 2.5em;
+    font-weight: bolder;
+    background-color: transparent;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+} 
+
+#activity {
+    grid-area: activity;
+    z-index: 1;
+}
+
+#notes-quiz-option {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 45% 10% 45%;
+    grid-template-areas:    'notes-option'
+                            '.'
+                            'quiz-option';
+}
+
+#notes-option {
+    grid-area: notes-option;
+    height: 100%;
+}
+
+#quiz-option {
+    grid-area: quiz-option;
+    height: 100%;
+}
+
+.note-quiz-buttons {
+    height: 100%;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    font-size: 2em;
+    border-radius: 10px;
+    text-overflow: clip;
+    background-color: transparent;
+    border: 1px ridge rgba(2,0,36,1);
+}
+
+#notes-list {
+    display: none;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10%;
+    justify-content: space-around;
+}
+
+.notes-list-button {
+    height: 100%;
+    width: 100%;
+}
+
+.box div {
+    position: absolute;
+    background-color: rgba(2,0,36,1);
+}
+
+.box div:nth-child(1) {
+    width: 15px;
+    height: 15px;
+    top: 12%;
+    left: 42%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2) {
+    width: 15px;
+    height: 15px;
+    top: 30%;
+    left: 30%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(3) {
+    width: 15px;
+    height: 15px;
+    top: 75%;
+    left: 12%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(4) {
+    width: 15px;
+    height: 15px;
+    top: 80%;
+    left: 90%;
+    animation: animate 4s linear infinite;
+}
+
+.box div:nth-child(5) {
+    width: 15px;
+    height: 15px;
+    top: 20%;
+    left: 90%;
+    animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(6) {
+    width: 15px;
+    height: 15px;
+    top: 70%;
+    left: 80%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(7) {
+    width: 15px;
+    height: 15px;
+    top: 90%;
+    left: 75%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(8) {
+    width: 15px;
+    height: 15px;
+    top: 10%;
+    left: 10%;
+    animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(9) {
+    width: 15px;
+    height: 15px;
+    top: 10%;
+    left: 70%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(10) {
+    width: 15px;
+    height: 15px;
+    top: 90%;
+    left: 20%;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}

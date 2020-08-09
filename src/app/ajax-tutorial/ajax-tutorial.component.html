@@ -1,0 +1,257 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="ajax-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-xmlhttp"><span class="button-text">XMLHttp</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-request"><span class="button-text">Request</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-response"><span class="button-text">Response</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-xml-file"><span class="button-text">XML File</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-php"><span class="button-text">PHP</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-asp"><span class="button-text">ASP</span></a>
+        <a class="nav-link" href="ajax-tutorial#ajax-database"><span class="button-text">Database</span></a>
+    </div>
+
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">&nbsp;AJAX</h1>
+        <hr>
+
+        <div class="section-body" id="introduction">
+            <div class="section-content">
+                <h2 class="section-title"><u>Introduction</u></h2>
+                <div class="sub-section" id="ajax-introduction">    
+                    <p>AJAX is not a programming language. It is a technique for accessing web servers from a web page. AJAX stands for <b><u>A</u></b>synchronous <b><u>Ja</u></b>vascript <b><u>X</u></b>ML.</p>
+                    <p>AJAX used combination of: </p>
+                    <ul>
+                        <li>A browser built-in XMLHttpRequest object - to request data from web server</li>
+                        <li>Javascript and HTML SOM - to display or use data</li>
+                    </ul>
+                    <p class="note">NOTE: AJAX applicationsmight use XML to transport data, but it is equally common to transport JSON data.</p>
+                    <p>AJAX allows web pagesto be updated asynchronously by exchanging data with a web server behind the scenes, meaning, it is possible to update parts of a web page, wuthout reloading entire page.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-xmlhttp">
+            <div class="section-content">
+                <h2 class="section-title"><u>XMLHttp</u></h2>
+                <div class="sub-section" id="ajax-xmlhttprequest-object">   
+                    <p>All Modern web browsers support XMLHttpRequest.</p>        
+                </div>
+                <h4><u>Create XMLHttpRequest Object</u></h4>
+                <div class="sub-section" id="ajax-create-object">
+                    <code>var xhttp = new XMLHttpRequest();</code>
+                </div>
+                <h4><u>Access Across Domains</u></h4>
+                <div class="sub-section" id="ajax-access-across-domains">
+                    <ul>
+                        <li>For security reasons, modern web browsers do not support access across domains.</li>
+                        <li>So, both web page and XML file must be on the same server.</li>
+                    </ul>
+                </div>
+                <h4><u>Old IE Browsers</u></h4>
+                <div class="sub-section" id="ajax-old-ie-browsers">
+                    <code>var iexhttp = new ActiveXObject("Microsoft.XMLHTTP");</code>
+                </div>
+                <h4><u>XMLHttpRequest Object Methods</u></h4>
+                <div class="sub-section" id="ajax-xmlhttprequest-object-methods">
+                    <table border cellpadding=5 cellspacing=10>
+                        <tr>
+                            <th>Methods</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>new XMLHttpRequest()</td>
+                            <td>Creates new XMLHttpRequest object</td>
+                        </tr>
+                        <tr>
+                            <td>abort()</td>
+                            <td>Cancels the current request</td>
+                        </tr>
+                        <tr>
+                            <td>getAllResponseHeaders()</td>
+                            <td>Returns Header information</td>
+                        </tr>
+                        <tr>
+                            <td>getResponseHeader()</td>
+                            <td>Returns specific Header information</td>
+                        </tr>
+                        <tr>
+                            <td>open(method, url, async, user, psw)</td>
+                            <td> Specifies the request
+                                <ul>
+                                    <li>method: request type - GET or POST</li>
+                                    <li>url: the file location</li>
+                                    <li>async: true(asynchronous) or false(synchronous)</li>
+                                    <li>user: optional username</li>
+                                    <li>psw: optional password</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>send()</td>
+                            <td>Sends request to server (used for GET requests)</td>
+                        </tr>
+                        <tr>
+                            <td>send(string)</td>
+                            <td>Sends request to server (used for POST requests)</td>
+                        </tr>
+                        <tr>
+                            <td>setRequestHeader(header, value)</td>
+                            <td>Adds a label/value pair to the header to be sent (header name, header value)</td>
+                        </tr>
+                    </table>
+                </div>
+                <h4><u>XMLHttpRequest Object Properties</u></h4>
+                <div class="sub-section" id="ajax-xmlhttprequest-object-properties">
+                    <table border cellpadding=5 cellspacing=10>
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>onreadystatechange</td>
+                            <td>Defines a fucntion to be called when the readyState property changes.</td>
+                        </tr>
+                        <tr>
+                            <td>readyState</td>
+                            <td>Holds state of XMLHttpRequest
+                                <ul>
+                                    <li>0: request not initialized</li>
+                                    <li>1: server connection established</li>
+                                    <li>2: request received</li>
+                                    <li>3: processing request</li>
+                                    <li>4: request finished and response received</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>responseText</td>
+                            <td>Returns response data as string.</td>
+                        </tr>
+                        <tr>
+                            <td>responseXML</td>
+                            <td>Returns response data as XML.</td>
+                        </tr>
+                        <tr>
+                            <td>status</td>
+                            <td>Returns status-number of the request
+                                <ul>
+                                    <li>200: "OK"</li>
+                                    <li>403: "Forbidden"</li>
+                                    <li>404: "Not Found"</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>statusText</td>
+                            <td>Returns status text like "OK"</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-request">
+            <div class="section-content">
+                <h2 class="section-title"><u>Request</u></h2>
+                <div class="sub-section" id="ajax-send-request-to-server">
+                    <p>To send a request to a server, open() and send() methods are used.</p>
+                    <code>xhttp.open("GET", "ajax_info.text", true);</code><br>
+                    <code>xhttp.send();</code><br>
+                </div>
+                <h4><u>GET Requests</u></h4>
+                <div class="sub-section" id="ajax-get-requests">
+                    <code>xhttp.open("GET", "demo_get.asp", true);</code><br>
+                    <code>xhttp.send();</code><br>
+                    <p class="exception">Exception: The above example, may give a cached data.</p>
+                    <p>A unique id can be added to the URL to avoid cached data</p>
+                    <code>xhttp.open("GET", "demo_get.asp?t=" + Math.random(), true);</code><br>
+                    <code>xhttp.send();</code><br>
+                    <p>To send information with GET method, add information to URL.</p>
+                    <code>xhttp.open("GET", "demo_get2.asp?fname=Henry&amp;lname=Ford", true);</code><br>
+                    <code>xhttp.send();</code><br>
+                </div>
+                <h4><u>POST Requests</u></h4>
+                <div class="sub-section" id="ajax-post-requests">
+                    <code>xhttp.open("POST", "demo_post.asp", true);</code><br>
+                    <code>xhttp.send();</code><br>
+                    <p>To POST data like an HTML form, add an HTTP header with setRequestHeader(). Specify the data you want to send in the send() method.</p>
+                    <code>xhttp.open("POST", "demo_get.asp", true);</code><br>
+                    <code>xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");</code><br>
+                    <code>xhttp.send();</code><br>
+                    <p>To send information with GET method, add information to URL.</p>
+                    <code>xhttp.open("GET", "demo_get2.asp?fname=Henry&amp;lname=Ford", true);</code><br>
+                    <code>xhttp.send();</code><br>
+                </div>
+                <h4><u>The url</u></h4>
+                <div class="sub-section" id="ajax-the-url">
+                    <p>The url parameter of open() method, is an address to a file on a server. The file can be of any kind like .txt or .xml or a scripting file like .asp and .php</p>
+                </div>
+                <h4><u>The Asynchronous / Synchronous</u></h4>
+                <div class="sub-section" id="ajax-asynchronous-synchronous">
+                    <p>Server requests should be sent asynchronously. Sp, the Javascript does not wait or server response and perform other scripts while waiting for response and deal with response when ready.</p>
+                    <p>Synchronous request is used for testing. It does not require onreadystatechange property.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-response">
+            <div class="section-content">
+                <h2 class="section-title"><u>Response</u></h2>
+                <div class="sub-section" id="ajax-response-onreadystatechange-property">  
+                    <p>readyState property holds the status of the XMLHttpRequest. onreadystatechanged property defines a function to be executed when the readyState changes. onreadystatechanged property is called everytime the readystate changes.</p>
+                    <p>when readystate is 4 and status is 200, the response is ready.</p>
+                    <code>xhttp.onreadystatechange = function() &#123;</code><br>
+                    &nbsp;&nbsp;<code>if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>document.getElementById("demo").innerHTML = this.responseText;</code><br>
+                    &nbsp;&nbsp;<code>&#125;</code><br>
+                    <code>&#125;;</code><br>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-xml-file">
+            <div class="section-content">
+                <h2 class="section-title"><u>XML File</u></h2>
+                <div class="sub-section" id="">        
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-php">
+            <div class="section-content">
+                <h2 class="section-title"><u>PHP</u></h2>
+                <div class="sub-section" id="">        
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-asp">
+            <div class="section-content">
+                <h2 class="section-title"><u>ASP</u></h2>
+                <div class="sub-section" id="">        
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ajax-database">
+            <div class="section-content">
+                <h2 class="section-title"><u>Database</u></h2>
+                <div class="sub-section" id="">        
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>
+        

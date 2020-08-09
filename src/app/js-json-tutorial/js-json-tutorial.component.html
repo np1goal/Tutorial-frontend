@@ -1,0 +1,188 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="jsjson-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-syntax"><span class="button-text">Syntax</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-data-types"><span class="button-text">Data Types</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-parse"><span class="button-text">Parse</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-stringify"><span class="button-text">Stringify</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-objects"><span class="button-text">Objects</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-php"><span class="button-text">PHP</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-html"><span class="button-text">HTML</span></a>
+        <a class="nav-link" href="jsjson-tutorial#json-jsonp"><span class="button-text">JSONP</span></a>
+    </div>
+
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">Javascript JSON</h1>
+        <hr>
+
+        <div class="section-body" id="introduction">
+            <div class="section-content">
+                <h2 class="section-title"><u>Introduction</u></h2>
+                <div class="sub-section" id="json-introduction">
+                    <p>JSON (<b><u>J</u></b>ava<b><u>S</u></b>cript <b><u>O</u></b>bject <b><u>N</u></b>otation) is used to store and exchange data.</p>
+                </div>
+                <h4><u>Exchanging Data</u></h4>
+                <div class="sub-section" id="json-exchanging-data">     
+                    <p>To exchange data between browser and server, the data can only be text. Any JS object can be converted to JSON and sent to server. JSON received from server can also be converted to JS objects.</p>
+                </div>
+                <h4><u>Sending Data</u></h4>
+                <div class="sub-section" id="json-sending-data">
+                    <p><code class="code-inline">JSON.stringify()</code> can be used to convert JS object to JSON and then sent.</p>
+                </div>
+                <h4><u>Receiving Data</u></h4>
+                <div class="sub-section" id="json-receiving-data">
+                    <p><code class="code-inline">JSON.parse()</code> can be used to convert received data into JS object.</p>
+                </div>
+                <h4><u>Storing Data</u></h4>
+                <div class="sub-section" id="json-storing-data">
+                    <p>Store the received data in any format prefered.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-syntax">
+            <div class="section-content">
+                <h2 class="section-title"><u>JSON Syntax</u></h2>
+                <div class="sub-section" id="json-syntax">
+                    <ul>
+                        <li>Data is stored in name/value pairs.</li>
+                        <li>Data is seperated by commas.</li>
+                        <li>Curly braces hold objects.</li>
+                        <li>Square brackets hold arrays.</li>
+                    </ul>
+                    <p>The name of the value is writtwn with double quotes <code class="code-inline">("name": "John")</code> unlike JS object.</p>
+                </div>
+                <h2><u>JSON Values</u></h2>
+                <div class="sub-section" id="json-values">
+                    <p>JSON values must be - string, number, JSON object, array, boolean and null. JS function, date and undefined are not included.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-data-types">
+            <div class="section-content">
+                <h2 class="section-title"><u>Data Types</u></h2>
+                <div class="sub-section" id="json-data-types-introduction">
+                    <p><code class="code-inline">&#123;"name": "John"&#125;</code> String are defined in double quotes.</p>
+                    <p><code class="code-inline">&#123;"age":31&#125;</code> Number must be integer or floating number.</p>
+                    <p><code class="code-inline">&#123;"employee": &#123;"name": "John", "age": 31&#125;&#125;</code> JSON object in JSON object.</p>
+                    <p><code class="code-inline">&#123;"names": ["John", "Anna", "James"]&#125;</code> Array in JSON object.</p>
+                    <p><code class="code-inline">&#123;"values": true&#125;</code> Boolean values can be true or false.</p>
+                    <p><code class="code-inline">&#123;"name": null&#125;</code> Value can be null.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-parse">
+            <div class="section-content">
+                <h2 class="section-title"><u>Parse</u></h2>
+                <div class="sub-section" id="json-parse-introduction">
+                    <p>Data received from the server is always a string. Parsing data through <code class="code-inline">JSON.parser()</code> becomes Javascript object.</p>
+                    <code>JSON.parser('&#123;"name": "John", "age": 30&#125;');</code>
+                </div>
+                <h4><u>JSON from Server</u></h4>
+                <div class="sub-section" id="json-from-server">     
+                </div>
+                <h4><u>Array as JSON</u></h4>
+                <div class="sub-section" id="json-array">
+                </div>
+                <h4><u>Exceptions</u></h4>
+                <div class="sub-section" id="json-parse-exceptions">
+                </div>
+                <h4><u>Parsing Functions</u></h4>
+                <div class="sub-section" id="json-parsing-functions">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-stringify">
+            <div class="section-content">
+                <h2 class="section-title"><u>Stringify</u></h2>
+                <div class="sub-section" id="json-stringify-introduction">
+                    <p>Converts JS object into a string.</p> 
+                </div>
+                <h4><u>Stringify Javascript Object</u></h4>
+                <div class="sub-section" id="json-stringify-javascript-object">     
+                    <p>Javascript object can be converted to string.</p>
+                    <code>JSON.stringify(&#123;"name": "John", "age": 30&#125;)</code>
+                </div>
+                <h4><u>Stringify Javascript Array</u></h4>
+                <div class="sub-section" id="json-stringify-array">
+                    <p>Javascript array can also be converted to string.</p>
+                    <code>JSON.stringify(["John", "Ajay", "Anna"])</code>
+                </div>
+                <h4><u>Exceptions</u></h4>
+                <div class="sub-section" id="json-stringify-exceptions">
+                    <p>In JSON, date objects are not allowed. The JSON.stringify() function will convert any dates into strings.</p>
+                    <p>In JSON, functions are not allowed as object values. The JSON.stringify() function will remove any functions from a JavaScript object, both the key and the value.</p>
+                    <p>To add functions in json convert functions into strings using toString() before running the JSON.stringify() function</p>
+                    <p class="note">NOTE: If functions are sent using JSON, the functions will lose their scope, and the receiver would have to use eval() to convert them back into functions.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-objects">
+            <div class="section-content">
+                <h2 class="section-title"><u>Objects</u></h2>
+                <div class="sub-section" id="json-objects-introduction">
+                    <p>It is a key/value pair. Key specified in double quotes (""), keys and values seperated by colon (:), pairs seperated by comma (,)</p>
+                </div>
+                <h4><u>Accessing Object</u></h4>
+                <div class="sub-section" id="json-stringify-javascript-object">  
+                    <p>There are two ways to access objects: </p>   
+                    <code>myObj = &#123; "name": "John", "age": 30, "car": null &#125;;</code><br>
+                    <code>x = myObj.name; //First way</code><br>
+                    <code>x = myObj["name"]; //Second way</code><br>
+                </div>
+                <h4><u>Looping an Object</u></h4>
+                <div class="sub-section" id="json-stringify-array">
+                    <code>for (x in obj) &#123;</code><br>
+                    &nbsp;&nbsp;<code>console.log(x + " : " + obj[x]) // x has key, obj[x] has value</code><br>
+                    <code>&#125;</code><br>
+                </div>
+                <h4><u>Nested JSON Objects</u></h4>
+                <div class="sub-section" id="json-stringify-exceptions">
+                    <p>Nested object can be access using <code class="code-inline">obj.cars.cars2;</code><b>  OR  </b><code class="code-inline">obj.cars["cars2"];</code></p>
+                </div>
+                <h4><u>Modify values</u></h4>
+                <div class="sub-section" id="json-stringify-array">
+                    <p>Value of nexted objects can also be modified like <code class="code-inline">obj.cars.cars2 = "BMW";</code><b>  OR  </b><code class="code-inline">obj.cars["cars2"] = "BMW";</code></p>
+                </div>
+                <h4><u>Deleted Object Properties</u></h4>
+                <div class="sub-section" id="json-stringify-exceptions">
+                    <p>Use <code class="code-inline">delete</code> keyword like <code class="code-inline">delete obj.cars.cars2;</code></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-php">
+            <div class="section-content">
+                <h2 class="section-title"><u>PHP</u></h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-html">
+            <div class="section-content">
+                <h2 class="section-title"><u>HTML</u></h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="json-jsonp">
+            <div class="section-content">
+                <h2 class="section-title"><u>JSONP</u></h2>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

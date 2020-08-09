@@ -1,0 +1,214 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="jsbom-tutorial#window"><span class="button-text">Window</span></a>
+        <a class="nav-link" href="jsbom-tutorial#screen"><span class="button-text">Screen</span></a>
+        <a class="nav-link" href="jsbom-tutorial#location"><span class="button-text">Location</span></a>
+        <a class="nav-link" href="jsbom-tutorial#history"><span class="button-text">History</span></a>
+        <a class="nav-link" href="jsbom-tutorial#navigator"><span class="button-text">Navigator</span></a>
+        <a class="nav-link" href="jsbom-tutorial#popup-alert"><span class="button-text">Popup Alert</span></a>
+        <a class="nav-link" href="jsbom-tutorial#timing"><span class="button-text">Timing</span></a>
+        <a class="nav-link" href="jsbom-tutorial#cookies"><span class="button-text">Cookies</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">Javascript BOM (Browser Object Model)</h1>
+        <hr>
+
+        <div class="section-body" id="window">
+            <div class="section-content">
+                <h2 class="section-title"><u>Window</u></h2>
+                <div class="sub-section" id="window-introduction">
+                    <p>"Browser Object Model" BOM, allows Javascript to talk to browser. The <code class="code-inline">window</code> object is supported by all browsers. All global objects, variables and functions become memebers of the window object. Global variables are properties of the window. Global functions are methods of the window.</p>
+                    <p><code>window.document.getElementById("demo");</code> is same as <code>document.getElementById("demo");</code></p>
+                </div>
+                <h4><u>Window Size</u></h4>
+                <div class="sub-section" id="window-size"> 
+                    <p>Two properties can be used to identify the size of browser window; does not include toolbars and scrollbars.</p>
+                    <p><code>window.innerHeight</code> the inner height of browser window in pixels</p>
+                    <p><code>window.innerWidth</code> the inner width of browser window in pixels</p>
+                    <p>For IE 8, 7, 6, 5: </p>
+                    <p><code>document.documentElement.clientHeight</code> OR <code>document.documentElement.clientWidth</code> <b> OR </b></p>
+                    <p><code>document.body.clientHeight</code> OR <code>document.bosy.clientWidth</code></p>
+                </div>
+                <h4><u>Window Methods</u></h4>
+                <div class="sub-section" id="window-methods">
+                    <ul>
+                        <li><code class="code-inline">window.open()</code> - opens a new window</li>
+                        <li><code class="code-inline">window.close()</code> - close the current window</li>
+                        <li><code class="code-inline">window.moveTo()</code> - move the current window</li>
+                        <li><code class="code-inline">window.resizeTo()</code> - resize the current window</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="screen">
+            <div class="section-content">
+                <h2 class="section-title"><u>Screen</u></h2>
+                <div class="sub-section" id="screen-introduction">
+                    <p>The <code class="code-inline">window.screen</code> object contains information about the user's screen. <code class="code-inline">window .screen</code> can be written without the window prefix.</p>
+                </div>
+                <h4><u>Screen Methods</u></h4>
+                <div class="sub-section" id="screen-methods">
+                    <ul>
+                        <li><code class="code-inline">screen.width</code> property returns the width of the visitor's screen in pixels.</li>
+                        <li><code class="code-inline">screen.height</code> property returns the height of the visitor's screen in pixels.</li>
+                        <li><code class="code-inline">screen.availWidth</code> property returns the width of the visitor's screen in pixels minus interface features like the Window's Taskbar.</li>
+                        <li><code class="code-inline">screen.availHeight</code> property returns the height of the visitor's screen in pixels minus interface features like the Window's Taskbar.</li>
+                        <li><code class="code-inline">screen.colorDepth</code> property returns number of bits used to display one color.</li>
+                            <ul>
+                                <li>8 bits: VGA colors</li>
+                                <li>16 bits: High colors</li>
+                                <li>24 bits: True colors --> rgb colors in HTML are True Colors</li>
+                                <li>32 bits: Deep colors</li>
+                            </ul>
+                        <li><code class="code-inline">screen.pixelDepth</code> property returns pixel depth of screen --> Color Depth and Pixel Depth are equal for modern computers.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="location">
+            <div class="section-content">
+                <h2 class="section-title"><u>Location</u></h2>
+                <div class="sub-section" id="location-introduction">
+                    <p>The <code class="code-inline">window.location</code> object can be used to get the current page address (URL) and to redirect the browser to a new page. The prefix of <code class="code-inline">window</code> is optional.</p>
+                </div>
+                <div class="sub-section" id="location-methods">
+                    <ul>
+                        <li><code class="code-inline">location.href</code> property returns the URL of the current page.</li>
+                        <li><code class="code-inline">location.hostname</code> property returns name of internet host of the current page like www.w3schools.com.</li>
+                        <li><code class="code-inline">location.pathname</code> property returns path name of the current page like /path/pathname#element.</li>
+                        <li><code class="code-inline">location.protocol</code> property returns web protocol of the current page like https:.</li>
+                        <li><code class="code-inline">location.port</code> property returns number of internet host port of the current page.</li>
+                        <li><code class="code-inline">location.assign()</code> method loads a new document.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="section-body" id="history">
+            <div class="section-content">
+                <h2 class="section-title"><u>History</u></h2>
+                <div class="sub-section" id="history-introduction">
+                    <p>The <code class="code-inline">window.history</code> object contains the browsers history. The prefix of <code class="code-inline">window</code> is optional.</p>
+                </div>
+                <div class="sub-section" id="history-methods">
+                    <p>To protect the privacy of the users, there are limitations to how Javascript can access the this object.</p>
+                    <ul>
+                        <li><code class="code-inline">history.back()</code> same as clicking back button in the browser</li>
+                        <li><code class="code-inline">history.forward()</code> same as clicking forward button in the browser</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="navigator">
+            <div class="section-content">
+                <h2 class="section-title"><u>Navigator</u></h2>
+                <div class="sub-section" id="navigator-introduction">
+                    <p>The <code class="code-inline">window.navigator</code> object contains information about the visitor's browser. The prefix of <code class="code-inline">window</code> is optional.</p>
+                </div>
+                <div class="sub-section" id="navigator-methods">
+                    <li><code class="code-inline">navigator.cookieEnabled</code> returns true if cookies are enabled otherwise false.</li>
+                    <li><code class="code-inline">navigator.appName</code> returns application name of the browser -> <span class="exception">"Netscape" is application for IE11, Chrome, Firfox and Safari.</span></li>
+                    <li><code class="code-inline">navigator.appCodeName</code> returns application code name of the browser -> <span class="exception">"Mozilla" is application for IE11, Chrome, Firfox and Safari.</span></li>
+                    <li><code class="code-inline">navigator.product</code> returns product name of the browser engine -> <span class="exception">Do not rely on this!!!</span></li>
+                    <li><code class="code-inline">navigator.appVersion</code> returns version information of the browser</li>
+                    <li><code class="code-inline">navigator.userAgent</code> returns user-agent header sent by the browser to the server</li>
+                    <li><code class="code-inline">navigator.platform</code> returns for browser platform (Operating System)</li>
+                    <li><code class="code-inline">navigator.language</code> returns browser's language</li>
+                    <li><code class="code-inline">navigator.onLine</code> returns true if browser is online</li>
+                    <li><code class="code-inline">navigator.javaEnabled()</code> returns true if java is enabled</li>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="popup-alert">
+            <div class="section-content">
+                <h2 class="section-title"><u>Popup Alert</u></h2>
+                <div class="sub-section" id="popup-alert-introduction">
+                    <p>JavaScript has three kind of popup boxes: Alert box, Confirm box, and Prompt box.</p>
+                </div>
+                <h4><u>Alert Box</u></h4>
+                <div class="sub-section" id="popup-alert-alert-box">
+                    <p>An alert box is often used if you want to make sure information comes through to the user. When the alert-box is popped, the user has to click "OK" to proceed.</p>
+                    <p><code>alert("Hello")</code> --> window prefix is optional</p>
+                </div>
+                <h4><u>Confirm Box</u></h4>
+                <div class="sub-section" id="popup-alert-confirm-box">
+                    <p>A confirm box is often used if you want user to verify or accept something. When the confirm-box is popped, the user has to click "OK" or "Cancel" to proceed. If user click "OK", box returns true. If user click "Cancel", box returns false.</p>
+                    <p><code>confirm("Hello")</code> --> window prefix is optional</p>
+                </div>
+                <h4><u>Prompt Box</u></h4>
+                <div class="sub-section" id="popup-alert-prompt-box">
+                    <p>A prompt box is often used if you want user to input a value before entering a page. When the prompt-box is popped, the user has to click "OK" or "Cancel" to proceed. If user click "OK", box returns input value. If user click "Cancel", box returns null.</p>
+                    <p><code>prompt("someText", "defaultText")</code> --> window prefix is optional</p>
+                </div>
+                <h4><u>Line Break</u></h4>
+                <div class="sub-section" id="popup-alert-line-break">
+                    <p>To enter new line in opuup boc use "\n"</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="timing">
+            <div class="section-content">
+                <h2 class="section-title"><u>Timing</u></h2>
+                <div clas="sub-section" id="timing-introduction">
+                    Javascript can be executed in time-intervals know as timing events.
+                </div>
+                <h4><u>Timing Events</u></h4>
+                <div clas="sub-section" id="timing-events">
+                    The window object allows execution of a code at specified time intervals called Timing Events. The two key methods are:
+                    <ul>
+                        <li><code class="code-inline">setTimeout(function, milliseconds)</code> executes a function specified number of elements.</li>
+                        <li><code class="code-inline">setInterval(function, milliseconds)</code> same as setTimeOut() but repeats the execution continously after every specified time.</li>
+                    </ul>
+                </div>
+                <h4><u>How to stop Execution?</u></h4>
+                <div clas="sub-section" id="stop-execution">
+                    <p><code class="code-inline">clearTimeout(timeoutVariable)</code> stops the execition of setTimeout()</p>
+                    <p><code class="code-inline">clearInterval(intervalVariable)</code> stops the execution of setInterval()</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="cookies">
+            <div class="section-content">
+                <h2 class="section-title"><u>Cookies</u></h2>
+                <div class="sub-section" id="cookies-introduction">
+                    <p>Cookies store user information in web pages.</p>
+                    <p>When a browser requests a web page from a server, cookies belonging to the page are added to the request. This was the server gets the necessary data to "remember" information about the users.</p>
+                </div>
+                <h4><u>Create a Cookie</u></h4>
+                <div class="sub-section" id="create-cookies">
+                    <p><code class="code-inline">document.cookie = "username: nishthapatel";</code> This creates a new cookie</p>
+                    <p><code class="code-inline">document.cookie = "username: nishthapatel; expires=Thu, 18 Jul 2020 12:00:00 UTC";</code> This creates a new cookie with an expiry date. By default expiry date is when the browser is closed.</p>
+                    <p><code class="code-inline">document.cookie = "username: nishthapatel; expires=Thu, 18 Jul 2020 12:00:00 UTC; path=/";</code> With path parameter, the browser knows what path the cookie belongs to. By default it belongs to the current page.</p>                    
+                </div>
+                <h4><u>Read a Cookie</u></h4>
+                <div class="sub-section" id="read-cookies">
+                    <p><code class="code-inline">document.cookie;</code> Access the cookie; returns a string of all cookies like: cookie1 = value; cookie2 = value; cookie3 = value</p>
+                </div>
+                <h4><u>Update a Cookie</u></h4>
+                <div class="sub-section" id="change-cookies">
+                    <p><code class="code-inline">document.cookie= "username: nish";</code> Cookies can be overwritten.</p>
+                </div>
+                <h4><u>Delete a Cookie</u></h4>
+                <div class="sub-section" id="delete-cookies">
+                    <p><code class="code-inline">document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";</code> To delete a cookie, set the expire date to a past date. To delete the correct cookie, define the correct cookie path.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

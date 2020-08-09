@@ -1,0 +1,892 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="javascript-tutorial#script-tag"><span class="button-text">Script Tag</span></a>
+        <a class="nav-link" href="javascript-tutorial#javascript-output"><span class="button-text">Javascript Output</span></a>
+        <a class="nav-link" href="javascript-tutorial#statements"><span class="button-text">Statements</span></a>
+        <a class="nav-link" href="javascript-tutorial#javascript-syntax"><span class="button-text">Javascript Syntax</span></a>
+        <a class="nav-link" href="javascript-tutorial#javascript-data-types"><span class="button-text">Javascript Data Types</span></a>
+        <a class="nav-link" href="javascript-tutorial#objects"><span class="button-text">Objects</span></a>
+        <a class="nav-link" href="javascript-tutorial#escape-character"><span class="button-text">Escape Character</span></a>
+        <a class="nav-link" href="javascript-tutorial#string-methods"><span class="button-text">String Methods</span></a>
+        <a class="nav-link" href="javascript-tutorial#number"><span class="button-text">Number</span></a>
+        <a class="nav-link" href="javascript-tutorial#number-methods"><span class="button-text">Number methods</span></a>
+        <a class="nav-link" href="javascript-tutorial#number-properties"><span class="button-text">Number Properties</span></a>
+        <a class="nav-link" href="javascript-tutorial#arrays"><span class="button-text">Arrays</span></a>
+        <a class="nav-link" href="javascript-tutorial#dates"><span class="button-text">Dates</span></a>
+        <a class="nav-link" href="javascript-tutorial#maths"><span class="button-text">Maths</span></a>
+        <a class="nav-link" href="javascript-tutorial#operators"><span class="button-text">Operators</span></a>
+        <a class="nav-link" href="javascript-tutorial#loops"><span class="button-text">Loops</span></a>
+        <a class="nav-link" href="javascript-tutorial#break-continue"><span class="button-text">Break and Continue</span></a>
+        <a class="nav-link" href="javascript-tutorial#scope"><span class="button-text">Scope</span></a>
+        <a class="nav-link" href="javascript-tutorial#hoisting"><span class="button-text">Hoisting</span></a>
+        <a class="nav-link" href="javascript-tutorial#strict-mode"><span class="button-text">Strict mode</span></a>
+        <a class="nav-link" href="javascript-tutorial#this-keyword"><span class="button-text">this keyword</span></a>
+        <a class="nav-link" href="javascript-tutorial#functions"><span class="button-text">Functions</span></a>
+        <a class="nav-link" href="javascript-tutorial#new-keyword"><span class="button-text">new keyword</span></a>
+        <a class="nav-link" href="javascript-tutorial#functional-programming"><span class="button-text">Functional Programming</span></a>
+        <a class="nav-link" href="javascript-tutorial#asynchronous-javascript"><span class="button-text">Asynchronous Javascript</span></a>
+        <a class="nav-link" href="javascript-tutorial#es6-javascript"><span class="button-text">ES6 Javascript</span></a>
+    </div>
+
+    <div class="body">
+        <h1 class="subject-title">&nbsp;Javascript</h1>
+        <hr>
+
+        <div class="section-body" id="#script-tag">
+            <div class="section-content">
+                <h2 class="section-title"><u>&lt;script&gt; tag</u></h2>
+                <div class="sub-section">
+                    <p>Any number of script can be placed in an HTML document.</p>
+                    <p>Scripts can be placed in either <code class="code-inline">&lt;head&gt;</code> tag or <code class="code-inline">&lt;body&gt;</code> tag.</p>
+                    <p>External file of extension <b>.js</b> can be added in <code class="code-inline">&lt;script&gt;</code> tag in <code class="code-inline">src</code> attribute.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        
+        <div class="section-body" id="javascript-output">
+            <div class="section-content"> 
+                <h2 class="section-title"><u>Javascript output</u></h2>
+                <div class="sub-section">
+                    <ul>
+                        <li>Writing into an HTML element, using <code class="code-inline">innerHTML</code></li><br>
+                        <ul>
+                            <li>To access HTML element use <code class="code-inline">document.getElementById(id)</code> method.</li><br>
+                            <li>The <code class="code-inline">innerHTML</code> property defines HTML content.</li>
+                            <p><code>&lt;p id="demo"&gt;&lt;/p&gt;</code></p>
+                            <p><code>document.getElementById("demo").innerHTML = 2 + 4;</code> ----> Prints 6 in p tag.</p>
+                        </ul>
+                        <li>Writing into the HTML output, using <code class="code-inline">document.write()</code></li><br>
+                        <ul>
+                            <li>For testing purposes use <code class="code-inline">document.write(8);</code></li>
+                            <p class="note">NOTE: Using document.write() after an HTML document is loaded will delete all existing HTML content. It should only be used for Testing.</p>
+                        </ul>
+                        <li>Writing into an alert box, using <code class="code-inline">window.alert()</code></li><br>
+                        <ul>
+                            <li>For alert box do <code class="code-inline">window.alert(2 + 3);</code> will open alert.</li><br>
+                        </ul>
+                    </ul>
+                    <p class="exception">Exception: To print the current content of the window use <code class="code-inline">window.print()</code> in event binding.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="section-body" id="statements">
+            <div class="section-content">
+                <h2 class="section-title"><u>Statements</u></h2>
+                <div class="sub-section">
+                    <p>Javascript statements are compose of values, operators, expressions, keywords and comments.</p>
+                    <p>Semi-colons seperate one statement from the other.</p>
+                    <table border cellspacing=5 cellpadding=10>
+                        <tr>
+                            <th>keyword</th>
+                            <th>description</th>
+                        </tr>
+                        <tr>
+                            <td>break</td>
+                            <td>Terminates a loop.</td>
+                        </tr>
+                        <tr>
+                            <td>continue</td>
+                            <td>Jumps out of a loop and starts at top.</td>
+                        </tr>
+                        <tr>
+                            <td>debugger</td>
+                            <td>Stops the execution of Javascript and calls the debugging function.</td>
+                        </tr>
+                        <tr>
+                            <td>do ...while</td>
+                            <td>Loops a code block (atleast executes the code block once).</td>
+                        </tr>
+                        <tr>
+                            <td>for</td>
+                            <td>Loops a code block.</td>
+                        </tr>
+                        <tr>
+                            <td>function</td>
+                            <td>Declares a function.</td>
+                        </tr>
+                        <tr>
+                            <td>if ...else</td>
+                            <td>If condition else condition.</td>
+                        </tr>
+                        <tr>
+                            <td>return</td>
+                            <td>Exits a function.</td>
+                        </tr>
+                        <tr>
+                            <td>switch</td>
+                            <td>Execution of blocks depending on cases.</td>
+                        </tr>
+                        <tr>
+                            <td>try ...catch</td>
+                            <td>Implements error handling.</td>
+                        </tr>
+                        <tr>
+                            <td>var</td>
+                            <td>Declares a variable.</td>
+                        </tr>
+                    </table>
+                </div>
+            <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="javascript-syntax">
+            <div class="section-content">
+                <h2 class="section-title"><u>Javascript Syntax</u></h2>
+                <h4><u>Values</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Two types of values: <b>Fixed values</b> and <b>Variable values</b>.</p>
+                    <p>&nbsp;&nbsp;Fixed values are called <b>Literals</b>. Vaible values are called <b>Variables</b>.</p>
+                </div>
+                <h4><u>Literals</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;<b>Numbers</b> are written with or without decimals.</p>
+                    <p>&nbsp;&nbsp;<b>Strings</b> are text witten with single quotes or double quotes.</p>
+                </div>
+                <h4><u>Variables</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Varibles are used to store data.</p>
+                </div>
+                <h4><u>Operators</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Arithmetic operators are ( <code class="code-inline">+ , * , - , /, %, ++, --, **</code> )</p>
+                    <p>&nbsp;&nbsp;Assignment operators ( <code class="code-inline">=</code> ) to assign values.</p>
+                </div>
+                <h4><u>Expressions</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Expression is a combination of values, variable and operators, which computes a value.</p>
+                </div>
+                <h4><u>Keywords</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Javascript keywords are used to identify actions to be performed.</p>
+                </div>
+                <h4><u>Comments</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Comments are code after double slashes <code class="code-inline">//</code> or code between <code class="code-inline">/*</code> and <code class="code-inline">*/</code>.</p>
+                </div>
+                <h4><u>Identifiers</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Identifiers are names.</p>
+                    <p>&nbsp;&nbsp;In Javascript, identifiers are used to name variables.</p>
+                    <p>&nbsp;&nbsp;In Javascript the first character much be a character or an underscore or a dollar sign.</p>
+                    <p>&nbsp;&nbsp;<span class="exception">Exception: Numbers cannot be first character.</span></p>
+                </div>
+                <h4><u>Case sensitive</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Identifiers are case sensitives.</p>
+                </div>
+                <h4><u>Camel case</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Underscore: my-variable.</p>
+                    <p>&nbsp;&nbsp;Lower Camel Case: myVariable.</p>
+                    <p>&nbsp;&nbsp;Upper Camel Case: MyVariable.</p>
+                    <p>&nbsp;&nbsp;<span class="exception">Exception: Hyphens are not allowed as they are reseved for subtraction.</span></p>
+                </div>
+                <h4><u>Character Set</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Javascript uses Unicode character set.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="javascript-data-types">
+            <div class="section-content">
+                <h2 class="section-title"><u>Javascript Data types</u></h2>
+                <h4><u>Data Types</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Data types: numbers, strings, objects etc.</p>
+                </div>
+                <h4><u>Concept of Data Types</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;When adding a number and string then number is converted to string.</p>
+                    <p>&nbsp;&nbsp;Expression is evaluated from left to right.</p>
+                    <p>&nbsp;&nbsp;<code class="code-inline">16 + 4 + "Joe" = 20Joe</code></p>
+                    <p>&nbsp;&nbsp;<code class="code-inline">"Joe" + 16 + 4 = Joe164</code></p>
+                </div>
+                <h4><u>Data Types are Dynamic</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Javascript has dynamic types meaning the same variable can hold multiple data types.</p>
+                </div>
+                <h4><u>typeOf operator</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Javascript <code class="code-inline">typeof</code> operator is used to find the type of Javascript variable.</p>
+                    <p>&nbsp;&nbsp;<code class="code-inline">typeof(4.001) //returns "number"</code></p>
+                    <p>&nbsp;&nbsp;<code class="code-inline">typeof "John" //returns "string"</code></p>
+                </div>
+                <h4><u>undefined</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;A variable without a value has type <code class="code-inline">undefined</code>.</p>
+                    <p>&nbsp;&nbsp;Any variable can be emptied if the value is set again to <code class="code-inline">undefined</code>.</p>
+                </div>
+                <h4><u>empty values</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Empty value has nothing to do with undefined.</p>
+                    <p>&nbsp;&nbsp;An empty string has both value "" and type string.</p>
+                </div>
+                <h4><u>null</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;In Javascript, null is nothing.</p>
+                    <p>&nbsp;&nbsp;typeof null is object.</p>
+                    <p>&nbsp;&nbsp; <span class="note">NOTE: undefined and null are equal in value and different in type.</span></p>
+                </div>
+                <h4><u>Primitive Data</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;It is a single simple data value with no additional properties and methods.</p>
+                    <p>&nbsp;&nbsp;Types: string, number, boolean and undefined</p>
+                </div>
+                <h4><u>Complex Data</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Types: function and object</p>
+                    <p>&nbsp;&nbsp;typeof operator returns object for objects, arrays and null.</p>
+                    <p>&nbsp;&nbsp;typeof operator doenot return objects for function, it returns function.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="objects">
+            <div class="section-content">
+                <h2 class="section-title"><u>Objects</u></h2>
+                <h4><u>Objects</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Object can store multiple values. The values of object are written as <b>name:value</b> pairs.</p>
+                </div>
+                <h4><u>Properties</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;The name:values pairs in JavaScript objects are called properties</p>
+                    <p>&nbsp;&nbsp;<code class="code-inline">property: propertyValue</code></p>
+                    <p>&nbsp;&nbsp;Access the elements by <code class="code-inline">object.property</code> OR <code class="code-inline">object["property"]</code></p>
+                </div>
+                <h4><u>Methods</u></h4>
+                <div class="sub-section">
+                    <p>&nbsp;&nbsp;Objects can also have methods. A method is a function stored as a property.</p>
+                    <p>&nbsp;&nbsp;<code class="code-inline">property: function() &#123; return 10 + 20; &#125;</code></p>
+                    <p>&nbsp;&nbsp;Access the method by <code class="code-inline">object.method()</code></p>
+                    <p>&nbsp;&nbsp;<span class="exception">Exception: Do not declare Strings, Numbers and Booleans as Objects.</span></p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="escape-character">
+            <div class="section-content">
+                <h2 class="section-title"><u>Escape Character</u></h2>
+                <table cellpadding=5 cellspacing=10 border>
+                    <tr style="text-align:center;">
+                        <th>Code</th>
+                        <td>\'</td>
+                        <td>\"</td>
+                        <td>\\</td>
+                        <td>\b</td>
+                        <td>\f</td>
+                        <td>\n</td>
+                        <td>\r</td>
+                        <td>\t</td>
+                        <td>\v</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>Single quote</td>
+                        <td>Double quote</td>
+                        <td>Backslash</td>
+                        <td>Backspace</td>
+                        <td>Form Feed</td>
+                        <td>New line</td>
+                        <td>Carriage return</td>
+                        <td>Horizontal Tabulator</td>
+                        <td>Vertical Tabulator</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="string-methods">
+            <div class="section-content">
+                <h2 class="section-title"><u>String Methods</u></h2>
+                <table cellpadding=5 cellspacing=10 border>
+                    <tr style="text-align:center;">
+                        <th>Methods</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>length</td>
+                        <td>Length of string</td>
+                    </tr>
+                    <tr>
+                        <td>indexOf()</td>
+                        <td>Returns the first index of the occurence of a specified text in a string --> Returns -1 is text is not found</td>
+                    </tr>
+                    <tr>
+                        <td>lastIndexOf()</td>
+                        <td>Returns the last index of the occurence of a specified text in a string --> Returns -1 is text is not found</td>
+                    </tr>
+                    <tr>
+                        <td>search()</td>
+                        <td>Searches a string for a specified value and returns the position of the match.</td>
+                    </tr>
+                    <tr>
+                        <td>slice(start, end)</td>
+                        <td>Extracts a part of string, if both index is negative the string is counted from the end of the string --> Negative posiitons donot work for Internet Explorer 8</td>
+                    </tr>
+                    <tr>
+                        <td>substring(start, end)</td>
+                        <td>It is same as slice but it does not accept negative indexes.</td>
+                    </tr>
+                    <tr>
+                        <td>substr(start, length)</td>
+                        <td>It is same as substring, but instead of end it takes length as parameter.</td>
+                    </tr>
+                    <tr>
+                        <td>replace()</td>
+                        <td>Replaces a specified value with another value of string. The method doesnot change the string, it creates a new one.</td>
+                    </tr>
+                    <tr>
+                        <td>toUpperCase()</td>
+                        <td>String to upper case</td>
+                    </tr>
+                    <tr>
+                        <td>toLowerCase()</td>
+                        <td>String to lower case</td>
+                    </tr>
+                    <tr>
+                        <td>concat()</td>
+                        <td>Concats two strings</td>
+                    </tr>
+                    <tr>
+                        <td>trim()</td>
+                        <td>Removes extra white spaces. It does not work on Internet Explorer 8.</td>
+                    </tr>
+                    <tr>
+                        <td>charAt()</td>
+                        <td>Returns the character of the index.</td>
+                    </tr>
+                    <tr>
+                        <td>charCodeAt()</td>
+                        <td>Returns the unicode of the character.</td>
+                    </tr>
+                    <tr>
+                        <td>string[0]</td>
+                        <td>Returns of the character at the index.</td>
+                    </tr>
+                    <tr>
+                        <td>split()</td>
+                        <td>String to Array []</td>
+                    </tr>
+                </table>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="number">
+            <div class="section-content">
+                <h2 class="section-title"><u>Number</u></h2>
+                <div class="sub-section">
+                    <p>NaN is a Javascript reserved word indicating that a number is not a legal number</p>
+                    <p>Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number)</p>
+                    <p><code>var x = 100 / "Apple";  // x will be NaN (Not a Number)</code></p>
+                    <p>However, <code>var y = 100 / "10";     // y will be 10</code></p>
+                    <p><code>isNaN(x);   // returns true because x is Not a Number</code></p>
+                    <br>
+                    <p>Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number</p>
+                    <p>Division by 0 (zero) also generates Infinity</p>
+                    <p>Infinity is a number: typeof Infinity returns number</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="number-methods">
+            <div class="section-content">
+                <h2 class="section-title"><u>Number Methods</u></h2>
+                <table cellpadding=5 cellspacing=10 border>
+                    <tr>
+                        <th>Methods</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>toString()</td>
+                        <td>Returns number as string</td>
+                    </tr>
+                    <tr>
+                        <td>toExponential()</td>
+                        <td>Returns a string, with a number rounded and written using exponential notation like 9.6560e+0</td>
+                    </tr>
+                    <tr>
+                        <td>toFixed()</td>
+                        <td>Returns a string, with the number written with a specified number of decimals</td>
+                    </tr>
+                    <tr>
+                        <td>toPrecision()</td>
+                        <td>Returns a string, with a number written with specified length</td>
+                    </tr>
+                    <tr>
+                        <td>valueOf()</td>
+                        <td>Returns a number as number</td>
+                    </tr>
+                    <tr>
+                        <td>Number()</td>
+                        <td>Returns a number, converted from its argument.</td>
+                    </tr>
+                    <tr>
+                        <td>parseFloat()</td>
+                        <td>Parses its argument and returns a floating point number</td>
+                    </tr>
+                    <tr>
+                        <td>parseInt()</td>
+                        <td>Parses its argument and returns an integer</td>
+                    </tr>
+                    <tr>
+                        <td>Number()</td>
+                        <td>Converts variable to numbers. If </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="number-properties">
+            <div class="section-content">
+                <h2 class="section-title"><u>Number Properties</u></h2>
+                <table cellpadding=5 cellspacing=10 border>
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>MAX_VALUE</td>
+                        <td>Returns the largest number possible in Javascript</td>
+                    </tr>
+                    <tr>
+                        <td>MIN_VALUE</td>
+                        <td>Returns the smallest number possible in Javascript</td>
+                    </tr>
+                    <tr>
+                        <td>POSITIVE_INFINITY</td>
+                        <td>Represents positive infinity</td>
+                    </tr>
+                    <tr>
+                        <td>NEGATIVE_INFINITY</td>
+                        <td>Represents negative infinity</td>
+                    </tr>
+                    <tr>
+                        <td>NaN</td>
+                        <td>Represents "Not-a-Number" value</td>
+                    </tr>
+                </table>
+                <p class="note">NOTE: Number Properties cannot be used on variables</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="arrays">
+            <div class="section-content">
+                <h2 class="section-title"><u>Arrays</u></h2>
+                <div class="sub-section">
+                    <p>Arrrays can hold more than one value at a time. Array elements can be objects.</p>
+                    <p>Access the elements of array using indexes.</p>
+                </div>
+                <h4><u>Array Methods</u></h4>
+                <div class="sub-section">
+                    <p><code class="code-inline">array.length</code> gives number of elements in the array.</p>
+                    <p><code class="code-inline">array.sort()</code> sorts the array.</p>
+                    <p><code class="code-inline">array.forEach()</code> for loop shortcut.</p>
+                    <p><code class="code-inline">array.push()</code> adds new element to array.</p>
+                    <p><code class="code-inline">var array = [];</code> defines an empty array.</p>
+                    <p><code class="code-inline">array.isArray()</code> adds new element to array.</p>
+                    <p><code class="code-inline">array.toString()</code> prints the entire array as string.</p>
+                    <p><code class="code-inline">array.join("*")</code> joins all array elements in string with * in-between.</p>
+                    <p><code class="code-inline">array.pop()</code> removes Last element of array.</p>
+                    <p><code class="code-inline">array.shift()</code> removes First element of array.</p>
+                    <p><code class="code-inline">array.unshift()</code> adds new element at front of the array.</p>
+                    <p><code class="code-inline">delete array[0];</code> changes first element of array to undefined.</p>
+                    <p><code class="code-inline">array.splice(2, 0, "element1", "element2")</code> can be used to add new items to an array. The first parameter (2) defines the position where new elements should be added (spliced in). The second parameter (0) defines how many elements should be removed. The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.</p>
+                    <p><code class="code-inline">array.splice(2, 0)</code> can be used to remove elements without leaving "holes" in the array. The first parameter (0) defines the position where new elements should be added (spliced in). The first parameter (0) defines the position where new elements should be added (spliced in). The rest of the parameters are omitted. No new elements will be added.</p>
+                    <p><code class="code-inline">array1.concat(array2, array3)</code> returns new array by concatenating arrays.</p>
+                    <p><code class="code-inline">array.slice(1,3)</code> slices out a piece of array. It does not change the exisiting array, it creates a new array.</p>
+                </div>
+                <h4><u>Array Sorting</u></h4>
+                <div class="sub-section">
+                    <p><code class="code-inline">array.sort()</code> sorts the array --> Only for Strings.</p>
+                    <p><code class="code-inline">array.reverse()</code> sorts the array in reverse order --> Only for Strings.</p>
+                </div>
+                <p><code></code></p>
+                <h3>MORE TO COME...</h3>
+                <h4><u>Array Iteration</u></h4>
+                <h3>MORE TO COME...</h3>
+                <p class="note">NOTE: Adding new elements at a position > length+1 may create holes in array.</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="dates">
+            <div class="section-content">
+                <h2 class="section-title"><u>Dates</u></h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="maths">
+            <div class="section-content">
+                <h2 class="section-title"><u>Maths</u></h2>
+                <div class="sub-section">
+                    <p><code class="code-inline">abs(x)</code> is absolute value of x, <code class="code-inline">ceil(x)</code> rounds up to nearest integer, <code class="code-inline">floor(x)</code> rounds down to neared integer</p>
+                    <p><code class="code-inline">max(x,y,z...a)</code> max value, <code class="code-inline">min(x,y,z...a)</code> min value, <code class="code-inline">pow(x, y)</code> is x<sup>y</sup>, <code class="code-inline">random()</code> random number 0 to 1.</p>
+                    <p><code class="code-inline">round(x)</code> value of x rounded to near integer, <code>sqrt(x)</code> squareroot, <code class="code-inline">exp(x)</code> is e<sup>x</sup></p>
+                    <p><code class="code-inline">cos(x)</code> is cosine, <code class="code-inline">sin(x)</code> is sine, <code class="code-inline">tan(x)</code> is tan, <code class="code-inline">acos(x)</code> is acosine, <code class="code-inline">asin(x)</code> is asine, <code class="code-inline">atan(x)</code> is atan.</p>
+                    <p><code class="code-inline">Math.random()</code> random number between 0 to 1.</p>
+                    <p><code class="code-inline">Math.floor(Math.random() * 10)</code> random number 0 to 9.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="operators">
+            <div class="section-content">
+                <h2 class="section-title"><u>Operators</u></h2>
+                <h4><u>Comparison Operators</u></h4>
+                <div class="sub-section">
+                    <code>==, ===, !=, !==, &gt;, &lt;, &gt;=, &lt;=</code>
+                </div>
+                <h4><u>Logical Operators</u></h4>
+                <div class="sub-section">
+                    <code>&#38;&#38;, ||, !</code>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="loops">
+            <div class="section-content">
+                <h2 class="section-title"><u>Loops</u></h2>
+                <h4><u>For loops</u></h4>
+                <h4><u>While Loops</u></h4>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="break-continue">
+            <div class="section-content">
+                <h2 class="section-title"><u>Break and continue</u></h2>
+                <div class="sub-section">
+                    <p><code>break</code> jumps out of loop.</p>
+                    <p><code>continue</code> jumps over one iteration in the loop.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="scope">
+            <div class="section-content">
+                <h2 class="section-title"><u>Scope</u></h2>
+                <ul> 
+                    <li><u>Global Scope</u></li>
+                    <ul>
+                        <li>A variable declared outside all the functions are Global.</li>
+                        <li>All scripts and functions on a web page can access it.</li>
+                    </ul><br>
+                    <li><u>Local Scope</u></li>
+                    <ul>
+                        <li>A variable declared inside the function is Local to the function.</li>
+                        <li>They can only be accessed from within the function.</li>
+                        <li>Local scope can be dividedd into two - Function scope and Block scope.</li>
+                    </ul><br>
+                    <li><u>Function Scope</u></li>
+                    <ul>
+                        <li>Whenever the a variable is declaraed inside a function, it is visible only inside the funtion.</li>
+                        <li><b>var</b> is the keyword used to define variable for a function-scope accessibility.</li>
+                    </ul><br>
+                    <li><u>Block Scope</u></li>
+                    <ul>
+                        <li>A block scope is the area between if and switch conditions or for and while loops.</li>
+                        <li>Anything inside <b>&#123;curly brackets&#125;</b> is a block.</li>
+                        <li><b>const</b> and <b>let</b> are the keywords used to define variable in a block.</li>
+                    </ul><br>
+                    <code>function foo() &#123;</code><br>
+                    &nbsp;&nbsp;<code>if(true) &#123;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>var fruit1 = 'apple';        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>//exist in function scope</b></code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>const fruit2 = 'banana';     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>//exist in block scope</b></code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>let fruit3 = 'strawberry';   &nbsp;&nbsp;&nbsp;&nbsp;<b>//exist in block scope</b></code><br>
+                    &nbsp;&nbsp;<code>&#125;</code><br>
+                    &nbsp;&nbsp;<code>console.log(fruit1);  <b>//apple</b></code><br>
+                    &nbsp;&nbsp;<code>console.log(fruit2);  <b>//error: fruit2 is not defined</b></code><br>
+                    &nbsp;&nbsp;<code>console.log(fruit3);  <b>//error: fruit3 is not defined</b></code><br>
+                    <code>&#125;</code><br><br>
+                    <li><u>Lexical Scope</u></li>
+                    <ul>
+                        <li>The children scope always has access to variable defined in the parent scope.</li>
+                        <li>The children functions are lexically bound to the execution context of their parents.</li>
+                    </ul><br>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="hoisting">
+            <div class="section-content">
+                <h2 class="section-title"><u>Hoisting</u></h2>
+                <ul>
+                    <li>Hoisting is Javascript's default behavior of moving all the declarations at the top.</li>
+                    <li>Javascript hoists only declarations not intializations.</li>
+                </ul>
+                <p class="note">NOTE: Variable defined with let does not get hoisted.</p>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="section-body" id="strict-mode">
+            <div class="section-content">
+                <h2 class="section-title"><u>Strict Mode</u></h2>
+                <ul>
+                    <li>Strict mode is used on entire body or on a particular function.</li>
+                    <li>It doesnot apply to any blocks with curly braces.</li>
+                    <li>Type <code>"use script";</code> in either global space or in function.</li>
+                    <li>Javascript is a flexible language, where sometimes it does make assumptions. However, using strict mode, javascript throws error instead of assuming.</li>
+                    <li>For example,</li>
+                    <ul>
+                        <li>Declaration of variable; without strict mode if a variable is initialized without being declared then Javascript assumed declaration but in strict mode, an error is thrown.</li>
+                        <li></li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="this-keyword">
+            <div class="section-content">
+                <h2 class="section-title"><u><i>this</i> keyword</u></h2>
+                <h4><u>Rules to determine <i>this</i></u></h4>
+                <ul>
+                    <li>In a method, this refers to the owner object.</li>
+                    <li>Alone, this refers to the global object.</li>
+                    <li>In a function, this refers to the global object.</li>
+                    <li>In a function, in strict mode, this is undefined.</li>
+                    <li>In an event, this refers to the element that received the event.</li>
+                </ul>
+                <p><u>call()</u></p>
+                <p><u>apply()</u></p>
+                <p><u>bind()</u></p>
+                <p><u>new</u></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Functions</u></h2>
+                <div class="sub-section">
+                    <p>Javascript functions are declared using <code class="code-inline">function</code> keyword.</p>
+                    <p>Declared Functions does not end with semi-colon. If function is initialized to a variable then it ends with semi-colon.</p>
+                    <p>The typeof Javascript function is function. Javascript functions has both properties and methods.</p>
+                    <p><code class="code-inline">myFunction.toString()</code> returns the function in string form.</p>
+                </div>
+                <h4><u>Function Parameters</u></h4>
+                <div class="sub-section">
+                    <ul>
+                        <li>Javascript function definitions do not specify data types for parameters.</li>
+                        <li>Javascript functions do not perform type checking on the passed arguments.</li>
+                        <li>Javascript does not check the numbered of variables passed. The missing values are set to undefined.</li>
+                    </ul>
+                    <p>Default parameters can be set like:</p>
+                    <code>function (a=2, b=2) => a * b;</code>
+                    <p>The above code takes the value of a = 2 and b = 2 if parameter value of any of it is not declared.</p>
+                    <p>The keyword <code class="code-inline">arguments</code> can be used to loop through all the arguments of the function.</p>
+                </div>
+                <h4><u>Function Invocation</u></h4>
+                <div class="sub-section">
+                    <p>Function constructor <code class="code-inline">var myFunction = new Function("a", "b", "a * b");</code> Use this like <code class="code-inline">var z = myFunction(4, 5);</code></p>
+                    <p>Hoisting also applies to function declarations.</p>
+                    <p>A self-invoking expression is invoked automatically, without being called. Function expressions will execute automatically if the expression is followed by (). You cannot self-invoke a function declaration.</p>
+                    <code>(function &#123; console.log("Hello"); &#125;)();</code>
+                </div>
+                <h4><u>Function call()</u></h4>
+                <div class="sub-section">
+                    <ul>
+                        <li><p>The <code class="code-inline">call()</code> method is used for an object that can use a method belonging to another object.</p></li>
+                        &nbsp;&nbsp;<code>var person = &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>fullName: function() &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code><b>return this.firstName + " " + this.lastName;</b></code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>var person1 = &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>firstName:"John",</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>lastName: "Doe"</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>person.fullName.<b>call(person1)</b>;   <code style="color:green; font-size: 1em;">//returns "John Doe"</code></code><br>
+                    </ul>
+                    <ul>
+                        <li><p>Parameters can also be added in the call function</p></li>
+                        &nbsp;&nbsp;<code>var person = &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>fullName: function(city, country) &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code><b>return this.firstName + " " + this.lastName + ", " + city + ", " + country;</b></code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>var person1 = &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>firstName:"John",</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>lastName: "Doe"</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>person.fullName.<b>call(person1, "Oslo", "Norway")</b>;   <code style="color:green; font-size: 1em;">//returns "John Doe, Oslo, Norway"</code></code><br>
+                    </ul>
+                </div>
+                <h4><u>Function apply()</u></h4>
+                <div class="sub-section">
+                    <ul>
+                        <li><code class="code-inline">apply()</code> method works similar to <code class="code-inline">call()</code> method. The only difference is apply() method taked paramters in form of array and call() method take them seperately.</li>
+                        &nbsp;&nbsp;<code>var person = &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>fullName: function(city, country) &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code><b>return this.firstName + " " + this.lastName + ", " + city + ", " + country;</b></code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>var person1 = &#123;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>firstName:"John",</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>lastName: "Doe"</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>person.fullName.<b>apply(person1, <u>["Oslo", "Norway"]</u>)</b>;   <code style="color:green; font-size: 1em;">//returns "John Doe, Oslo, Norway"</code></code><br>
+                    </ul>
+                </div>
+                <h4><u>Javascript Closures</u></h4>
+                <div class="sub-section">
+                    
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="new-keyword">
+            <div class="section-content">
+                <h2 class="section-title"><u><i>new</i> operator and Constructor functions</u></h2>
+                <h4><u>User defined types</u></h4>
+                <h4><u>Function called with <i>new</i> keyword</u></h4>
+                <h4><u>Object without a class</u></h4>
+                <h4><u>Constructor function assigned to a variable</u></h4>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="functional-programming">
+            <div class="section-content">
+                <h2 class="section-title"><u>Functional Programming</u></h2>
+                <h4><u>Pure functions</u></h4>
+                <div class="sub-section">
+                    <p>Pure functions are the foundation of functional programming.</p>
+                    <p>Pure functions has 2 characteristics:</p>
+                    <ul>
+                        <li>Same inputs <u>always</u> give the same outputs.</li>
+                        <li>Does No side-effects like</li>
+                        <ul>
+                            <li>Mutating the input</li>
+                            <li>console.log</li>
+                            <li>HTTP calls (AJAX/fetch)</li>
+                            <li>Changing of the file system</li>
+                            <li>Querying the DOM</li>
+                        </ul>
+                    </ul>
+                    <p>Pure functions does nothing rather than producing a return value by doing some calculations. It does not update another variable, mutate state, make http calls or query the DOM.</p>
+                    <p>An application that uses more pure functions is easier to reason about, easier to unit test, can be memoized and can be parrallelised.</p>
+                </div>
+                <h4><u>Function Composition</u></h4>
+                <div class="sub-section">
+                    <p>Function Composition is a way to combine two or more functions to produce a new function. Like <code class="code-inline">f(g(x))</code></p>
+                </div>
+                <h4><u>Function currying</u></h4>
+                <div class="sub-section">
+                    <b>DONOT UNDERSTAND CURRYING WELL</b>
+                </div>
+                <h4><u>High order functions</u></h4>
+                <div class="sub-section">
+
+                </div>
+                <h4><u>.map()</u></h4>
+                <div class="sub-section">
+                    <p>With an example use <code class="code-inline">.map()</code> function.</p>
+                    <code>var officers = [</code><br>
+                    &nbsp;&nbsp;<code>&#123; id: 20, name: 'Captain Piett' &#125;,</code><br>
+                    &nbsp;&nbsp;<code>&#123; id: 24, name: 'General Veers' &#125;,</code><br>
+                    &nbsp;&nbsp;<code>&#123; id: 56, name: 'Admiral Ozzel' &#125;,</code><br>
+                    &nbsp;&nbsp;<code>&#123; id: 88, name: 'Commander Jerjerrod' &#125;</code><br>
+                    <code>];</code><br>
+                    <p>To get only the ids of the above array .map() function is most useful.</p>
+                    <code>var officersIds = officers.map(function (officer) &#123;</code><br>
+                    &nbsp;&nbsp;<code>return officer.id</code><br>
+                    <code>&#125;);</code><br>
+                    <p>Shortcut for the above code in Typescript and ES6:</p>
+                    <code>const officersIds = officers.map(officer => officer.id);</code>
+                    <p>Basically is takes 2 arguments, a callback and an optional context (will be considered as this in the callback). The callback runs for each value in the array and returns each new value in the resulting array.</p>
+                </div>
+                <h4><u>.reduce()</u></h4>
+                <div class="sub-section">
+
+                </div>
+                <h4><u>.filter()</u></h4>
+                <div class="sub-section">
+                    <p>.reduce() also runs a callback for each element of an array. What’s different here is that reduce passes the result of this callback (the accumulator) from one array element to the other.</p>
+                    <p>The accumulator can be pretty much anything (integer, string, object, etc.) and must be instantiated or passed when calling .reduce().</p>
+                    
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="asynchronous-javascript">
+            <div class="section-content">
+                <h2 class="section-title"><u>Asynchronous Javascript</u></h2>
+                <p>Javascript runs asynchronously. It does not wait for responses.</p>
+                <h4><u>Callbacks</u></h4>
+                <div class="sub-section">
+                    <p>Callbacks are not necessarily asynchronous. They can be synchronous.</p>
+                    <p>Callbacks are used to execute a piece of code dependant on the completion of another piece of code.</p>
+                    <p>More than two Nested Callbacks are not too good.</p>
+                    <p>Example/Practice version is available <a href="https://codepen.io/nishthaPatel/pen/WNQKWMP?editors=0011" target="blank">here</a> for callbacks</p>
+                </div>
+                <h4><u>Promises</u></h4>
+                <div class="sub-section">
+                    <p>A promise returns a result of asynchronous operation or failure of an asynchronous operation.</p>
+                    <p>Example/Practice version is available <a href="https://codepen.io/nishthaPatel/pen/QWjBXLp?editors=0012" target="blank">here</a> for promises</p>
+                    <p><b>Pay attention to:</b></p>
+                    <ul>
+                        <li>How to create a new promise ?</li>
+                        <li>How to get success result ?</li>
+                        <li>How to get failure error ?</li>
+                    </ul>
+                    <p>Practice using multiple promises <a href="https://codepen.io/nishthaPatel/pen/jObpjaY?editors=0012">here</a></p>
+                </div>
+                <h4><u>Async Await</u></h4>
+                <div class="sub-section">
+                    
+                </div>
+                <h4><u>Event loop</u></h4>
+                <h4><u>Asynchronous</u></h4>
+                <h4><u>Single Threaded</u></h4>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="es6-javascript">
+            <div class="section-content">
+                <h2 class="section-title"><u>ES6 Javascript</u></h2>
+                <h4><u>var, let and const</u></h4>
+                <h4><u>Arrow functions</u></h4>
+                <div class="sub-section">
+                    <p>The <code class="code-inline">function</code> and <code class="code-inline">return</code> keywords and the curly brackets <code class="code-inline">&#123;&#125;</code> are not necessary.</p>
+                    <code>hello = (name) =>  "Hello "+ name;</code>
+                    <p class="note">NOTE: return keyword and curly brackets are required if function has more than one statement.</p>
+                    <p>Arrow functions do not have their own <code class="code-inline">this</code>. They are not well suited for defining object methods. Arrow functions are not hoisted. They must be defined before they are used. Using const is safer than using var, because a function expression is always constant value.</p>
+                </div>
+                <h4><u>Template literals</u></h4>
+                <h4><u>Default parameters</u></h4>
+                <h4><u>Object Literals</u></h4>
+                <h4><u>Rest and Spread Operators</u></h4>
+                <h4><u>Destructuring Assignment</u></h4>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

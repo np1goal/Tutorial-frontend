@@ -1,0 +1,21 @@
+<div id="navigation-bar">
+    <button id="logo" mat-raised-button routerLink="../">Nishtha's Tutorial</button>
+    <div id="navigation-buttons">
+        <button id="notes-list" mat-button [matMenuTriggerFor]="menu">Notes</button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="../html-tutorial">HTML</button>
+            <button mat-menu-item routerLink="../css-tutorial">CSS</button>
+            <button mat-menu-item routerLink="../scss-sass-tutorial">SCSS / SASS</button>
+            <button mat-menu-item routerLink="../javascript-tutorial">Javascript</button>
+            <button mat-menu-item routerLink="../jsbom-tutorial">Javascript BOM</button>
+            <button mat-menu-item routerLink="../jsdom-tutorial">Javascript DOM</button>
+            <button mat-menu-item routerLink="../jsjson-tutorial">Javascript JSON</button>
+            <button mat-menu-item routerLink="../ajax-tutorial">Ajax</button>
+            <button mat-menu-item routerLink="../jquery-tutorial">jQuery</button>
+            <button mat-menu-item routerLink="../angular8-tutorial">Angular 8</button>
+            <button mat-menu-item routerLink="../nodejs-tutorial">Node.js</button>
+            <button mat-menu-item routerLink="../threejs-tutorial">Three.js</button>
+        </mat-menu>
+        <button id="quiz-button" mat-raised-button routerLink="../quiz">Quiz</button>
+    </div>
+</div>

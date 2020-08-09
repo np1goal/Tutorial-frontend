@@ -1,0 +1,214 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="scss-sass-tutorial/#variables"><span class="button-text">Variables</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#nesting"><span class="button-text">Nesting</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#import"><span class="button-text">@import</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#mixin"><span class="button-text">@mixin</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#extend"><span class="button-text">@extend</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#string-functions"><span class="button-text">String Functions</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#numeric-functions"><span class="button-text">Numeric Functions</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#list-functions"><span class="button-text">List Functions</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#map-functions"><span class="button-text">Map Functions</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#introspection-functions"><span class="button-text">Introspection Functions</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#color-functions"><span class="button-text">Color Functions</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#maps"><span class="button-text">Maps</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">&nbsp;SCSS / SASS</h1>
+        <hr>
+
+        <div class="section-body" id="variables">
+            <div class="section-content">
+                <h2 class="section-title"><u>Variables</u></h2>
+                <p>SASS stores values of strings, numbers, colors, booleans, lists and nulls in Variables.</p>
+                <p> Variables can be created using $ before the variable.</p>
+                <p>For Example, <code>$primary-color: #230978;</code></p>
+                <p>Used as, <code>background-color: $primary-color;</code></p>
+                <p>Sass variables can be overriden.</p>
+                <p>Sass variables are only available at the level of nesting.</p>
+                <p>The variable can be oveeriden globally by using <code class="code-inline">!global</code></p>
+                <p>Like, <code>$myColor: green !global;</code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="nesting">
+            <div class="section-content">
+                <h2 class="section-title"><u>Nesting</u></h2>
+                <p>Sass allows to nest CSS selectors</p>
+                <p><code>
+                    nav &#123;<br>
+                    &nbsp;&nbsp;ul &#123;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;list-style: none;<br>
+                    &nbsp;&nbsp;&#125;<br>
+                    &nbsp;&nbsp;li &#123;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br>
+                    &nbsp;&nbsp;&#125;<br>
+                    &#125;<br>
+                </code></p>
+                <p>Sass can also have nested properties</p>
+                <p><code>
+                    font: &#123;<br>
+                    &nbsp;&nbsp;family: Helvetica, sans-serif;<br>
+                    &nbsp;&nbsp;size: 18px;<br>
+                    &nbsp;&nbsp;weight: bold;<br>
+                    &#125;<br>
+                </code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="import">
+            <div class="section-content">
+                <h2 class="section-title"><u>@import</u></h2>
+                <p>@import statement allows to import one file to another.</p>
+                <p class="note">NOTE: CSS @import directive has a major drawback due to performance issues; it creates an extra HTTP request each time you call it. However, the Sass @import directive includes the file in the CSS; so no extra HTTP call is required at runtime.</p>
+
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="mixin">
+            <div class="section-content">
+                <h2 class="section-title"><u>@mixin</u></h2>
+                <p>The <code>@mixin</code> directive lets you create CSS code that is to be reused throughout the website.</p>
+                <p>The <code>@include</code> directive is created to let you use the mixin.</p>
+                <p><code>
+                    @mixin name &#123;<br>
+                    &nbsp;&nbsp;property: value;<br>
+                    &nbsp;&nbsp;property: value;<br>
+                    &nbsp;&nbsp;...<br>
+                      &#125;
+                </code></p>
+                <p><code>
+                    selector &#123;<br>
+                    &nbsp;&nbsp;@include mixin-name;<br>
+                    &#125;
+                </code></p>
+                <h4><u>Passing Variables in Mixin</u></h4>
+                <p>Mixin also accepts variables</p>
+                <p><code>
+                    @mixin bordered($color, $width) &#123;<br>
+                    &nbsp;&nbsp;border: $width solid $color;<br>
+                    &#125;<br>
+                    <br>  
+                    .myArticle &#123;<br> 
+                    &nbsp;&nbsp;@include bordered(blue, 1px);  // Call mixin with two values<br>
+                    &#125;<br>
+                </code></p>
+                <h4><u>Default Values in Mixin</u></h4>
+                <p>Mixin also accepts default values for variables</p>
+                <p><code>
+                    @mixin bordered($color: blue, $width: 1px) &#123;<br>
+                    &nbsp;&nbsp;border: $width solid $color;<br>
+                    &#125;<br>
+                    <br>  
+                    .myTips &#123;<br>
+                    &nbsp;&nbsp;@include bordered($color: orange);<br>
+                    &#125;<br>
+                </code></p>
+                <h4><u>Mixin can also be used for Vendor Prefixes</u></h4>
+                <p>Another good use of mixin is for vendor prefixes.</p>
+                <p><code>
+                    @mixin transform($property) &#123;<br>
+                    &nbsp;&nbsp;-webkit-transform: $property;<br>
+                    &nbsp;&nbsp;-ms-transform: $property;<br>
+                    &nbsp;&nbsp;transform: $property;<br>
+                    &#125;<br>
+                    <br>  
+                    .myBox &#123;<br>
+                    &nbsp;&nbsp;@include transform(rotate(20deg));<br>
+                    &#125;
+                </code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="extend">
+            <div class="section-content">
+                <h2 class="section-title"><u>@extend</u></h2>
+                <p>The <code>@extend</code> directive is used to share a set of properties from one selector to another.</p>
+                <p><code>
+                    .button-basic &#123;<br>
+                    &nbsp;&nbsp;border: none;<br>
+                    &nbsp;&nbsp;padding: 15px 30px;<br>
+                    &nbsp;&nbsp;text-align: center;<br>
+                    &nbsp;&nbsp;font-size: 16px;<br>
+                    &nbsp;&nbsp;cursor: pointer;<br>
+                    &#125;<br>
+                    <br>
+                    .button-report  &#123;<br>
+                    &nbsp;&nbsp;@extend .button-basic;<br>
+                    &nbsp;&nbsp;background-color: red;<br>
+                    &#125;<br>
+                </code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="parent-selector">
+            <div class="section-content">
+                <h2 class="section-title"><u>Parent Selector</u></h2>
+                <p>&amp; is a special character used in nesting to refer to parent selector.</p>
+            </div>
+        </div>
+        <hr>
+
+
+        <div class="section-body" id="string-functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>String functions</u></h2>
+               
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="numeric-functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Numeric functions</u></h2>
+               
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="list-functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>List functions</u></h2>
+               
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="map-functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Map functions</u></h2>
+                <p>An array of maps can also be created in SCSS. For Example, </p>
+                <code>$font-weights: ("regular": 400, "medium": 500, "bold": 700);</code>
+                <p>This is can be used as <code>font-weight: map-get($font-weights, bold);</code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="introspection-functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Introspection Functions</u></h2>
+                
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="color-functions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Color Functions</u></h2>
+                
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

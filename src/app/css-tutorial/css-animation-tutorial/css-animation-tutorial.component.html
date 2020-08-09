@@ -1,0 +1,118 @@
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="css-animation-tutorial"><span class="button-text">Home</span></a>
+        <a class="nav-link" href="css-tutorial#tranforms"><span class="button-text">Transforms</span></a>
+        <a class="nav-link" href="css-tutorial#transitions"><span class="button-text">Transitions</span></a>
+        <a class="nav-link" href="css-tutorial#keyframes"><span class="button-text">Keyframes</span></a>
+        <a class="nav-link" href="css-tutorial#fill-mode"><span class="button-text">Fill Mode</span></a>
+        <a class="nav-link" href="css-tutorial#repeating-animations"><span class="button-text">Repeating animations</span></a>
+        <a class="nav-link" href="css-tutorial#direction"><span class="button-text">Direction</span></a>
+        <a class="nav-link" href="css-tutorial#shorthand"><span class="button-text">Shorthand</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">&nbsp;CSS Animations</h1>
+        <hr>
+
+        <div class="section-body" id="transforms">
+            <div class="section-content">
+                <h2 class="section-title"><u>Transforms</u></h2>
+                <p>Transform is used to move, rotate, scale and skew elements.</p>
+                <p><code>translate()</code>, <code>translateX()</code>, <code>translateY()</code> moves the element in x and y direction. +ve is forward, -ve is backward.</p>
+                <p><code>scale()</code>, <code>scaleX()</code>, <code>scaleY()</code> changes width and height of the element in x and y direction. >1 is increase, &lt;1 is decrease.</p>
+                <p><code>rotate()</code> rotates the element. +deg is forward rotate, -deg is backward rotate.</p>
+                <p><code>skew()</code>, <code>skewX()</code>, <code>skewY()</code> slants the element with respect to width and height direction.</p>
+                <p><code>matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())</code> combines all the 2D transform methods into one.</p>
+                <span class="note">NOTE: More than one transform functions can be used at a time.</span>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="transitions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Transitions</u></h2>
+                <p>Transition allows to change property values smoothly in a duration time.</p>
+                <p><code>transition: width 1s</code> changes the property width in 1sec</p>
+                <span class="note">NOTE: More than one property can be added.</span>
+                <p><code>transition-timing-function</code> property specifies the speed curve of transition effect</p>
+                <ul>
+                    <li><code>linear</code> same speed from start to end</li>
+                    <li><code>ease</code> slow start, then fast and end slowly</li>
+                    <li><code>ease-in</code> slow start</li>
+                    <li><code>ease-out</code> slow end</li>
+                    <li><code>ease-in-out</code> slow start, slow end</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="keyframes">
+            <div class="section-content">
+                <h2 class="section-title"><u>Keyframes</u></h2>
+                <p>Key frames decides the change in time frame</p>
+                <p> <code>@keyframes drive &#123; </code><br>
+                    <code>&nbsp;&nbsp;from &#123; transform: translateX(0px); &#125;</code><br>
+                    <code>&nbsp;&nbsp;to &#123; transform: translateX(200px); &#125;</code><br>
+                    <code>&#125;</code><br>
+                    <code>.element &#123; </code><br>
+                    <code>&nbsp;&nbsp; animation: drive 2s;</code><br>
+                    <code>&#125;</code><br>
+                </p>
+                <p>Element drives 200px from 0px.</p>
+                <p>Instead of <code>from</code> and <code>to</code> percentages can also be used like <code>0%</code>, <code>25%</code>, <code>75%</code> and <code>100%</code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="fill-mode">
+            <div class="section-content">
+                <h2 class="section-title"><u>Fill mode</u></h2>
+                <p><code>animation-fill-mode:</code> property that specifies a style of an element when the animation is not playing.</p>
+                <ul>
+                    <li>forwards: element will retain the value of last keyframe</li>
+                    <li>backwards: element will start with the value of first keyframe</li>
+                    <li>both: element will retain the value of both keyframe</li>
+                    <li>initial: element sets property to default value</li>
+                    <li>inherit: element inherits parent property</li>
+                </ul>
+                <p><code>animation-delay: 2s</code> delays the animation for 2 sec.</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="repeating-animations">
+            <div class="section-content">
+                <h2 class="section-title"><u>Repeating animations</u></h2>
+                <p><code>animation-iteration-count:</code> the value can be between 1 to infinite</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="direction">
+            <div class="section-content">
+                <h2 class="section-title"><u>Direction</u></h2>
+                <p><code>animation-direction: </code> decides direction of animation</p>
+                <ul>
+                    <li>normal: normal animation</li>
+                    <li>reverse: reverse animation</li>
+                    <li>alternate: normal first, reverse later</li>
+                    <li>alternate-reverse: reverse first, normal later</li>
+                    <li>initial: initial value</li>
+                    <li>inherit: inherits parent animation</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="shorthand">
+            <div class="section-content">
+                <h2 class="section-title"><u>Shorthand</u></h2>
+                <p><code>animation: (keyframe-name/property) (animation-duration) (animation-timing-function) (animation-iteration-count) (aniamtion-direction)</code></p>
+                <span class="note">NOTE: More than one animation can be added by using comma ','</span>
+                <p></p>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,784 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="css-tutorial"><span class="button-text">Home</span></a>
+        <a class="nav-link" href="css-tutorial#selectors"><span class="button-text">Selectors</span></a>
+        <a class="nav-link" href="css-tutorial#color-types"><span class="button-text">Color Types</span></a>
+        <a class="nav-link" href="css-tutorial#image-urls"><span class="button-text">Image urls</span></a>
+        <a class="nav-link" href="css-tutorial#opacity-transperancy"><span class="button-text">Opacity Transperancy</span></a>
+        <a class="nav-link" href="css-tutorial#gradients"><span class="button-text">Gradients</span></a>
+        <a class="nav-link" href="css-tutorial#units"><span class="button-text">Units</span></a>
+        <a class="nav-link" href="css-tutorial#text-manipulation"><span class="button-text">Text Manipulation</span></a>
+        <a class="nav-link" href="css-tutorial#font-styles"><span class="button-text">Font Styles</span></a>
+        <a class="nav-link" href="css-tutorial#box-model"><span class="button-text">Box Model</span></a>
+        <a class="nav-link" href="css-tutorial#borders"><span class="button-text">Borders</span></a>
+        <a class="nav-link" href="css-tutorial#margin-padding"><span class="button-text">Margin vs Padding</span></a>
+        <a class="nav-link" href="css-tutorial#display-types"><span class="button-text">Display Types</span></a>
+        <a class="nav-link" href="css-tutorial#flex-box"><span class="button-text">Flex Box</span></a>
+        <a class="nav-link" href="css-tutorial#flex-grid"><span class="button-text">Flex Grid</span></a>
+        <a class="nav-link" href="css-tutorial#grid"><span class="button-text">Grid</span></a>
+        <a class="nav-link" href="css-tutorial#animations"><span class="button-text">Animations</span></a>
+        <a class="nav-link" href="css-tutorial#questions"><span class="button-text">Questions</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">&nbsp;CSS</h1>
+        <hr>
+
+        <div class="section-body" id="selectors">
+            <div class="section-content">
+                <h2 class="section-title"><u>Selectors</u></h2>
+                <h4><u>Basic Selectors</u></h4>
+                <ol>
+                    <li> Element selector: Selected and styled by element names</li>
+                        <article>&nbsp;&nbsp;&nbsp;&nbsp;This is first article of element selector. Styled by using article.</article><br>
+                        <article>&nbsp;&nbsp;&nbsp;&nbsp;This is second article of element selector. Styled by using article.</article><br>
+                        <article>&nbsp;&nbsp;&nbsp;&nbsp;This is third article of element selector. Styled by using article.</article><br><br>
+                    <li> Class selector: Selected and styled by class names </li>
+                        <div class="class-selector">&nbsp;&nbsp;&nbsp;&nbsp;The class name of this div 1 is class-selector</div>
+                        <div class="class-selector">&nbsp;&nbsp;&nbsp;&nbsp;The class name of this div 2 is class-selector</div><br>
+                    <li> Id selector: Selcted and styled by id names </li>
+                        <div id="id-selector-1">&nbsp;&nbsp;&nbsp;&nbsp;The id name of this div 1 is id-selector-1</div>
+                        <div id="id-selector-2">&nbsp;&nbsp;&nbsp;&nbsp;The id name of this div 2 is id-selector-2</div><br>
+                </ol>
+                <span class="note">NOTE: Priority of selectors - id > class > element</span>
+                <h4><u>Pseudo Selectors</u></h4>
+                <table border cellspacing=10 cellpadding=10 style="border: solid;">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>:active</td>
+                        <td>a:active</td>
+                        <td>Selects active link.</td>
+                    </tr>
+                    <tr>
+                        <td>::after</td>
+                        <td>p::after</td>
+                        <td>Inserts something after the content of each p element.</td>
+                    </tr>
+                    <tr>
+                        <td>::before</td>
+                        <td>p::before</td>
+                        <td>Inserts something before the content of each p element.</td>
+                    </tr>
+                    <tr>
+                        <td>:checked</td>
+                        <td>input:checked</td>
+                        <td>Selects every checked input element.</td>
+                    </tr>
+                    <tr>
+                        <td>:default</td>
+                        <td>input:default</td>
+                        <td>Selects the default input element.</td>
+                    </tr>
+                    <tr>
+                        <td>:disabled</td>
+                        <td>input:disabled</td>
+                        <td>Selects every disabled input element.</td>
+                    </tr>
+                    <tr>
+                        <td>:empty</td>
+                        <td>p:empty</td>
+                        <td>Selects every p element that has no children.</td>
+                    </tr>
+                    <tr>
+                        <td>:enabled</td>
+                        <td>input:enabled</td>
+                        <td>Selects every enabled input element.</td>
+                    </tr>
+                    <tr>
+                        <td>:first-child</td>
+                        <td>p:first-child</td>
+                        <td>Selects every p element that is the first child of the parent.</td>
+                    </tr>
+                    <tr>
+                        <td>::first-letter</td>
+                        <td>p::first-letter</td>
+                        <td>Selects first letter of every p element.</td>
+                    </tr>
+                    <tr>
+                        <td>::first-line</td>
+                        <td>p::first-line</td>
+                        <td>Selects first line of every p element.</td>
+                    </tr>
+                    <tr>
+                        <td>:first-of-type</td>
+                        <td>p:first-of-type</td>
+                        <td>Selects every p element that is the first p element of its parent.</td>
+                    </tr>
+                    <tr>
+                        <td>:focus</td>
+                        <td>input:focus</td>
+                        <td>Selects input element which has focus.</td>
+                    </tr>
+                    <tr>
+                        <td>:hover</td>
+                        <td>a:hover</td>
+                        <td>Selects link on mouseover.</td>
+                    </tr>
+                    <tr>
+                            <td>:in-range</td>
+                            <td>input::in-range</td>
+                            <td>Selects input elements with a value within a specified range.</td>
+                        </tr>
+                        <tr>
+                            <td>:indeterminant</td>
+                            <td>input:indeterminant</td>
+                            <td>Selects input elements that are in indeterminant state.</td>
+                        </tr>
+                        <tr>
+                            <td>:invalid</td>
+                            <td>input:invalid</td>
+                            <td>Selects all input elements with invalid value.</td>
+                        </tr>
+                        <tr>
+                            <td>:lang(language)</td>
+                            <td>p:lang(it)</td>
+                            <td>Selects every p element with lang attribute equal to it (Italian).</td>
+                        </tr>
+                        <tr>
+                            <td>:last-child</td>
+                            <td>p:last-child</td>
+                            <td>Selects every p element that is last of parent.</td>
+                        </tr>
+                        <tr>
+                            <td>:last-of-type</td>
+                            <td>p:last-of-type</td>
+                            <td>Selects every p element that is last p element of its parent.</td>
+                        </tr>
+                        <tr>
+                            <td>:link</td>
+                            <td>a:link</td>
+                            <td>Selects all unvisited link.</td>
+                        </tr>
+                        <tr>
+                            <td>:not(selector)</td>
+                            <td>:not(p)</td>
+                            <td>Selects every element that is not p element.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-child(n)</td>
+                            <td>p:nth-child(2)</td>
+                            <td>Selects every p element that is second child of parents.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-child(n)</td>
+                            <td>p:nth-last-child(2)</td>
+                            <td>Selects second last Child element of the p element.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-of-type(n)</td>
+                            <td>p:nth-last-of-type(2)</td>
+                            <td>Selects second last p element of the parent element.</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-of-type(n)</td>
+                            <td>p:nth-of-type(2)</td>
+                            <td>Selects every p element that is second last p element of its parent.</td>
+                        </tr>
+                        <tr>
+                            <td>:only-of-type</td>
+                            <td>p:only-of-type</td>
+                            <td>Selects every p element that is the only p element of the parent.</td>
+                        </tr>
+                        <tr>
+                            <td>:only-child</td>
+                            <td>p:only-child</td>
+                            <td>Selects every p element that is the only child of the parent.</td>
+                        </tr>
+                        <tr>
+                            <td>:optional</td>
+                            <td>input:optional</td>
+                            <td>Selects input elements NOT with "required" attribute.</td>
+                        </tr>
+                        <tr>
+                            <td>:out-of-range</td>
+                            <td>input:out-of-range</td>
+                            <td>Selects input elements with a value outside a specific range.</td>
+                        </tr>
+                        <tr>
+                            <td>::placeholder</td>
+                            <td>input::placeholder</td>
+                            <td>Selects input element with "placeholder" attribute specified.</td>
+                        </tr>
+                        <tr>
+                            <td>:read-only</td>
+                            <td>input:read-only</td>
+                            <td>Selects input element with "readonly" attribute specified.</td>
+                        </tr>
+                        <tr>
+                            <td>:read-write</td>
+                            <td>input:read-write</td>
+                            <td>Selects input element NOT with "readonly" attribute specified.</td>
+                        </tr>
+                        <tr>
+                            <td>:required</td>
+                            <td>input:required</td>
+                            <td>Selects input element with "required" attribute specified.</td>
+                        </tr>
+                        <tr>
+                            <td>:root</td>
+                            <td>:root</td>
+                            <td>Selects document's root element.</td>
+                        </tr>
+                        <tr>
+                            <td>::selection</td>
+                            <td>::selection</td>
+                            <td>Selects portion of element that is selected by user.</td>
+                        </tr>
+                        <tr>
+                            <td>:target</td>
+                            <td>#news:target</td>
+                            <td>Selects the current active #news element (clicked on a URL containing that anchor name).</td>
+                        </tr>
+                        <tr>
+                            <td>:valid</td>
+                            <td>input:valid</td>
+                            <td>Selects all input elements with a valid value.</td>
+                        </tr>
+                        <tr>
+                            <td>:visited</td>
+                            <td>a:visited</td>
+                            <td>Selects all visited links.</td>
+                        </tr>
+                </table>
+                <h4><u>Advanced Selectors</u></h4>
+                <table border cellspacing=10 cellpadding=10 style="border: solid;">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>.class1.class2</td>
+                        <td>.name1.name2</td>
+                        <td>Selects all elements with both name1 and name2 within its class attributes.</td>
+                    </tr>
+                    <tr>
+                        <td>.class1 .class2</td>
+                        <td>.name1 .name2</td>
+                        <td>Selects all elements with name2 that is descendant of name1.</td>
+                    </tr>
+                    <tr>
+                        <td>element.class</td>
+                        <td>p.intro</td>
+                        <td>Selects all p elements with class="intro"</td>
+                    </tr>
+                    <tr>
+                        <td>element1, element2</td>
+                        <td>div, p</td>
+                        <td>Selects all div and p elements</td>
+                    </tr>
+                    <tr>
+                        <td>element1 element2</td>
+                        <td>div p</td>
+                        <td>Selects all p elements in all div elements.</td>
+                    </tr>
+                    <tr>
+                        <td>element1 > element2</td>
+                        <td>div > p</td>
+                        <td>Selects all p elements where parent is div element.</td>
+                    </tr>
+                    <tr>
+                        <td>element1 + element2</td>
+                        <td>div + p</td>
+                        <td>Selects all p elements that are placed immediately after div elements.</td>
+                    </tr>
+                    <tr>
+                        <td>element1 ~ element2</td>
+                        <td>ul ~ p</td>
+                        <td>Selects all ul elements that are preceded by p elements.</td>
+                    </tr>
+                </table>
+
+                <h4><u>Attribute Selectors</u></h4>
+                <table border cellspacing=10 cellpadding=10 style="border: solid;">
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>[attribute]</td>
+                        <td>[target]</td>
+                        <td>Selects all elements with target attribute</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute=value]</td>
+                        <td>[target=_blank]</td>
+                        <td>Selects all elements with target=_blank</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute~=value]</td>
+                        <td>[title~=flower]</td>
+                        <td>Selects all elements with a title attribute containing the word "flower"</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute|=value]</td>
+                        <td>[lang|=en]</td>
+                        <td>Selects all elements with a lang attribute value starting with "en"</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute^=value]</td>
+                        <td>a[href^="https"]</td>
+                        <td>Selects every a element whose href attribute value starts with "href"</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute$=value]</td>
+                        <td>a[href$=".pdf"]</td>
+                        <td>Selects every a element whose href attribute value ends with ".pdf"</td>
+                    </tr>
+                    <tr>
+                        <td>[attribute*=value]</td>
+                        <td>a[href*="w3schools"]</td>
+                        <td>Selects every a element whose href attribute value contains a substring of "w3schools"</td>
+                    </tr>
+                </table>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="color-types">
+            <div class="section-content">
+                <h2 class="section-title"><u>Types of colors</u></h2>
+                <p id="hex-color">Use hex #rrbbgg for color (0 - 9 to A - F)</p>
+                <p id="rgb-color">Use rgb(rrr, ggg, bbb) for color (0 - 255)</p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="image-urls">
+            <div class="section-content">
+                <h2 class="section-title"><u>Image urls</u></h2>
+                <div id="image-urls-content"> 
+                        <p>This is background.</p>
+                        <p>The background-repeat is set to no-repeat.</p>
+                        <p>The background-size is set to 30vw 40vh.</p>
+                </div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="opacity-transperancy">
+            <div class="section-content">
+                <h2 class="section-title"><u>Opacity / Transperancy</u></h2>
+                <div id="opacity-transperancy-content">
+                    <p>Opacity or alpha in rgba can go from 0 (no visibility) to 1 (visibility).</p>
+                </div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="gradients">
+            <div class="section-content">
+                <h2 class="section-title"><u>Gradients</u></h2>
+                <div id="linear-gradient-1"><p>linear-background(to right, green, blue 80%)</p></div>
+                <div id="linear-gradient-2"><p>linear-background(200deg, green 20%, blue)</p></div>
+                <div id="radial-gradient-1"><p>radial-gradient(red 20%, blue 40%, green 55%)</p></div>
+                <div id="radial-gradient-2"><p>radial-gradient(circle, red 20%, blue 40%, green 55%)</p></div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="units">
+            <div class="section-content">
+                <h2 class="section-title"><u>Units</u></h2>
+                <h4><u>Absolute units</u></h4>
+                <ul>
+                    <li id="unit-pixels">This is 13px.</li>
+                    <li id="unit-points">This is 13pt. 1pt ~ 1.3 px</li>
+                    <li id="unit-pc">This is 2pc. 1pc = 12 pt, ~ 16px</li>
+                </ul>
+
+                <h4><u>Relative units</u></h4>
+                <ul>
+                    <li id="unit-percent">This is 100%, which almost regular size. It can be more than 100%</li>
+                    <li id="unit-em">This is 2em, Double the regular size</li>
+                    <li id="unit-vh-vw">View-width (vw) and View-height (vh) is another unit.</li>
+                </ul>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="text-manipulation">
+            <div class="section-content">
+                <h2 class="section-title"><u>Text manipulation</u></h2>
+                <p id="text-decoration-none">text-decoration: none</p>
+                <p id="text-decoration-line-through">text-decoration: line-through</p>
+                <p id="text-decoration-underline">text-decoration: underline</p>
+                <p id="text-decoration-overline">text-decoration: overline</p>
+                <p id="text-transform-uppercase">text-transform: uppercase</p>
+                <p id="text-transform-lowercase">text-transform: lowercase</p>
+                <p id="text-transform-capitalize">text-transform: capitalize ---> First letter of every word is capitalized</p>
+                <p id="text-align-center">text-align: center</p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="font-styles">
+            <div class="section-content">
+                <h2 class="section-title"><u>Font styles</u></h2>
+                <p id="font-size">font-size: 1.25em</p>
+                <p id="font-weight">font-weight: 400 ----> (Bolding; 100 to 800)</p>
+                <p id="font-style">font-style: normal, italic, oblique</p>
+                <p id="font-family">font-family: "Time New Roman", serif</p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="box-model">
+            <div class="section-content">
+                <h2 class="section-title"><u>Box Model</u></h2>
+                <div id="border-container">
+                    <div id="border-content">This text is the content. Green is padding, space between border and content. Blue is border. Red is margin, external space.</div>
+                </div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="borders">
+            <div class="section-content">
+                <h2 class="section-title"><u>Borders</u></h2>
+                <p id="border-shorthand">This is shorthand -- border: width style color</p>
+                <p id="border-width">Only width -- border-width: width</p>
+                <p id="border-color">Only color -- border-color: color</p>
+                <h4><u>Border styles</u></h4>
+                <p id="border-style-solid">border-style: solid</p>
+                <p id="border-style-dotted">border-style: dotted</p>
+                <p id="border-style-dashed">border-style: dashed</p>
+                <p id="border-style-double">border-style: double</p>
+                <p id="border-style-groove">border-style: groove</p>
+                <p id="border-style-ridge">border-style: ridge</p>
+                <p id="border-style-inset">border-style: inset</p>
+                <p id="border-style-outset">border-style: outset</p>
+                <p id="border-style-none">border-style: none - No border</p>
+                <p id="border-style-hidden">border-style: hidden - Hidden border</p>
+                <span class="note">NOTE: If border style is NOT set then other border properties will never execute.</span>
+                <p id="border">Each border can be styled differently or in one property - top right bottom left</p>
+                <p id="border-radius">Radius can be given to any border.</p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="margin-padding">
+            <div class="section-content">
+                <h2 class="section-title"><u>Margin and Padding</u></h2>
+                <h4><u>Margin</u></h4>
+                <ul>
+                    <li>margin: top right bottom left</li>
+                    <li>Margin can be set to auto for divs to make is horizontally center</li>
+                    <li>Top and bottom margins of two elements placed on top of the other, sometimes collapse into a single margin which is equal to the largest of two margins.</li>
+                </ul>
+                <h4><u>Padding</u></h4>
+                <ul>
+                    <li>padding: top right bottom left <b>OR</b></li>
+                    <li>padding: top right bottom <b>OR</b></li>
+                    <li>padding: top-bottom right-left</li>
+                </ul>
+                <span class="note">NOTE: If div has width = 200px; margin = 50px; then the actual width of the div would be 200 + 50 + 50 = 300px</span>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="display-types">
+            <div class="section-content">
+                <h2 class="section-title"><u>Display types</u></h2>
+                Default display value can be overriden. 
+                <p>display: none - Does not display</p>
+                <p>display: float - element floats on the page</p>
+                <div class="float-container">
+                    <button class="float-left-btn">float: left</button>
+                </div><br><br><br>
+                <div class="float-container">
+                    <button id="float-right-btn">float: right</button>
+                </div><br><br><br>
+                <div class="float-container">
+                    <button id="float-none-btn">float: none</button>
+                </div><br><br><br>
+                <div id="float-container-inherit">
+                    <button id="float-inherit-btn">float: inherit</button>
+                    <span>The parent of this button has float: right property, so the button inherits the property</span>
+                </div><br><br><br>
+                <div class="float-container">
+                    <button class="float-left-btn">float: left</button>
+                    <p id="clear-property">display: clear - it is used after using the float property to display something next to it.</p>
+                </div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="flex-box">
+            <div class="section-content">
+
+                <h2 class="section-title"><u>Flex box</u></h2>
+                <p>Flexible box: It is a layout module that makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+                <p>Flex box has 2 main parts: the container and the items</p>
+                <p>Container is the parent element in which the display type is active. This is usually in the form of div.</p>
+                <p>Flex items are child elements of the container, and make up the contents on the box.</p>
+                
+                <h4><u>This is flex-direction: row (stacks from left to right)</u></h4>
+                <div id="flex-container-row">
+                    <div class="flex-item-row">1</div>
+                    <div class="flex-item-row">2</div>
+                    <div class="flex-item-row">3</div>
+                    <div class="flex-item-row">4</div>
+                </div>
+
+                <h4><u>This is flex-direction: column (stacks from top to bottom)</u></h4>
+                <div id="flex-container-column">
+                    <div class="flex-item-column">1</div>
+                    <div class="flex-item-column">2</div>
+                    <div class="flex-item-column">3</div>
+                    <div class="flex-item-column">4</div>
+                </div>
+
+                <h4><u>This is flex-direction: row-reverse (stacks from right to left)</u></h4>
+                <div id="flex-container-row-reverse">
+                    <div class="flex-item-row-reverse">1</div>
+                    <div class="flex-item-row-reverse">2</div>
+                    <div class="flex-item-row-reverse">3</div>
+                    <div class="flex-item-row-reverse">4</div>
+                </div>
+
+                <h4><u>This is flex-direction: column-reverse (stacks from bottom to top)</u></h4>
+                <div id="flex-container-column-reverse">
+                    <div class="flex-item-column-reverse">1</div>
+                    <div class="flex-item-column-reverse">2</div>
+                    <div class="flex-item-column-reverse">3</div>
+                    <div class="flex-item-column-reverse">4</div>
+                </div>
+
+                <h4><u>This is flex-wrap: wrap (wraps the items)</u></h4>
+                <div id="flex-container-wrap">
+                    <div class="flex-item-row">1</div>
+                    <div class="flex-item-row">2</div>
+                    <div class="flex-item-row">3</div>
+                    <div class="flex-item-row">4</div>
+                    <div class="flex-item-row">5</div>
+                    <div class="flex-item-row">6</div>
+                    <div class="flex-item-row">7</div>
+                    <div class="flex-item-row">8</div>
+                    <div class="flex-item-row">9</div>
+                    <div class="flex-item-row">10</div>
+                    <div class="flex-item-row">11</div>
+                    <div class="flex-item-row">12</div>
+                    <div class="flex-item-row">13</div>
+                    <div class="flex-item-row">14</div>
+                    <div class="flex-item-row">15</div>
+                </div>
+
+                <p>Use flow-wrap: nowrap for not wrapping.</p>
+                <h4><u>This is flex-wrap: wrap-reverse (wraps the items in reverse)</u></h4>
+                <div id="flex-container-wrap-reverse">
+                    <div class="flex-item-row">16</div>
+                    <div class="flex-item-row">17</div>
+                    <div class="flex-item-row">18</div>
+                    <div class="flex-item-row">19</div>
+                    <div class="flex-item-row">20</div>
+                    <div class="flex-item-row">21</div>
+                    <div class="flex-item-row">22</div>
+                    <div class="flex-item-row">23</div>
+                    <div class="flex-item-row">24</div>
+                    <div class="flex-item-row">25</div>
+                    <div class="flex-item-row">26</div>
+                    <div class="flex-item-row">27</div>
+                    <div class="flex-item-row">28</div>
+                    <div class="flex-item-row">29</div>
+                    <div class="flex-item-row">30</div>
+                </div>
+                <p class="note">NOTE: shorthand for both direction and wrap -- flex-flow: (direction) (wrap)</p>
+                
+                <h4><u>Content alignment -- justify-content -- horizontal alignment</u></h4>
+                <div id="justify-content-center">
+                    <div class="justify-content-item">justify-content: center -- center of container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="justify-content-flex-start">
+                    <div class="justify-content-item">justify-content: flex-start -- start of container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="justify-content-flex-end">
+                    <div class="justify-content-item">justify-content: flex-end -- end of container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="justify-content-space-around">
+                    <div class="justify-content-item">justify-content: space-around -- space before, between and end</div>
+                    <div class="justify-content-item">justify-content: space-around -- space before, between and end</div>
+                    <div class="justify-content-item">justify-content: space-around -- space before, between and end</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="justify-content-space-between">
+                    <div class="justify-content-item">justify-content: space-between -- space between</div>
+                    <div class="justify-content-item">justify-content: space-between -- space between</div>
+                    <div class="justify-content-item">justify-content: space-between -- space between</div>
+                </div>
+
+                <h4><u>Content alignment -- align-item -- vertical alignment</u></h4>
+                <div id="align-item-center">
+                    <div class="align-item-item">align-item: center -- center of container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="align-item-flex-start">
+                    <div class="align-item-item">align-item: flex-start -- top of container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="align-item-flex-end">
+                    <div class="align-item-item">align-item: flex-end -- bottom of container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="align-item-stretch">
+                    <div class="align-item-item">align-item: stretch -- stretches the item to fill the container</div>
+                </div>
+
+                <div class="space"></div>
+                <div id="align-item-baseline">
+                    <div class="align-item-item" style="font-size:1em;">align-item: baseline -- align as baselines</div>
+                    <div class="align-item-item" style="font-size:1.5em;">align-item: baseline -- align as baselines</div>
+                    <div class="align-item-item" style="font-size:1.3em;">align-item: baseline -- align as baselines</div>
+                </div>
+
+                <h4><u>Flex item order</u></h4>
+                <div id="flex-order-container">
+                    <div style="order: 3">1; has order: 3</div>
+                    <div style="order: 2">2; has order: 2</div>
+                    <div style="order: 4">3; has order: 4</div>
+                    <div style="order: 1">4; has order: 1</div>
+                </div>
+
+                <h4><u>Flex item grow</u></h4>
+                <div id="flex-grow-container">
+                    <div style="flex-grow: 1">1; flex-grow: 1</div>
+                    <div style="flex-grow: 1">2; flex-grow: 1</div>
+                    <div style="flex-grow: 8">3; flex-grow: 8</div>
+                </div>
+
+                <h4><u>Flex item shrink</u></h4>
+                <div id="flex-shrink-container">
+                        <div>1</div>
+                        <div>2</div>
+                        <div style="flex-shrink: 0">3</div>
+                        <div>4</div>
+                        <div>5</div>
+                </div>
+
+                <h4><u>basis</u></h4>
+                <div id="flex-basis-container">
+                    <div>1</div>
+                    <div>2</div>
+                    <div style="flex-basis: 300px">3</div>
+                    <div>4</div>
+                </div>
+
+                <h4><u>The 'flex' property</u></h4>
+                <p><code>flex: flex-grow flex-shrink flex-basis</code></p>
+                <h4><u>Item alignment</u></h4>
+                <p>align-self vertically aligns in the container, align-self override align-item property</p>
+                <p><code>align-self: center</code></p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="flex-grid">
+            <div class="section-content">
+                <h2 class="section-title"><u>Flex box vs Grid</u></h2>
+                <p>Flex box Layout is in 1-dimension - it works with row or column.</p>
+                <p>Grid Layout is in both 1-dimension and 2-dimensions - it works with both row and column.</p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="grid">
+            <div class="section-content">
+                <h2 class="section-title"><u>CSS Grids</u></h2>
+                <h4><u>Display</u></h4>
+                <p><code>display: grid;</code> OR <code>display: inline-grid;</code></p>
+                <h4><u>Gaps</u></h4>
+                <p><code>grid-column-gap: column</code> - Gaps between columns</p>
+                <p><code>grid-row-gap: (row)</code> - Gaps between rows</p>
+                <p><code>grid-gap: (row) (column)</code> - Gaps between rows and columns</p>
+                <h4><u>Lines</u></h4>
+                <p><u>Templates to create rows and columns + Grid items</u></p>
+                <p>The lines between columns are called column lines and between rows are called row lines.</p>
+                <p><code>grid-column-start: 1; grid-column-end:3</code> - Add an item at column 1 and end at column 3</p>
+                <p><code>grid-column: 1/ 3</code> - Add an item at column 1 and end at column 3</p>
+                <p><code>grid-column: 2/ span 3</code> - Add an item at column 2 and span 3 columns (end at 4th column)</p>
+                <p><code>grid-row-start: 1; grid-row-end:3</code> - Add an item at row 1 and end at row 3</p>
+                <p><code>grid-row: 1/ 3</code> - Add an item at row 1 and end at row 3</p>
+                <p><code>grid-row: 2/ span 3</code> - Add an item at row 2 and span 3 rows (end at 4th row)</p>
+                <p><code>grid area: grid-row-start / grid-column-start / grid-row-end / grid-column-end</code></p>
+                <h4><u>Grid containers</u></h4>
+                <p><code>grid-template-rows:</code> Create number of rows with either size or auto</p>
+                <p><code>grid-template-columns:</code> Create number of columns with either size or auto</p>
+                <p><u>justify-content property is used to align the whole grid inside the container Horizontally.</u></p>
+                <p><code>jusity-content: space-evenly;</code> - equal amount of space between and around columns</p>
+                <p><code>jusity-content: space-around;</code> - equal amount of space around columns</p>
+                <p><code>jusity-content: space-between;</code> - equal amount of space between columns</p>
+                <p><code>jusity-content: center;</code> - in the middle of the container</p>
+                <p><code>jusity-content: start;</code> - in the start of container</p>
+                <p><code>jusity-content: end;</code> - in the end of container</p>
+                <p><u>align-content property is used to align the whole grid inside the container Vertically.</u></p>
+                <p><code>align-content: space-evenly;</code> - equal amount of space between and around rows</p>
+                <p><code>align-content: space-around;</code> - equal amount of space around rows</p>
+                <p><code>align-content: space-between;</code> - equal amount of space between rows</p>
+                <p><code>align-content: center;</code> - in the middle of the container</p>
+                <p><code>align-content: start;</code> - in the top of container</p>
+                <p><code>align-content: end;</code> - in the bottom of container</p>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="animations">
+            <div class="section-content">
+                <h2 class="section-title"><u>Animation</u></h2>
+                <a routerLink="css-animation-tutorial">CSS Animation</a>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="questions">
+            <div class="section-content">
+                <h2 class="section-title"><u>Questions</u></h2>
+                <ul>
+                <li><h4>If there are any issues in styling, what to check?</h4></li>
+                    <ul>
+                        <li>Is there any duplication of id name?</li>
+                        <li>Is there any overridding of the style?</li>
+                    </ul>
+                </ul>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

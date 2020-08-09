@@ -1,0 +1,233 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="jsdom-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="jsdom-tutorial#methods"><span class="button-text">Methods</span></a>
+        <a class="nav-link" href="jsdom-tutorial#js-document"><span class="button-text">Document</span></a>
+        <a class="nav-link" href="jsdom-tutorial#elements"><span class="button-text">Elements</span></a>
+        <a class="nav-link" href="jsdom-tutorial#animation"><span class="button-text">Animation</span></a>
+        <a class="nav-link" href="jsdom-tutorial#events"><span class="button-text">Events</span></a>
+        <a class="nav-link" href="jsdom-tutorial#event-listener"><span class="button-text">Event-Listener</span></a>
+        <a class="nav-link" href="jsdom-tutorial#navigation"><span class="button-text">Navigation</span></a>
+        <a class="nav-link" href="jsdom-tutorial#nodes"><span class="button-text">Nodes</span></a>
+        <a class="nav-link" href="jsdom-tutorial#collections"><span class="button-text">Collections</span></a>
+        <a class="nav-link" href="jsdom-tutorial#node-lists"><span class="button-text">Node-lists</span></a>
+    </div>
+    <div class="body">
+        <h1 class="subject-title">&nbsp;Javascript DOM</h1>
+        <hr>
+
+        <div class="section-body" id="introduction"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Introduction</u></h2>
+                <p>When a web page is loaded the browser creates a Document Object Model of the page. The object model lets Javascript to create dynamic HTML.</p>
+                <p>It can change HTML elements and attributes and CSS styles. It can add and remove HTML elements and attributes. It can react to HTML events in the page. It can also create new HTML events.</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="methods"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Methods</u></h2>
+                <p>HTML DOM methods are actions that can be performed. HTML DOM properties are values that can be set or changed.</p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="js-document"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Document</u></h2>
+                <h4><u>Finding HTML elements</u></h4>
+                <ul>
+                    <li><code>document.getElementById("id")</code></li>
+                    <li><code>document.getElementByTagName("name")</code></li>
+                    <li><code>document.getElementByClassName("name")</code></li>
+                </ul>
+                <h4><u>Changing HTML elements</u></h4>
+                <ul>
+                    <li><code>element.innerHTML</code> = change the inner content of HTML elements</li>
+                    <li><code>element.style.property</code> = change the style of an element</li>
+                    <li><code>element.attribute</code> = change attribute values of an HTML element --> <span class="exception">Does not work in Typescript</span></li>
+                    <li><code>element.setAttribute(attribute, value)</code> = change the attribute of the value</li>
+                </ul>
+                <span id="elementByIdDocument" (click)="elementId();">Click this div</span>
+                <h5 id="setAttributeDocument" align=center (click)="changeAlignment();">The alignment of h5 is center, click on it, the alignment will change using element.setAttribute("align", "left")</h5>
+                <h4><u>Adding and Deleting HTML elements</u></h4>
+                <ul>
+                    <li><code>document.createElement(element)</code> = create HTML element</li>
+                    <li><code>document.removeChild(element)</code> = remove an HTML element</li>
+                    <li><code>document.appendChild(elements)</code> = add an HTML element</li>
+                    <li><code>document.replaceChild(new, old)</code> = replace an HTML element</li>
+                    <li><code>document.write(text)</code> = write into HTML output stream --> <span class="exception">Will reload entire page with new content</span></li>
+                </ul>
+                <button id="attributeDocument" (click)="createElement();">Create Element</button>
+                <h4><u>Adding Event Handlers</u></h4>
+                <ul>
+                    <li><code>document.getElementById("id").onclick = function &#123; ...code... &#125;</code></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="elements"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Elements</u></h2>
+                <p>HTML elements can be found by id name, tag name, class name, CSS selectors and HTML object collections.</p>
+                <h4><u>CSS Selectors</u></h4>
+                <p>To find all HTML elements that matched a specified CSS selector (id, class names, types, attributes, values of attributes etc.) use <code class="code-inline">querySelectorAll()</code> method.</p>
+                <p>For example, to get call elements of <code class="code-inline">p</code> with <code class="code-inline">class="intro"</code> do: </p> 
+                <code>var x = document.querySelectorAll("p.intro");</code>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="section-body" id="animation"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Animation</u></h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="events">
+            <div class="section-content">
+                <h2 class="section-title"><u>Events</u></h2>
+                <p>There are events that can be added in HTML elements that can trigger some function.</p>
+                <table cellpadding=5 cellspacing=10 border>
+                    <tr>
+                        <th>Event</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>onclick</td>
+                        <td>When an element is clicked</td>
+                    </tr>
+                    <tr>
+                        <td>onload</td>
+                        <td>When web page is loaded
+                            <ul>
+                                <li>Can be used to check user's browser type and browser version and accordingly load page</li>
+                                <li>Can be used for restoring cookie information</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>onunload</td>
+                        <td>When web page is unloaded
+                            <ul>
+                                <li>Can be used for storing cookie information</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>onchange</td>
+                        <td>Mostly used with input tag</td>
+                    </tr>
+                    <tr>
+                        <td>onmouseover</td>
+                        <td>When mouse is hovering the element</td>
+                    </tr>
+                    <tr>
+                        <td>onmouseout</td>
+                        <td>When mouse is not hovering the element</td>
+                    </tr>
+                    <tr>
+                        <td>onmousedown</td>
+                        <td>When mouse is pressed</td>
+                    </tr>
+                    <tr>
+                        <td>onmouseup</td>
+                        <td>When mouse is released</td>
+                    </tr>
+                    <tr>
+                        <td>onfocus</td>
+                        <td>When an element is focused on like clicking in textfield</td>
+                    </tr>
+                </table>
+                <div class="space"></div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="event-listener">
+            <div class="section-content">
+                <h2 class="section-title"><u>Event Listener</u></h2>
+                <p>The <code class="code-inline">addEventListener()</code> method attaches One or Many event handlers to a specific element.</p> 
+                <p>Event Listeners can be added to any DOM object (like window) or HTML elements. It makes it easier to control how the event reacts to bubbling.</p>
+                <p>The <code class="code-inline">removeEventListener()</code> is used to remove an event listener.</p>
+                <p>You can add many event handlers of the same type to one element, i.e two "click" events. Many Event Listener can be attached to same element.</p>
+                <p><code>element.addEventListener(event, function, useCapture)</code> --> <span class="exception">event is like "click", notice it is not onclick; useCapture is optional</span></p>
+                <p><code>window.addEventListener("resize", function)</code></p>
+                <p>If <code class="code-inline">&lt;p&gt;</code> element is inside <code class="code-inline">&lt;div&gt;</code> element, then two options are possible - <i>Bubbling</i> or <i>Capturing</i>. In Bubbling the event listener of innermost element is executed first. In Capturing the event listener of outermost element is executed first.</p>
+                <p>The <code class="code-inline">removeEventListener()</code> method removes event handlers that have been attached with the addEventListener() method</p>
+                <p class="note">NOTE: <code>addEventListener()</code> and <code>removeEventListener()</code> methods are not supported in IE 8 and earlier version. <code>attachEvent()</code> and <code>detachEvent()</code> can be used in its place.</p>
+            </div>
+        </div>
+        <hr>
+   
+        <div class="section-body" id="navigation">
+            <div class="section-content">
+                <h2 class="section-title"><u>Navigation</u></h2>
+                <h4><u>Node Relationships</u></h4>
+                <code>&lt;html&gt;</code><br>
+                &nbsp;&nbsp;<code>&lt;head&gt;</code><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;title&gt;DOM Tutorial&lt;/title&gt;</code><br>
+                &nbsp;&nbsp;<code>&lt;/head&gt;</code><br>
+                &nbsp;&nbsp;<code>&lt;body&gt;</code><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;h1&gt;DOM Lesson one&lt;/h1&gt;</code><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;p&gt;Hello World!&lt;/p&gt;</code><br>
+                &nbsp;&nbsp;<code>&lt;/body&gt;</code><br>
+                <code>&lt;/html&gt;</code><br>
+                <p>Here, html is root node and has 2 children head (first child) and body (last child.)</p>
+                <p>Head has one child title and body has two children h1 and p (h1 and p are also siblings).</p>
+                <p>Title has one text node.</p>
+                <p>This nodes can be accessed as <code class="code-inline">document.getElementById("demo").firstChild.nodeValue;</code> or <code class="code-inline">document.getElementById("demo").childNodes[1].nodeValue;</code></p>
+                <h4><u>DOM Root Nodes</u></h4>
+                <p>There are two special properties that allow access to the full document.</p>
+                <ul>
+                    <li>document.body - body of document</li>
+                    <li>document.documentElement - full document</li>
+                </ul>
+                <h4><u>nodeName Property</u></h4>
+                <p>nodeName property specifies the name of node.</p>
+                <ul>
+                <li>nodeName is read-only</li>
+                <li>nodeName of element node is tag name (tag name is Uppercase)</li>
+                <li>nodeName of attribute node is attribute name</li>
+                <li>nodeName of text node is #text</li>
+                <li>nodeName of document node is #document</li>
+                </ul>
+                <h4><u>nodeValue Property</u></h4>
+                <p>nodeValue property specifies the value of node.</p>
+                <ul>
+                    <li>nodeValue for element nodes is null</li>
+                    <li>nodeValue of text nodes is the text itself</li>
+                    <li>nodeValue of attribute nodes is attribute value</li>
+                </ul>
+                <h4><u>nodeType Property</u></h4>
+                <p>nodeType property is read only and returns the type of node.</p>
+            </div>
+        </div>
+        <hr>
+       
+        <div class="section-body" id="nodes">
+            <div class="section-content">
+                <h2 class="section-title"><u>Nodes</u></h2>
+            </div>
+        </div>
+        <hr>
+       
+        <div class="section-body"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Collections</u></h2>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body"> 
+            <div class="section-content">
+                <h2 class="section-title"><u>Node Lists</u></h2>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

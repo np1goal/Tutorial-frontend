@@ -1,0 +1,129 @@
+<div class="document notes-document">
+    <head><script>src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"</script></head>
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="jquery-tutorial#hide-show"><span class="button-text">Hide-Show</span></a>
+        <a class="nav-link" href="jquery-tutorial#fade"><span class="button-text">Fade</span></a>
+        <a class="nav-link" href="jquery-tutorial#slide"><span class="button-text">Slide</span></a>
+        <a class="nav-link" href="jquery-tutorial#animate"><span class="button-text">Animate</span></a>
+        <a class="nav-link" href="jquery-tutorial#stop"><span class="button-text">stop()</span></a>
+        <a class="nav-link" href="jquery-tutorial#callback"><span class="button-text">Callback</span></a>
+        <a class="nav-link" href="jquery-tutorial#chanining"><span class="button-text">Chanining</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">jQuery</h1>
+        <hr>
+
+        <div class="section-body" id="hide-show">
+            <div class="section-content">
+                <h2 class="section-title"><u>Hide/Show</u></h2>
+                <h4><u>hide() and show() methods</u></h4>
+                <div class="sub-section" id="hide-show-text">
+                    <code>$(selector).hide(speed, callback);</code>
+                    <code>$(selector).show(speed, callback);</code>
+                    <p>The optional speed specifies time in milliseconds or keywords like "slow" or "fast". The optional callback function is to be executed after the hide() and show() methods.</p>
+                </div>
+                <h4><u>toogle() method</u></h4>
+                <div class="sub-section" id="hide-show-text">
+                    <code>$(selector).toggle(speed, callback);</code>
+                    <p>toggle() method jumps between hide and show method.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="fade">
+            <div class="section-content">
+                <h2 class="section-title"><u>Fade</u></h2>
+                <h4><u>fadeIn() method</u></h4>
+                <div class="sub-section" id="fade-in-text">
+                    <p>fadeIn() method is used to fade in a hidden element.</p>
+                    <code>$(selector).fadeIn(speed, callback);</code>
+                    <p>The optional speed specifies time in milliseconds or keywords like "slow" or "fast". The optional callback function is to be executed after the fadeIn() method.</p>
+                </div>
+                <h4><u>fadeOut() method</u></h4>
+                <div class="sub-section" id="fade-in-text">
+                    <p>fadeOut() method is used to fade in a hidden element.</p>
+                    <code>$(selector).fadeOut(speed, callback);</code>
+                    <p>The optional speed specifies time in milliseconds or keywords like "slow" or "fast". The optional callback function is to be executed after the fadeOut() method.</p>
+                </div>
+                <h4><u>fadeToogle() method</u></h4>
+                <div class="sub-section" id="hide-show-text">
+                    <code>$(selector).fadeToggle(speed, callback);</code>
+                    <p>fadeToggle() method jumps between fadeIn() and fadeOut() method.</p>
+                </div>
+                <h4><u>fadeTo() method</u></h4>
+                <div class="sub-section" id="hide-show-text">
+                    <code>$(selector).fadeTo(speed,opacity,callback);</code>
+                    <p>The jQuery fadeTo() method allows fading to a given opacity (value between 0 and 1). The optional speed specifies time in milliseconds or keywords like "slow" or "fast". The optional callback function is to be executed after the fadeTo() method.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="side">
+            <div class="section-content">
+                <h2 class="section-title"><u>Slide</u></h2>
+                <h4><u>slideDown() method</u></h4>
+                <div class="sub-section" id="fade-in-text">
+                    <p>slideDown() method is used to fade in a hidden element.</p>
+                    <code>$(selector).sideDown(speed, callback);</code>
+                    <p>The optional speed specifies time in milliseconds or keywords like "slow" or "fast". The optional callback function is to be executed after the slideDown() method.</p>
+                </div>
+                <h4><u>slideUp() method</u></h4>
+                <div class="sub-section" id="fade-in-text">
+                    <p>slideUp() method is used to fade in a hidden element.</p>
+                    <code>$(selector).slipdeUp(speed, callback);</code>
+                    <p>The optional speed specifies time in milliseconds or keywords like "slow" or "fast". The optional callback function is to be executed after the slideUp() method.</p>
+                </div>
+                <h4><u>slideToggle() method</u></h4>
+                <div class="sub-section" id="hide-show-text">
+                    <code>$(selector).slideToggle(speed, callback);</code>
+                    <p>slideToggle() method jumps between slideDown() and slideUp() method.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="animate">
+            <div class="section-content">
+                <h2 class="section-title"><u>Animate</u></h2>
+                <div class="sub-section" id="animate-text">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="stop">
+            <div class="section-content">
+                <h2 class="section-title"><u>stop()</u></h2>
+                <div class="sub-section" id="stop-text">
+                    <p>The jQuery stop() method is used to stop an animation or effect before it is finished. The stop() method works for all jQuery effect functions, including sliding, fading and custom animations.</p>
+                    <code>$(selector).stop(stopAll,goToEnd);</code>
+                    <p>The optional stopAll parameter specifies whether also the animation queue should be cleared or not. Default is false, which means that only the active animation will be stopped, allowing any queued animations to be performed afterwards. The optional goToEnd parameter specifies whether or not to complete the current animation immediately. Default is false.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="callback">
+            <div class="section-content">
+                <h2 class="section-title"><u>Callback</u></h2>
+                <div class="sub-section" id="callback-text">
+                    <p>A callback function is executed after the current effect is 100% finished.</p>
+                    <code>$(selector).hide(speed,callback);</code>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="chaining">
+            <div class="section-content">
+                <h2 class="section-title"><u>Chaining</u></h2>
+                <div class="sub-section" id="chaining-text">
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

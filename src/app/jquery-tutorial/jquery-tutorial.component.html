@@ -1,0 +1,131 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="jquery-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="jquery-tutorial#syntax"><span class="button-text">Syntax</span></a>
+        <a class="nav-link" href="jquery-tutorial#selectors"><span class="button-text">Selectors</span></a>
+        <a class="nav-link" href="jquery-tutorial#events"><span class="button-text">Events</span></a>
+        <a class="nav-link" href="jquery-tutorial#effects"><span class="button-text">Effects</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">jQuery</h1>
+        <hr>
+
+        <div class="section-body" id="introduction">
+            <div class="section-content">
+                <h2 class="section-title"><u>Introduction</u></h2>
+                <div class="sub-section" id="jquery-introduction">
+                    <p>jQuery is a Javascript library. jQuery also simplifies a lot of complicated things from Javascript, like AJAX calls and DOM manipulation.</p>
+                    <p>To use jQuery:</p>
+                    <ul>
+                        <li>Download jQuery library from jQuery.com <b>OR</b></li>
+                        <li>Include jQuery from CDN, like Google or Microsoft</li>
+                    </ul>
+                    <p>Use <code class="code-inline">&lt;script&gt;</code> tag to include cdn link or file path to src attribute inside &lt;head&gt; tag.</p>
+                    <p>For Google use <code>&lt;script&gt; src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&lt;script&gt;</code></p>
+                    <p>For Microsoft use <code>&lt;script&gt; src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&lt;script&gt;</code></p>
+                    <p>When downloading jQuery library, there are two versions:</p>
+                    <ul>
+                        <li>Production version - minified and compressed for live website</li>
+                        <li>Deveopment version - for testing and development purpose (readable code)</li>
+                    </ul>
+                    <p>jQuery fucntions can be written in another file with .js extension and instialized in src attribute of script tag.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="syntax">
+            <div class="section-content">
+                <h2 class="section-title"><u>Syntax</u></h2>
+                <div class="sub-section" id="jquery-syntax">
+                    <p>To apply jQuery, select html elements and perform action on them</p>
+                    <code><b>$(selector).action()</b></code>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="selectors">
+            <div class="section-content">
+                <h2 class="section-title"><u>Selectors</u></h2>
+                <div class="sub-section" id="jquery-selectors">
+                    <p>All CSS selectors can be used to select an element.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="events">
+            <div class="section-content">
+                <h2 class="section-title"><u>Events</u></h2>
+                <div class="sub-section" id="events-list">
+                    <table border cellspacing=5 cellpadding=10>
+                        <tr>
+                            <th>Mouse Events</th>
+                            <th>Keyboard Events</th>
+                            <th>Form Events</th>
+                            <th>Document/Window Events</th>
+                        </tr>
+                        <tr>
+                            <td>click</td>
+                            <td>keypress</td>
+                            <td>submit</td>
+                            <td>load</td>
+                        </tr>
+                        <tr>
+                            <td>dblclick</td>
+                            <td>keydown</td>
+                            <td>change</td>
+                            <td>resize</td>
+                        </tr>
+                        <tr>
+                            <td>mouseenter</td>
+                            <td>keyup</td>
+                            <td>focus</td>
+                            <td>scroll</td>
+                        </tr>
+                        <tr>
+                            <td>mouseleave</td>
+                            <td></td>
+                            <td>blur</td>
+                            <td>unload</td>
+                        </tr>
+                    </table>
+                    <div class="space"></div>
+                </div>
+                <h4><u>Document ready</u></h4>
+                <div class="sub-section" id="document-ready">
+                    <p>The <code class="code-inline">$document.ready( function() &#123; // jQuery methods &#125;);</code> allows us to execute a fucntion when the document is fully loaded. This is to prevent any jQuery code from running before the body of the document is loaded.</p>
+                </div>
+                <h4><u>on() Method</u></h4>
+                <div class="sub-section" id="on-method">
+                    <p>The <code class="code-inline">on()</code> method attached one or more event handlers for the selected events.</p>
+                    <code>$("p").on(&#123;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>mouseenter: function() &#123;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(this).css("background-color", "lightgray");</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>mouseleave: function() &#123;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(this).css("background-color", "lightblue");</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>click: function()&#123;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$(this).css("background-color", "yellow");</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#125;</code><br>
+                    &nbsp;&nbsp;<code>&#125;);</code><br>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </div>
+        <hr>
+     
+        <div class="section-body" id="effects">
+                <div class="section-content">
+                    <h2 class="section-title"><u>jQuery Effects</u></h2>
+                    <a routerLink="jqueryeffects-tutorial">jQuery Effects</a>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="space"></div>
+        </div>
+</div>

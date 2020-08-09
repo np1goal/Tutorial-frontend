@@ -1,0 +1,101 @@
+<app-navigation-bar></app-navigation-bar>
+<div class="document notes-document">
+    <div class="notes-sidebar-nav">
+        <a class="nav-link" href="nodejs-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="nodejs-tutorial#modules"><span class="button-text">Modules</span></a>
+        <a class="nav-link" href="nodejs-tutorial#http-module"><span class="button-text">HTTP Module</span></a>
+    </div>
+    <div class="body">
+        <hr>
+        <h1 class="subject-title">Node.js</h1>
+        <hr>
+
+        <div class="section-body" id="introduction">
+            <div class="section-content">
+                <h2 class="section-title"><u>Introduction</u></h2>
+                <div class="sub-section" id="nodejs-introduction">
+                    <p>Node.js is an open source server environment which, allows Javascript to run on the server.</p>
+                    <p>Node.js uses asynchronous programming.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="modules">
+            <div class="section-content">
+                <h2 class="section-title"><u>Modules</u></h2>
+                <div class="sub-section" id="nodejs-modules-introduction">
+                    <p>Modules are same as Javascript libraries. A set functions to be included in the application. Node.js has some built-in modules.</p>
+                    <p>There are 3 types of Modules:</p>
+                    <ul>
+                        <li>Core Modules</li>
+                        <li>Local Modules</li>
+                        <li>Third Party Modules</li>
+                    </ul>
+                </div>
+                <h4><u>Include Core Modules</u></h4>
+                <div class="sub-section" id="nodejs-include-modules">
+                    <p>To include a module use <code class="code-inline">require()</code> function</p>
+                    <code>var http = require('http');</code><br><br>
+                    <table border cellpadding=5 cellspacing=10>
+                        <tr>
+                            <th>Code Module</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>http</td>
+                            <td>includes classes, methods and events to create Node.js http server</td>
+                        </tr>
+                        <tr>
+                            <td>url</td>
+                            <td>includes methods for url resolution and parsing</td>
+                        </tr>
+                        <tr>
+                            <td>querystring</td>
+                            <td>includes methods to deal with query string</td>
+                        </tr>
+                        <tr>
+                            <td>path</td>
+                            <td>includes methods to deal with file paths</td>
+                        </tr>
+                        <tr>
+                            <td>fs</td>
+                            <td>includes classes, methods and events to work with I/O file</td>
+                        </tr>
+                        <tr>
+                            <td>util</td>
+                            <td>includes utility functions useful for programmers</td>
+                        </tr>
+                    </table>
+                </div>   
+                <h4><u>Create and Include Local Modules</u></h4>
+                <div class="sub-section" id="nodejs-create-include-modules">
+                    <p>New modules can be created and included in applications. <code class="code-inline">exports</code> keyword is used to make properties and methods available outside the module file.</p>
+                    <code>exports.myDateTime = function() &#123;</code><br>
+                    &nbsp;&nbsp;<code>return Date();</code><br>
+                    <code>&#125;;</code><br>
+                    <p>This can be stored in another file <code class="code-inline">my-module.js</code></p>
+                    <p>This module can be included in the node file using <code class="code-inline">require()</code></p>
+                    <code>var myModule = require('./my-module.js');</code>
+                    <p></p>
+                </div>   
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="http-module">
+            <div class="section-content">
+                <h2 class="section-title"><u>HTTP Module</u></h2>
+                <div class="sub-section" id="nodejs-http-module-introduction">
+                    <p>Node.js has built-in http module, which allows Node.js to transfer data over Hyper Test Transfer Protocol.</p>
+                    <code>var http = require('http');</code>
+                </div>
+                <h4><u>Node.js as Web Server</u></h4>
+                <div class="sub-section" id="nodejs-http-module-web-server">
+                    <p>HTTP module can create an HTTP server that listens to server ports and gives a response back to the client.</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</div>

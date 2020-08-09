@@ -1,0 +1,154 @@
+#quiz-document {
+    height: 100%;
+    overflow-y: ellipsis;
+    display: grid;
+    grid-template-rows: 15% 25% 5% 50% auto;
+    grid-template-areas:    '.'
+                            'checkboxes-card'
+                            '.'
+                            'flash-card'
+                            '.';
+}
+
+.mat-card {
+    width: 80%;
+    margin: auto;
+}
+
+.quiz-button {
+    float: right;
+    margin-left: 1vw;
+}
+
+#checkboxes-card {
+    grid-area: checkboxes-card;
+    height: 80%;
+    display: grid;
+    grid-template-rows: auto 10% 20%;
+    grid-template-areas:    'checkboxes'
+                            '.'
+                            'submit-button'
+}
+
+#checkboxes {
+    grid-area: checkboxes;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+  
+#checkboxes > div {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#submit-button {
+    grid-area: submit-button;
+}
+
+#flash-card {
+    grid-area: flash-card;
+    height: 90%;
+    display: none;
+    grid-template-rows: 80% 10% 10%;
+    grid-template-areas:    'flashcard-body'
+                            '.'
+                            'flashcard-navigation';
+}
+
+#flash-card-body {
+    grid-area: flashcard-body;
+}
+
+#flash-card-navigation {
+    grid-area: flashcard-navigation;
+}
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+#maincontainer {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+#thecard {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+  
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT
+  .thecard:hover{
+    transform: rotateY(180deg);
+  } */
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+  #thefront {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-color: rgba(2,0,36,1);
+    color: #fff;
+    display: grid;
+    grid-template-rows: 10vh auto;
+    grid-template-areas:    'front-question'
+                            'front-answer-textarea';
+}
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+#theback{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-color: darkgray;
+    color: #000;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+  
+  
+  /*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+  
+#front-question{
+    grid-area: front-question;
+    font-family: 'zilla slab', sans-serif;
+    padding: auto;
+    font-weight: normal;
+    font-size: 1.2em;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+#front-answer-textarea {
+    grid-area: front-answer-textarea;
+    height: 100%;
+    background-color: rgb(2, 0, 49);
+}
+
+textarea::-webkit-input-placeholder {
+    color: #fff;
+  }
+  
+  textarea:-moz-placeholder { /* Firefox 18- */
+    color: #fff;  
+  }
+  
+  textarea::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff;  
+  }
+  
+  textarea:-ms-input-placeholder {
+    color: #fff;  
+  }
+  
+  textarea::placeholder {
+    color: #fff;  
+  }

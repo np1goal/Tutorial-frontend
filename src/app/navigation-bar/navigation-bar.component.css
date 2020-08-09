@@ -1,0 +1,38 @@
+#navigation-bar {
+    position: fixed;
+    width: 100%;
+    height: 6%;
+    background-color: rgba(2,0,36,1);
+    display: grid;
+    grid-template-columns: 20% auto 25%;
+    grid-template-areas: 'logo . navigation-buttons';
+}
+
+#logo {
+    grid-area: logo;
+    color: white;
+    margin: auto;
+    background-color: transparent;
+}
+
+#navigation-buttons {
+    grid-area: navigation-buttons;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-areas: 'notes-list . quiz-button'
+}
+
+#notes-list {
+    grid-area: notes-list;
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+#quiz-button {
+    grid-area: quiz-button;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: transparent;
+}
