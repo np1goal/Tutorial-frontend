@@ -18,22 +18,29 @@
     display: grid;
     grid-template-rows: auto;
     grid-gap: 1%;
+    width: 15vw;
+    overflow-x: hidden;
 }
 
 .nav-link {
     background-color: white;
     color: black;
-    padding: 10% 10%;
+    height: 10vh;
+    max-width: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 10% 10%; */
     text-align: center;
     border: 3px solid rgba(2,0,36,1);
     text-decoration: none;
-    display: block;
+    /* display: block; */
 }
 
 .button-text {
     overflow: hidden;
     white-space: nowrap;
-    display: block;   
+    /* display: block;    */
     text-overflow: ellipsis;
 }
 

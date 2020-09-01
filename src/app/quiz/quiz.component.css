@@ -15,6 +15,11 @@
     margin: auto;
 }
 
+.score {
+    float: left;
+    font-family: Courier New, Courier, monospace;
+}
+
 .quiz-button {
     float: right;
     margin-left: 1vw;
@@ -134,21 +139,21 @@
 }
 
 textarea::-webkit-input-placeholder {
-    color: #fff;
-  }
-  
-  textarea:-moz-placeholder { /* Firefox 18- */
-    color: #fff;  
-  }
-  
-  textarea::-moz-placeholder {  /* Firefox 19+ */
-    color: #fff;  
-  }
-  
-  textarea:-ms-input-placeholder {
-    color: #fff;  
-  }
-  
-  textarea::placeholder {
-    color: #fff;  
-  }
+color: #fff;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+color: #fff;  
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+color: #fff;  
+}
+
+textarea:-ms-input-placeholder {
+color: #fff;  
+}
+
+textarea::placeholder {
+color: #fff;  
+}

@@ -34,10 +34,11 @@
             </div>
         </div>
         <div id="flash-card-navigation">
+            <span class="score">Score: {{score}}</span>
             <button mat-raised-button class="quiz-button" (click)="nextQuestion()">Next <mat-icon>arrow_forward</mat-icon></button>
             <button mat-raised-button class="quiz-button" (click)="submitAnswer()">Submit</button>
             <button mat-raised-button class="quiz-button" (click)="revealAnswer()">Reveal Answer</button>
-            <button mat-raised-button class="quiz-button" (click)="backQuestion()"><mat-icon>arrow_back</mat-icon> Back</button>
+            <!-- <button mat-raised-button class="quiz-button" (click)="backQuestion()"><mat-icon>arrow_back</mat-icon> Back</button> -->
         </div>
     </mat-card>
 </div>

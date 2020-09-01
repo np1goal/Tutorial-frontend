@@ -14,7 +14,7 @@ import { ArrayDataSource } from '@angular/cdk/collections';
 export class QuizComponent implements OnInit {
 
   questions: Question[] = [];
-  subjects: Subject[] = [];
+  subjects: Subject[] = []; //Variable for all the subjects
   selectedSubjects: Subject[] = [];
   quizQuestions: Question[] = [];
   activeQuestion: Question = {
@@ -52,6 +52,7 @@ export class QuizComponent implements OnInit {
   }
 
   //Submit button functions
+  //Gets all questions of the selected subjects
   getQuizQuestions() {
     for(var i = 0; i < this.selectedSubjects.length; i++) {
       this.questionService.getQuestions(this.selectedSubjects[i]._id)
@@ -64,7 +65,7 @@ export class QuizComponent implements OnInit {
     setTimeout(() => { 
       document.getElementById('flash-card').style.display = 'grid';
       this.nextQuestion();
-    }, 3000);
+    }, 1000);
   }
 
   nextQuestion() {
@@ -74,7 +75,8 @@ export class QuizComponent implements OnInit {
     this.activeQuestion = this.quizQuestions[num];
     console.log(this.previousQuestion);
     document.getElementById('thecard').style.transform = 'rotateY(0deg)';
-    document.getElementById('thefront').style.opacity = '1';
+    document.getElementById('front-answer-textarea').style.opacity = '1';
+    document.getElementById('theback').style.opacity = '0';
   }
 
   backQuestion() {
@@ -83,29 +85,32 @@ export class QuizComponent implements OnInit {
 
   submitAnswer() {
     this.activeAnswer.toLowerCase();
-    var score = 1.0;
-    if (this.activeQuestion.keywords.length===1 && !(this.activeAnswer.includes(this.activeQuestion.keywords[i]))) { 
+    var score = 0;
+    console.log('length: ' + this.activeQuestion.keywords.length);
+    console.log('boolean: ' + this.activeAnswer.includes(this.activeQuestion.keywords[0]));
+    if (this.activeAnswer.length === 0) {
       score = 0;
-    } else if (this.activeQuestion.keywords.length===1 && this.activeAnswer.includes(this.activeQuestion.keywords[i])) { 
+    } else if (this.activeQuestion.keywords.length===1 && !(this.activeAnswer.includes(this.activeQuestion.keywords[0]))) { 
+      score = 0;
+    } else if (this.activeQuestion.keywords.length === 1 && this.activeAnswer.includes(this.activeQuestion.keywords[0])) { 
       score = 1;
     } else {
+      var point = 1 / this.activeQuestion.keywords.length;
       for(var i = 0; i < this.activeQuestion.keywords.length; i++) {
         console.log(this.activeQuestion.keywords[i]);
-        if(!(this.activeAnswer.includes(this.activeQuestion.keywords[i]))) {
-          console.log('scr: ' + score);
-          var temp = (score / (i+2));
-          score = score - temp;
-          console.log('score: ' + score);
+        if(this.activeAnswer.includes(this.activeQuestion.keywords[i])) {
+          score = score + point;
+          console.log('scr ' + score);
         }
       }
     }
-    // if(score < 0) score = 0;
     score = score + Number(this.score);
     this.score = score.toFixed(1);
     // -------------------------------------------------------SCORE ERROR-------------------------------------------------
     console.log('Score: ' + this.score);
     document.getElementById('thecard').style.transform = 'rotateY(180deg)';
-    document.getElementById('thefront').style.opacity = '0';
+    document.getElementById('front-answer-textarea').style.opacity = '0';
+    document.getElementById('theback').style.opacity = '1';
   }
 
   revealAnswer() {

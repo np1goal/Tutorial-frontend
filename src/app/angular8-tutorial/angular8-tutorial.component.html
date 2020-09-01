@@ -1,34 +1,31 @@
 <app-navigation-bar></app-navigation-bar>
 <div class="document notes-document">
     <div class="notes-sidebar-nav">
-        <a class="nav-link" href="angular8-tutorial#introduction"><span class="button-text">Introduction</span></a>
-        <a class="nav-link" href="angular8-tutorial#architecture"><span class="button-text">Architecture</span></a>
-        <a class="nav-link" href="angular8-tutorial#components"><span class="button-text">Components</span></a>
-        <a class="nav-link" href="angular8-tutorial#routing"><span class="button-text">Routing</span></a>
-        <a class="nav-link" href="angular8-tutorial#services"><span class="button-text">Services</span></a>
-        <a class="nav-link" href="angular8-tutorial#interpolation"><span class="button-text">Interpolation</span></a>
-        <a class="nav-link" href="angular8-tutorial#property-binding"><span class="button-text">Property Binding</span></a>
-        <a class="nav-link" href="angular8-tutorial#class-binding"><span class="button-text">Class Binding</span></a>
-        <a class="nav-link" href="angular8-tutorial#style-binding"><span class="button-text">Style Binding</span></a>
-        <a class="nav-link" href="angular8-tutorial#event-binding"><span class="button-text">Event Binding</span></a>
-        <a class="nav-link" href="angular8-tutorial#template-reference-variables"><span class="button-text">Template Reference Variables</span></a>
-        <a class="nav-link" href="angular8-tutorial#two-way-binding"><span class="button-text">Two Way Binding</span></a>
-        <a class="nav-link" href="angular8-tutorial#directives"><span class="button-text">Directives</span></a>
-        <a class="nav-link" href="angular8-tutorial#pipes"><span class="button-text">Pipes</span></a>
-        <a class="nav-link" href="angular8-tutorial#dependency-injection"><span class="button-text">Dependency Injection</span></a>
-        <a class="nav-link" href="angular8-tutorial#using-service"><span class="button-text">Using Service</span></a>
-        <a class="nav-link" href="angular8-tutorial#http-and-obervables"><span class="button-text">Http and Observables</span></a>
-        <a class="nav-link" href="angular8-tutorial#lifecycle-hooks"><span class="button-text">Lifecycle Hooks</span></a>
+        <a class="nav-link" href="angular10-tutorial#introduction"><span class="button-text">Introduction</span></a>
+        <a class="nav-link" href="angular10-tutorial#angular-cli"><span class="button-text">Angular CLI</span></a>
+        <a class="nav-link" href="angular10-tutorial#ngmodule"><span class="button-text">NgModule</span></a>
+        <a class="nav-link" href="angular10-tutorial#components"><span class="button-text">Components</span></a>
+        <a class="nav-link" href="angular10-tutorial#template-syntax"><span class="button-text">Template Syntax</span></a>
+        <a class="nav-link" href="angular10-tutorial#component"><span class="button-text">Component</span></a>
+        <a class="nav-link" href="angular10-tutorial#routing"><span class="button-text">Routing</span></a>
+        <a class="nav-link" href="angular10-tutorial#services"><span class="button-text">Services</span></a>
+        <a class="nav-link" href="angular10-tutorial#two-way-binding"><span class="button-text">Two Way Binding</span></a>
+        <a class="nav-link" href="angular10-tutorial#directives"><span class="button-text">Directives</span></a>
+        <a class="nav-link" href="angular10-tutorial#pipes"><span class="button-text">Pipes</span></a>
+        <a class="nav-link" href="angular10-tutorial#dependency-injection"><span class="button-text">Dependency Injection</span></a>
+        <a class="nav-link" href="angular10-tutorial#using-service"><span class="button-text">Using Service</span></a>
+        <a class="nav-link" href="angular10-tutorial#http-and-obervables"><span class="button-text">Http and Observables</span></a>
+        <a class="nav-link" href="angular10-tutorial#lifecycle-hooks"><span class="button-text">Lifecycle Hooks</span></a>
     </div>
     <div class="body">
         <hr>
-        <h1 id="title">Angular 8</h1>
+        <h1 id="title">Angular 10</h1>
         <hr>
 
         <div class="section-body" id="introduction">
             <div class="section-content">
                 <h2 class="section-title"><u>Introduction</u></h2>
-                <div class="sub-section" id="angular8-introduction">
+                <div class="sub-section" id="angular10-introduction">
                     <ul>
                         <li>Angular app is a modular app. It is made of collection of modules.</li>
                         <li>Every app has a root module named AppModule.</li>
@@ -39,10 +36,30 @@
         </div>
         <hr>
 
-        <div class="section-body" id="architecture">
+        <div class="section-body" id="angular-cli">
             <div class="section-content">
-                <h2 class="section-title"><u>Architecture</u></h2>
-                <div class="sub-section" id="angular8-architecture">
+                <h2 class="section-title"><u>Angular CLI</u></h2>
+                <div class="sub-section" id="angular10-angular-cli">
+                    Angular CLI is a command line interface for angular. 
+                    <ul>
+                        <li><code class="code-inline">npm install @angular/cli -g </code> installs angular CLI globally</li>
+                        <li><code class="code-inline">ng -v </code> shows the present version installed</li>
+                        <li><code class="code-inline">ng new newApp </code> creates a new angular app named newApp. Some other options can be passed with this command.
+                            <ul><li><code class="code-inline">ng new newApp --style=scss </code> creates a new app with style scss. Any styling options like less, sass, css etc. can be used.</li></ul>
+                        </li>
+                        <li><code class="code-inline">ng serve </code> compiles and runs app in a browser.</li>
+                        <li><code class="code-inline">ng generate </code> is used to create a specific schematic like component, service, interface etc.</li>
+                        <li><code class="code-inline">ng add </code> adds packages </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="ngmodule">
+            <div class="section-content">
+                <h2 class="section-title"><u>NgModule</u></h2>
+                <div class="sub-section" id="angular10-ngmodule">
                     <ul>
                         <li></li>
                     </ul>
@@ -53,40 +70,278 @@
 
         <div class="section-body" id="components">
             <div class="section-content">
-                <h2 class="section-title"><u>Components</u></h2>     
-                <div class="sub-section" id="angular8-components">
+                <h2 class="section-title"><u>Components</u></h2>
+                <div class="sub-section" id="angular10-components">
                     <ul>
-                        <li>Root component is AppComponent. AppComponent Module Typescript (app.module.ts) class has NgModule metadata declared in @NgModule tag.</li>
-                        <li>A component must belong to NgModule for it to be available to other components.</li>
-                        <li>A component is declared in @NgModule.declaration array (aka NgModule metadata).</li>
-                        <li>Each Component has HTML (view, template) + Typescript class (logic, data and method) + Metadata (Information, Decorator).</li>
-                        <li>@Component is the Component decorator that marks the class to be a Component class. In side decorator:</li>
-                        <br>
-                        <ul>
-                            <li>selector: Renders that tag of component to display in template. For example, 'app-root'; It can specified and used in 3 different ways.</li>
-                                <br>
-                                <ol>
-                                    <li>Define selector as tag -- selector: 'app-root', use this like &lt;app-root&gt;</li>
-                                    <li>Define selector as class -- selector: '.app-root', use this as class = "app-root" in an HTML tag like div</li>
-                                    <li>Define selector as attribute -- selector: '[app-root]', use as attribute in an HTML tag like div</li>
-                                </ol>
-                                <br>
-                            <li>templateUrl: It is the path to template of component. A small template can be created here also.</li>
-                                <br>
-                                <ol>
-                                    <li>Replace templateUrl to template -- template: '&lt;div&gt;This is inline template&lt;div&gt;'</li>
-                                    <li>Replace templateUrl to template, use backtics for multiple line template -- template: `&lt;div&gt;This is inline template&lt;div&gt;`</li>
-                                </ol>
-                                <br>
-                            <li>styleUrl: It is the path to style sheet of component</li>
-                                <br>
-                                <ol>
-                                    <li>Replace styleUrl to styles -- styles: [`div &#123;color: red;&#125;`]</li>
-                                </ol>
-                                <br>
-                        </ul>
+                        <li></li>
                     </ul>
                 </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="template-syntax">
+            <div class="section-content">
+                <h2 class="section-title"><u>Template Syntax</u></h2>
+                <div class="sub-section" id="angular10-template-syntax">
+                    <h4><u>Interpolation</u></h4>
+                    <div class="sub-section" id="angular10-interpolation">
+                        <ul>
+                            <li>Displays the value of a property in TS file. It is written in double curly braces.</li>
+                            <li><b>title</b> displays the value of title in TS file which is {{title}}.</li>
+                            <li><b>Math expressions:</b> result of 2 + 2 is {{2+2}}.</li>
+                            <li><b>String concatenation:</b> result of "This is" + title + "project" is {{"This is" + title + "project"}}.</li>
+                            <li><b>Using JS functions:</b> result of title.length is {{title.length}}.</li>
+                            <li><b>Using JS methods:</b> result of title.toUpperCase() is {{title.toUpperCase()}}.</li>
+                            <li><b>Using JS methods:</b> result of greetUser() method in TS file is {{greetUser()}}.</li>
+                            <li>Assignment to a variable is not allowed in interpolation.</li>
+                            <li>Property binding with interpolation can only work with string values.</li>
+                        </ul>
+                    </div>
+                    <h4><u>Property Binding</u></h4>
+                    <div class="sub-section" id="angular10-property-binding">
+                        <u>Attributes vs Properties</u>
+                        <ul>
+                            <li>Attributes are defined by HTML vs Properties are defined by DOM (Document Object Model).</li>
+                            <li>Attributes initialize DOM properties and cannot be changed vs Properties can be changed.</li>
+                        </ul>
+                        <p>Property / One-way Data binding - Data from Ts class to View</p>
+                        <p>For the anchor tag, the propert href is bound to the variable of hrefForPropertyBinding like [href] = "hrefForPropertyBinding" [] states property binding</p>
+                        <a [href] = "hrefForPropertyBinding">This is a link</a>
+                        <p class="note">NOTE: String interpolation is a type of property binding.</p>
+                    </div>
+                    <h4><u>Event Binding</u></h4>
+                    <div class="sub-section" id="angular10-event-binding">
+                        <p>Data from View to Ts class. Event is inside parantheses () like (click)</p>
+                        <button>Greet the user</button>
+                        <button (click) = "unGreetingUser();">Ungreet the user</button>
+                        <p>{{greetings}}</p>
+                        <div style="height: 10vh; width: 10vw; background-color:aqua;" (click) = "greetingUser();">Click this div</div>
+                        <div class="space"></div>
+                        <table border cellspacing=10 cellpadding=5 style="border: solid;">
+                            <tr>
+                                <th>Event</th>
+                                <th>Event Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>(click)</td>
+                                <td>Mouse Event</td>
+                                <td>Event occurs when user clicks an element</td>
+                            </tr>
+                            <tr>
+                                <td>(dblclick)</td>
+                                <td>Mouse Event</td>
+                                <td>Event occurs when user double-clicks an element</td>
+                            </tr>
+                            <tr>
+                                <td>(copy)</td>
+                                <td>Clipboard Event</td>
+                                <td>Event occurs when user copies content of an element</td>
+                            </tr>
+                            <tr>
+                                <td>(paste)</td>
+                                <td>Clipboard Event</td>
+                                <td>Event occurs when user pastes content in an element</td>
+                            </tr>
+                            <tr>
+                                <td>(cut)</td>
+                                <td>Clipboard Event</td>
+                                <td>Event occurs when user cuts some content of an element</td>
+                            </tr><tr>
+                                <td>(contextmenu)</td>
+                                <td>Mouse Event</td>
+                                <td>Event occurs when user right clicks on an element to open a context menu</td>
+                            </tr><tr>
+                                <td>(drag)</td>
+                                <td>Drag Event</td>
+                                <td>Event occurs when an element is being dragged</td>
+                            </tr><tr>
+                                <td>(keydown)</td>
+                                <td>Keyboard Event</td>
+                                <td>Event occurs when user is pressing key</td>
+                            </tr><tr>
+                                <td>(load)</td>
+                                <td>UIEvent, Event</td>
+                                <td>Event occurs when object has loaded</td>
+                            </tr>
+                        </table>
+                        <div class="space"></div>
+                        More at..... <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="new">W3Schools Link!</a>
+                    </div>
+                    <h4><u>Two-way binding</u></h4>
+                    <div class="sub-section" id="angular10-two-way-binding">
+                        <p>Event Binding (Data from View to Ts class) + Data Binding (Data from Ts class to View)</p>
+                        <p>This allows the user to set the value of a property and then display the value. This is two wat binding.</p>
+                        <p>[(ngModel)] = "userTypedValue" written in input tag; ngModel is bound to userTypedValue in Ts class</p>
+                        <input [(ngModel)] = "userTypedValue" type="text">
+                        <p><b><u>{{userTypedValue}}</u></b> is being written</p>
+                        <p class="note">NOTE: ngModel requires to import FormsModule in app.module.ts from '@angular/forms' and in @NgModule.imports array</p>
+                    </div> 
+                    <h4><u>Pipes</u></h4>
+                    <div class="sub-section" id="angular10-pipes">
+                        Pipes are used in interpolation.
+                        <ul>
+                            <li><u>String</u></li>
+                                <ul>
+                                    <li>title | lowercase -- makes everything lowercase --> {{title | lowercase}}</li>
+                                    <li>title | uppercase -- makes everything uppercase --> {{title | uppercase}}</li>
+                                    <li>title | titlecase -- makes everything titlecase --> {{title | titlecase}}</li>
+                                    <li>title | slice: 3 -- string from index 3 --> {{title | slice: 3}}</li>
+                                    <li>title | slice: 3: 8  -- string from index 3 to 8 --> {{title | slice: 3:9}}</li>
+                                    <li>objectToJson | json  -- converts object to json--> {{objectToJson | json}}</li>
+                                </ul>
+                                <br>
+                            <li><u>Numbers</u></li>
+                                <ul>
+                                    <li>5.23878 | number:'1.2-3' -- 1 integer and 2-3 Rounded decimal places --> {{5.23878 | number:'1.2-3'}}</li>
+                                    <li>5.23878 | number:'3.2-3' -- 3 integer and 7-8 Rounded decimal places --> {{5.23878 | number:'3.7-8'}}</li>
+                                    <li>0.25 | percent -- gives percentage --> {{0.25 | percent}}</li>
+                                </ul>
+                                <br>
+                            <li><u>Currency</u></li>
+                                <ul>
+                                    <li>0.25 | currency -- by default dollar --> {{0.25| currency}}</li>
+                                    <li>0.25 | currency: 'GBP' -- GBP is for euro --> {{0.25 | currency: 'GBP'}}</li>
+                                    <li>0.25 | currency: 'GBP': 'code' -- writes GBP instead of euro sign --> {{0.25 | currency: 'GBP': 'code'}}</li>
+                                </ul>
+                                <br>
+                            <li><u>Date</u></li>
+                                <ul>
+                                    <li>today | date: 'shortDate' -- only date --> {{today | date: 'shortDate'}}</li>
+                                    <li>today | date: 'shortTime' -- only time --> {{today | date: 'shortTime'}}</li>
+                                    <li>today | date: 'longDate' -- Full date --> {{today | date: 'longDate'}}</li>
+                                    <li>today | date: 'longTime' -- Full time with time zone --> {{today | date: 'longTime'}}</li>
+                                </ul>
+                                <br>
+                        </ul>
+                    </div>
+                    <h4><u>Template Reference Variables</u></h4>
+                    <div class="sub-section" id="angular10-template-reference-variables">
+                        <p>Used to transfer data from view to Ts class</p>
+                        <input #userInput type=“text”>
+                        <button (click) = "usersInputMessage(userInput.value);">Message</button>
+                        <p>The input is stored in a reference varible <b>#userInput</b> assigned in input tag.</p>
+                        <p>Clicking on the button triggers a TS function usersInputMessage() which takes the parameter of the input by <b>userInput.value</b></p>
+                        <br>
+                        <input #userRangeInput type="range">
+                        <button (click) = "usersInputRange(userRangeInput.value);">Range</button>
+                        <p>Input stored in #userRangeInput and userRangeInput.value sent as parameter to function usersInputRange()</p>
+                        <br>
+                        <input #userPasswordInput type="password">
+                        <button (click) = "usersInputPassword(userPasswordInput.value);">Password</button>
+                        <p>Input stored in #userPasswordInput and userPasswordInput.value sent as parameter to function usersPasswordRange()</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="directives">
+            <div class="section-content">
+                <h2 class="section-title"><u>Directives</u></h2>
+                <div class="sub-section" id="angular10-directives">
+                    <h4><u>Component Directives</u></h4>     
+                    <div class="sub-section" id="angular10-component-directives">
+                        <ul>
+                            <li>Root component is AppComponent. AppComponent Module Typescript (app.module.ts) class has NgModule metadata declared in @NgModule tag.</li>
+                            <li>A component must belong to NgModule for it to be available to other components.</li>
+                            <li>A component is declared in @NgModule.declaration array (aka NgModule metadata).</li>
+                            <li>Each Component has HTML (view, template) + Typescript class (logic, data and method) + Metadata (Information, Decorator).</li>
+                            <li>@Component is the Component decorator that marks the class to be a Component class. In side decorator:</li>
+                            <br>
+                            <ul>
+                                <li>selector: Renders that tag of component to display in template. For example, 'app-root'; It can specified and used in 3 different ways.</li>
+                                    <br>
+                                    <ol>
+                                        <li>Define selector as tag -- selector: 'app-root', use this like &lt;app-root&gt;</li>
+                                        <li>Define selector as class -- selector: '.app-root', use this as class = "app-root" in an HTML tag like div</li>
+                                        <li>Define selector as attribute -- selector: '[app-root]', use as attribute in an HTML tag like div</li>
+                                    </ol>
+                                    <br>
+                                <li>templateUrl: It is the path to template of component. A small template can be created here also.</li>
+                                    <br>
+                                    <ol>
+                                        <li>Replace templateUrl to template -- template: '&lt;div&gt;This is inline template&lt;div&gt;'</li>
+                                        <li>Replace templateUrl to template, use backtics for multiple line template -- template: `&lt;div&gt;This is inline template&lt;div&gt;`</li>
+                                    </ol>
+                                    <br>
+                                <li>styleUrl: It is the path to style sheet of component</li>
+                                    <br>
+                                    <ol>
+                                        <li>Replace styleUrl to styles -- styles: [`div &#123;color: red;&#125;`]</li>
+                                    </ol>
+                                    <br>
+                            </ul>
+                        </ul>
+                    </div>
+                    <h4><u>Structural Directives</u></h4>     
+                    <div class="sub-section" id="angular10-structural-directives">
+                    </div>
+                    <h4><u>Attributes Directives</u></h4>     
+                    <div class="sub-section" id="angular10-attribute-directives">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="component-styling">
+            <div class="section-content">
+                <h2 class="section-title"><u>Component Styling</u></h2>
+                <div class="sub-section" id="angular10-component-styling">
+                    <h4><u>Class Binding</u></h4>
+                    <div class="sub-section" id="angular10-class-binding">
+                        <ul>
+                            <li>Class Binding</li>
+                            <p>In an HTML tag class attribute can be used as propert binding like [class] = "specialText"</p>
+                            <p>If an HTML tag has both class and [class] then [class] will be executed.</p>
+                            <li>Class Binding with conditional expression for one class</li>
+                            <p>[class.text-danger] = "hasError" -- if hasError is true than only then textDanger style will be applied.</p>
+                            <li>Class Binding with conditional expression for multiple class</li>
+                            <p>An object can be written in Ts class, theStyles = &#123; "textSuccess": !this.hasError, "text-danger": this,hasError, "text-special": this.isSpecial &#125;</p>
+                            <p>[ngClass] = "theStyles" -- ngClass directive binds this to the object theStyles.</p>
+                        </ul>
+                    </div>
+                    <h4><u>Style Binding</u></h4>
+                    <div class="sub-section" id="angular10-style-binding">
+                        <p>[style.color] = "hasError ? 'red': 'green'"</p>
+                        <p>[ngStyle] can also be used like [ngClass]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="component-interaction">
+            <div class="section-content">
+                <h2 class="section-title"><u>Component Interaction</u></h2>
+                <div class="sub-section" id="angular10-component-interaction">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="lifecycle-methods">
+            <div class="section-content">
+                <h2 class="section-title"><u>Lifecycle Methods</u></h2>
+                <div class="sub-section" id="angular10-lifecycle-methods">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="architecture">
+            <div class="section-content">
+                <h2 class="section-title"><u>Architecture</u></h2>
+                <div class="sub-section" id="angular10-architecture">
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="component">
+            <div class="section-content">
             </div>
         </div>
         <hr>
@@ -94,7 +349,7 @@
         <div class="section-body" id="routing">
             <div class="section-content">
                 <h2 class="section-title"><u>Routing</u></h2>
-                <div class="sub-section" id="angular8-routing">
+                <div class="sub-section" id="angular10-routing">
                     
                 </div>
             </div>
@@ -104,7 +359,7 @@
         <div class="section-body" id="services">
             <div class="section-content">
                 <h2 class="section-title"><u>Services</u></h2>
-                <div class="sub-section" id="angular8-services">
+                <div class="sub-section" id="angular10-services">
                     <ul>
                         <li>Class that contains business logic of the application.</li>
                         <li>It is a class with specific purpose. The purpose could be to share data among multiple compoennts, implement application logic (like calculating age from DOB) or to do external interaction like to connect with Database.</li>
@@ -112,275 +367,123 @@
                         <li>Services are implemented using dependency injection.</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="interpolation">
-            <div class="section-content">
-                <h2 class="section-title"><u>Interpolation</u></h2>
-                <div class="sub-section" id="angular8-interpolation">
-                    <ul>
-                        <li>Displays the value of a property in TS file. It is written in double curly braces.</li>
-                        <li><b>title</b> displays the value of title in TS file which is {{title}}.</li>
-                        <li><b>Math expressions:</b> result of 2 + 2 is {{2+2}}.</li>
-                        <li><b>String concatenation:</b> result of "This is" + title + "project" is {{"This is" + title + "project"}}.</li>
-                        <li><b>Using JS functions:</b> result of title.length is {{title.length}}.</li>
-                        <li><b>Using JS methods:</b> result of title.toUpperCase() is {{title.toUpperCase()}}.</li>
-                        <li><b>Using JS methods:</b> result of greetUser() method in TS file is {{greetUser()}}.</li>
-                        <li>Assignment to a variable is not allowed in interpolation.</li>
-                        <li>Property binding with interpolation can only work with string values.</li>
-                    </ul>
+                <h4><u>Dependency Injection</u></h4>
+                <div class="sub-section" id="angular10-depenedency-injection">
+                </div>
+                <h4><u>Providing Services</u></h4>
+                <div class="sub-section" id="angular10-providing-services">
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="section-body" id="property-binding">
+        <div class="section-body" id="observables">
             <div class="section-content">
-                <h2 class="section-title"><u>Property Binding</u></h2>
-                <div class="sub-section" id="angular8-property-binding">
-                    <h4><u>Attributes vs Properties</u></h4>
-                    <ul>
-                        <li>Attributes are defined by HTML vs Properties are defined by DOM (Document Object Model).</li>
-                        <li>Attributes initialize DOM properties and cannot be changed vs Properties can be changed.</li>
-                    </ul>
-                    <p>Property / One-way Data binding - Data from Ts class to View</p>
-                    <p>For the anchor tag, the propert href is bound to the variable of hrefForPropertyBinding like [href] = "hrefForPropertyBinding" [] states property binding</p>
-                    <a [href] = "hrefForPropertyBinding">This is a link</a>
-                    <p class="note">NOTE: String interpolation is a type of property binding.</p>
+                <h2 class="section-title"><u>Observables</u></h2>
+                <h4><u>Creating Observables</u></h4>
+                <div class="sub-section" id="angular10-creating-observables">
+                </div>
+                <h4><u>Subscribing Observables</u></h4>
+                <div class="sub-section" id="angular10-subscribing-observables">
+                </div>
+                <h4><u>Executing Observables</u></h4>
+                <div class="sub-section" id="angular10-executing-observables">
+                </div>
+                <h4><u>Disposing Observables</u></h4>
+                <div class="sub-section" id="angular10-disposing-observables">
+                </div>
+                <h4><u>Operators</u></h4>
+                <div class="sub-section" id="angular10-operators">
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="section-body" id="class-binding">
+        <div class="section-body" id="http-client">
             <div class="section-content">
-                <h2 class="section-title"><u>Class Binding</u></h2>
-                <div class="sub-section" id="angular8-class-binding">
-                    <ul>
-                        <li>Class Binding</li>
-                        <p>In an HTML tag class attribute can be used as propert binding like [class] = "specialText"</p>
-                        <p>If an HTML tag has both class and [class] then [class] will be executed.</p>
-                        <li>Class Binding with conditional expression for one class</li>
-                        <p>[class.text-danger] = "hasError" -- if hasError is true than only then textDanger style will be applied.</p>
-                        <li>Class Binding with conditional expression for multiple class</li>
-                        <p>An object can be written in Ts class, theStyles = &#123; "textSuccess": !this.hasError, "text-danger": this,hasError, "text-special": this.isSpecial &#125;</p>
-                        <p>[ngClass] = "theStyles" -- ngClass directive binds this to the object theStyles.</p>
-                    </ul>
+                <h2 class="section-title"><u>HTTP Client</u></h2>
+                <h4><u>HttpClient</u></h4>
+                <div class="sub-section" id="angular10-httpclient">
+                </div>
+                <h4><u>GET, POST, PUT and DELETE</u></h4>
+                <div class="sub-section" id="angular10-get-post-put-delete">
+                </div>
+                <h4><u>Typed Response</u></h4>
+                <div class="sub-section" id="angular10-typed-response">
+                </div>
+                <h4><u>Error Handling</u></h4>
+                <div class="sub-section" id="angular10-error-handling">
+                </div>
+                <h4><u>Interceptors</u></h4>
+                <div class="sub-section" id="angular10-interceptors">
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="section-body" id="style-binding">
+        <div class="section-body" id="forms">
             <div class="section-content">
-                <h2 class="section-title"><u>Style Binding</u></h2>
-                <div class="sub-section" id="angular8-style-binding">
-                    <p>[style.color] = "hasError ? 'red': 'green'"</p>
-                    <p>[ngStyle] can also be used like [ngClass]</p>
+                <h2 class="section-title"><u>Forms</u></h2>
+                <h4><u>Template Driven Forms</u></h4>
+                <div class="sub-section" id="angular10-template-driven-forms">
+                    <h5>FormsModule</h5>
+                    <h5>ngForm</h5>
+                    <h5>ngModel</h5>
+                    <h5>ngModelGroup</h5>
+                    <h5>Tracking State and Validity</h5>
+                    <h5>Validation and Error Messages</h5>
+                    <h5>ngSubmit</h5>
+                </div>
+                <h4><u>Reactive Forms</u></h4>
+                <div class="sub-section" id="angular10-reactive-forms">
+                    <h5>ReactiveFormsModule</h5>
+                    <h5>FormControl</h5>
+                    <h5>FormGroup</h5>
+                    <h5>setValue and patchValue</h5>
+                    <h5>FormBuilder Service</h5>
+                    <h5>Validator Functions</h5>
+                    <h5>FormArray</h5>
+                    <h5>ngSubmit</h5>
                 </div>
             </div>
         </div>
         <hr>
 
-        <div class="section-body" id="event-binding">
+        <div class="section-body" id="routing">
             <div class="section-content">
-                <h2 class="section-title"><u>Event Binding</u></h2>
-                <div class="sub-section" id="angular8-event-binding">
-                    <p>Data from View to Ts class. Event is inside parantheses () like (click)</p>
-                    <button>Greet the user</button>
-                    <button (click) = "unGreetingUser();">Ungreet the user</button>
-                    <p>{{greetings}}</p>
-                    <div style="height: 10vh; width: 10vw; background-color:aqua;" (click) = "greetingUser();">Click this div</div>
-                    <div class="space"></div>
-                    <table border cellspacing=10 cellpadding=5 style="border: solid;">
-                        <tr>
-                            <th>Event</th>
-                            <th>Event Type</th>
-                            <th>Description</th>
-                        </tr>
-                        <tr>
-                            <td>(click)</td>
-                            <td>Mouse Event</td>
-                            <td>Event occurs when user clicks an element</td>
-                        </tr>
-                        <tr>
-                            <td>(dblclick)</td>
-                            <td>Mouse Event</td>
-                            <td>Event occurs when user double-clicks an element</td>
-                        </tr>
-                        <tr>
-                            <td>(copy)</td>
-                            <td>Clipboard Event</td>
-                            <td>Event occurs when user copies content of an element</td>
-                        </tr>
-                        <tr>
-                            <td>(paste)</td>
-                            <td>Clipboard Event</td>
-                            <td>Event occurs when user pastes content in an element</td>
-                        </tr>
-                        <tr>
-                            <td>(cut)</td>
-                            <td>Clipboard Event</td>
-                            <td>Event occurs when user cuts some content of an element</td>
-                        </tr><tr>
-                            <td>(contextmenu)</td>
-                            <td>Mouse Event</td>
-                            <td>Event occurs when user right clicks on an element to open a context menu</td>
-                        </tr><tr>
-                            <td>(drag)</td>
-                            <td>Drag Event</td>
-                            <td>Event occurs when an element is being dragged</td>
-                        </tr><tr>
-                            <td>(keydown)</td>
-                            <td>Keyboard Event</td>
-                            <td>Event occurs when user is pressing key</td>
-                        </tr><tr>
-                            <td>(load)</td>
-                            <td>UIEvent, Event</td>
-                            <td>Event occurs when object has loaded</td>
-                        </tr>
-                    </table>
-                    <div class="space"></div>
-                    More at..... <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="new">W3Schools Link!</a>
+                <h2 class="section-title"><u>Routing</u></h2>
+                <h4><u>Router Module</u></h4>
+                <div class="sub-section" id="angular10-router-module">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="template-reference-variables">
-            <div class="section-content">
-                <h2 class="section-title"><u>Template Reference Variables</u></h2>
-                <div class="sub-section" id="angular8-template-reference-variables">
-                    <p>Used to transfer data from view to Ts class</p>
-                    <input #userInput type=“text”>
-                    <button (click) = "usersInputMessage(userInput.value);">Message</button>
-                    <p>The input is stored in a reference varible <b>#userInput</b> assigned in input tag.</p>
-                    <p>Clicking on the button triggers a TS function usersInputMessage() which takes the parameter of the input by <b>userInput.value</b></p>
-                    <br>
-                    <input #userRangeInput type="range">
-                    <button (click) = "usersInputRange(userRangeInput.value);">Range</button>
-                    <p>Input stored in #userRangeInput and userRangeInput.value sent as parameter to function usersInputRange()</p>
-                    <br>
-                    <input #userPasswordInput type="password">
-                    <button (click) = "usersInputPassword(userPasswordInput.value);">Password</button>
-                    <p>Input stored in #userPasswordInput and userPasswordInput.value sent as parameter to function usersPasswordRange()</p>
+                <h4><u>Configuring Routes</u></h4>
+                <div class="sub-section" id="angular10-configuring-routes">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="two-way-binding">
-            <div class="section-content">
-                <h2 class="section-title"><u>Two-way binding</u></h2>
-                <div class="sub-section" id="angular8-two-way-binding">
-                    <p>Event Binding (Data from View to Ts class) + Data Binding (Data from Ts class to View)</p>
-                    <p>This allows the user to set the value of a property and then display the value. This is two wat binding.</p>
-                    <p>[(ngModel)] = "userTypedValue" written in input tag; ngModel is bound to userTypedValue in Ts class</p>
-                    <input [(ngModel)] = "userTypedValue" type="text">
-                    <p><b><u>{{userTypedValue}}</u></b> is being written</p>
-                    <p class="note">NOTE: ngModel requires to import FormsModule in app.module.ts from '@angular/forms' and in @NgModule.imports array</p>
-                </div> 
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="directives">
-            <div class="section-content">
-                <h2 class="section-title"><u>Directives</u></h2>
-                <div class="sub-section" id="angular8-directives">
-                    <ul>
-                        <li>Component Directives</li>
-                        <li>Structural Directives</li>
-                        <li>Attribute Directives</li>
-                    </ul>
+                <h4><u>RouterOutlet</u></h4>
+                <div class="sub-section" id="angular10-routeroutlet">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="pipes">
-            <div class="section-content">
-                <h2 class="section-title"><u>Pipes</u></h2>
-                <div class="sub-section" id="angular8-pipes">
-                    Pipes are used in interpolation.
-                    <ul>
-                        <li><u>String</u></li>
-                            <ul>
-                                <li>title | lowercase -- makes everything lowercase --> {{title | lowercase}}</li>
-                                <li>title | uppercase -- makes everything uppercase --> {{title | uppercase}}</li>
-                                <li>title | titlecase -- makes everything titlecase --> {{title | titlecase}}</li>
-                                <li>title | slice: 3 -- string from index 3 --> {{title | slice: 3}}</li>
-                                <li>title | slice: 3: 8  -- string from index 3 to 8 --> {{title | slice: 3:9}}</li>
-                                <li>objectToJson | json  -- converts object to json--> {{objectToJson | json}}</li>
-                            </ul>
-                            <br>
-                        <li><u>Numbers</u></li>
-                            <ul>
-                                <li>5.23878 | number:'1.2-3' -- 1 integer and 2-3 Rounded decimal places --> {{5.23878 | number:'1.2-3'}}</li>
-                                <li>5.23878 | number:'3.2-3' -- 3 integer and 7-8 Rounded decimal places --> {{5.23878 | number:'3.7-8'}}</li>
-                                <li>0.25 | percent -- gives percentage --> {{0.25 | percent}}</li>
-                            </ul>
-                            <br>
-                        <li><u>Currency</u></li>
-                            <ul>
-                                <li>0.25 | currency -- by default dollar --> {{0.25| currency}}</li>
-                                <li>0.25 | currency: 'GBP' -- GBP is for euro --> {{0.25 | currency: 'GBP'}}</li>
-                                <li>0.25 | currency: 'GBP': 'code' -- writes GBP instead of euro sign --> {{0.25 | currency: 'GBP': 'code'}}</li>
-                            </ul>
-                            <br>
-                        <li><u>Date</u></li>
-                            <ul>
-                                <li>today | date: 'shortDate' -- only date --> {{today | date: 'shortDate'}}</li>
-                                <li>today | date: 'shortTime' -- only time --> {{today | date: 'shortTime'}}</li>
-                                <li>today | date: 'longDate' -- Full date --> {{today | date: 'longDate'}}</li>
-                                <li>today | date: 'longTime' -- Full time with time zone --> {{today | date: 'longTime'}}</li>
-                            </ul>
-                            <br>
-                    </ul>
+                <h4><u>routerLink</u></h4>
+                <div class="sub-section" id="angular10-routerlink">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="dependency-injection">
-            <div class="section-content">
-                <h2 class="section-title"><u>Dependency Injection</u></h2>
-                <div class="sub-section" id="angular8-depenedency-injection">
-
+                <h4><u>Wildcard Routes</u></h4>
+                <div class="sub-section" id="angular10-wildcard-routes">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="using-service">
-            <div class="section-content">
-                <h2 class="section-title"><u>Using service</u></h2>
-                <div class="sub-section" id="angular8-using-service">
-
+                <h4><u>Redirecting Routes</u></h4>
+                <div class="sub-section" id="angular10-redirecting-routes">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="http-and-observables">
-            <div class="section-content">
-                <h2 class="section-title"><u>HTTP and Observables</u></h2>
-                <div class="sub-section" id="angular8-http-and-observables">
-
+                <h4><u>Route Parameters</u></h4>
+                <div class="sub-section" id="angular10-route-parameters">
                 </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="section-body" id="lifecycle-hooks">
-            <div class="section-content">
-                <h2 class="section-title"><u>Lifecycle Hooks</u></h2>
-                <div class="sub-section" id="angular8-lifecycle-hooks">
-                    <ul>
-                        <li></li>
-                    </ul>
+                <h4><u>Nested Routes</u></h4>
+                <div class="sub-section" id="angular10-nested-routes">
+                </div>
+                <h4><u>Relative Paths</u></h4>
+                <div class="sub-section" id="angular10-relative-paths">
+                </div>
+                <h4><u>Lazy Loading Routes</u></h4>
+                <div class="sub-section" id="angular10-lazy-loading-routes">
+                </div>
+                <h4><u>Route Guards</u></h4>
+                <div class="sub-section" id="angular10-route-guards">
                 </div>
             </div>
         </div>
