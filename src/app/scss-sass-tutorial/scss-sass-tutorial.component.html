@@ -11,8 +11,7 @@
         <a class="nav-link" href="scss-sass-tutorial/#list-functions"><span class="button-text">List Functions</span></a>
         <a class="nav-link" href="scss-sass-tutorial/#map-functions"><span class="button-text">Map Functions</span></a>
         <a class="nav-link" href="scss-sass-tutorial/#introspection-functions"><span class="button-text">Introspection Functions</span></a>
-        <a class="nav-link" href="scss-sass-tutorial/#color-functions"><span class="button-text">Color Functions</span></a>
-        <a class="nav-link" href="scss-sass-tutorial/#maps"><span class="button-text">Maps</span></a>
+        <a class="nav-link" href="scss-sass-tutorial/#control-directives"><span class="button-text">Control Directives</span></a>
     </div>
     <div class="body">
         <hr>
@@ -30,6 +29,56 @@
                 <p>Sass variables are only available at the level of nesting.</p>
                 <p>The variable can be oveeriden globally by using <code class="code-inline">!global</code></p>
                 <p>Like, <code>$myColor: green !global;</code></p>
+            </div>
+        </div>
+        <hr>
+
+        <div class="section-body" id="data-types">
+            <div class="section-content">
+                <h2 class="section-title"><u>Data Types</u></h2>
+                <table cellpadding="5" border="1px">
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>Numbers</td>
+                        <td>It represents numeric types</td>
+                        <td><code class="code-inline">$num: 5</code><br><code class="code-inline">$num: 10.5</code></td>
+                    </tr>
+                    <tr>
+                        <td>Strings</td>
+                        <td>Sequence of characters within double or single quotes</td>
+                        <td><code class="code-inline">$str: "String"</code><br><code class="code-inline">$str: 'String'</code></td>
+                    </tr>
+                    <tr>
+                        <td>Colors</td>
+                        <td>Color in hex, rgb, hsl form</td>
+                        <td><code class="code-inline">$color: #fff</code><br><code class="code-inline">$color: rgba(0,0,0,1)</code></td>
+                    </tr>
+                    <tr>
+                        <td>Booleans</td>
+                        <td>True or false types</td>
+                        <td><code class="code-inline">$flag: true</code><br><code class="code-inline">$flag: false</code></td>
+                    </tr>
+                    <tr>
+                        <td>Nulls</td>
+                        <td>Null value which is unknown data</td>
+                        <td><code class="code-inline">$value: null</code></td>
+                    </tr>
+                    <tr>
+                        <td>Mapping</td>
+                        <td>Creates key-value pairs</td>
+                        <td><code class="code-inline">$red-map: (light: #e57373, medium: #f44336, dark: #b71c1c);</code><br><code class="code-inline">color: map-get($red-map, light);</code></td>
+                    </tr>
+                    <tr>
+                        <td>List</td>
+                        <td>Values spereated by commas or spaces. <u>Nested lists are possible</u></td>
+                        <td><code class="code-inline">$body-margin: 0 0 10px 15px;</code> 4 items<br><code class="code-inline">$random-list: 10, (10 0), 3;</code> 3 items, 2nd item is also a list</td>
+                    </tr>
+                </table>
+                <div class="space"></div>
             </div>
         </div>
         <hr>
@@ -58,6 +107,7 @@
                     &nbsp;&nbsp;weight: bold;<br>
                     &#125;<br>
                 </code></p>
+                <p><code class="code-inline">&amp;</code> is a special character used in nesting to refer to parent selector.</p>
             </div>
         </div>
         <hr>
@@ -150,19 +200,59 @@
         </div>
         <hr>
 
-        <div class="section-body" id="parent-selector">
-            <div class="section-content">
-                <h2 class="section-title"><u>Parent Selector</u></h2>
-                <p>&amp; is a special character used in nesting to refer to parent selector.</p>
-            </div>
-        </div>
-        <hr>
-
-
         <div class="section-body" id="string-functions">
             <div class="section-content">
                 <h2 class="section-title"><u>String functions</u></h2>
-               
+                <span class="note">NOTE: Index of Strings in SASS/SCSS start from 1.</span>
+                <div class="space"></div>
+                <table cellpadding=5 border>
+                    <tr>
+                        <th>String function</th>
+                        <th>Explaination</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>unquote($string)</td>
+                        <td>Removes quotations from a string</td>
+                        <td><code class="code-inline">unquote("hello")</code> <br>returns hello</td>
+                    </tr>
+                    <tr>
+                        <td>quote($string)</td>
+                        <td>Adds quotations from a string</td>
+                        <td><code class="code-inline">quote(hello)</code> <br>returns "hello"</td>
+                    </tr>
+                    <tr>
+                        <td>str-length($string)</td>
+                        <td>Length of string</td>
+                        <td><code class="code-inline">str-length("hello")</code> <br>returns 5</td>
+                    </tr>
+                    <tr>
+                        <td>str-insert($string, $insert, $index)</td>
+                        <td>Insert string at an index</td>
+                        <td><code class="code-inline">str-insert("I Nishtha", "am ", 3)</code><br>returns "I am Nishtha"</td>
+                    </tr>
+                    <tr>
+                        <td>str-index($string, $substring)</td>
+                        <td>Returns index of first appearance of substring or null if it does not exist</td>
+                        <td><code class="code-inline">str-index("hello", "h")</code><br>returns 1<br><code class="code-inline">str-index("hello", "H")</code> <br>returns null</td>
+                    </tr>
+                    <tr>
+                        <td>str-slice($string, $start-at, [$end-at])</td>
+                        <td>Returns a substring that starts at index $start-at and optionally till end index at $end-at</td>
+                        <td><code class="code-inline">str-slice("hello world", 7)</code><br>returns "world"<code class="code-inline">str-slice("hello world", 7,8)</code><br>returns "wo"</td>
+                    </tr>
+                    <tr>
+                        <td>to-uppercase($string)</td>
+                        <td>Converts string to Uppercase</td>
+                        <td><code class="code-inline">to-uppercase("hello")</code> <br>returns "HELLO"</td>
+                    </tr>
+                    <tr>
+                        <td>to-lowercase($string)</td>
+                        <td>Converts string to Lowercase</td>
+                        <td><code class="code-inline">to-lowercase("HeLLo")</code> <br>returns "hello"</td>
+                    </tr>
+                </table>
+                <div class="space"></div>
             </div>
         </div>
         <hr>
@@ -170,7 +260,54 @@
         <div class="section-body" id="numeric-functions">
             <div class="section-content">
                 <h2 class="section-title"><u>Numeric functions</u></h2>
-               
+                <table cellpadding=5 border>
+                    <tr>
+                        <th>Numeric function</th>
+                        <th>Explaination</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>percentage($number)</td>
+                        <td>Converts unitless number to percentage</td>
+                        <td><code class="code-inline">percentage(1.5)</code> <br>returns 150</td>
+                    </tr>
+                    <tr>
+                        <td>round($number)</td>
+                        <td>Rounds to nearest whole number</td>
+                        <td><code class="code-inline">round(7.25)</code><br>returns 7<br><code class="code-inline">round(7.5)</code><br>returns 8</td>
+                    </tr>
+                    <tr>
+                        <td>ceil($number)</td>
+                        <td>Rounds up to nearest whole number</td>
+                        <td><code class="code-inline">ceil(7.25)</code> <br>returns 8</td>
+                    </tr>
+                    <tr>
+                        <td>floor($number)</td>
+                        <td>Rounds down to neared whole number</td>
+                        <td><code class="code-inline">floor(7.75)</code><br>returns 7</td>
+                    </tr>
+                    <tr>
+                        <td>abs($number)</td>
+                        <td>Returns absolute value</td>
+                        <td><code class="code-inline">abs(7)</code><br>returns 7<br><code class="code-inline">abs(-7)</code> <br>returns 7</td>
+                    </tr>
+                    <tr>
+                        <td>min($numbers)</td>
+                        <td>Returns smallest number</td>
+                        <td><code class="code-inline">min(7, -5, 0, 8, 9)</code><br>returns -5</td>
+                    </tr>
+                    <tr>
+                        <td>max($number)</td>
+                        <td>Returns biggest number</td>
+                        <td><code class="code-inline">max(7, -5, 0, 8, 9)</code> <br>returns 9</td>
+                    </tr>
+                    <tr>
+                        <td>random() <b>OR</b><br> random($limit)</td>
+                        <td>Returns number between 0 and 1 <b>OR</b><br> Return number between 0 and limit </td>
+                        <td><code class="code-inline">random()</code><br>returns 0.45894<br><code class="code-inline">random(5)</code><br>returns 4</td>
+                    </tr>
+                </table>
+                <div class="space"></div>
             </div>
         </div>
         <hr>
@@ -178,7 +315,54 @@
         <div class="section-body" id="list-functions">
             <div class="section-content">
                 <h2 class="section-title"><u>List functions</u></h2>
-               
+                <span class="note">NOTE: Index of List in SASS/SCSS start from 1. All lists are immutable (cannot be changed).</span>
+                <table cellpadding=5 border>
+                    <tr>
+                        <th>List function</th>
+                        <th>Explaination</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>length($list)</td>
+                        <td>Returns length of list</td>
+                        <td><code class="code-inline">length(1 3 2)</code> <br>returns 3</td>
+                    </tr>
+                    <tr>
+                        <td>nth($list, $n)</td>
+                        <td>Returns nth element in a list</td>
+                        <td><code class="code-inline">nth(1 2 4, 2)</code><br>returns 2</td>
+                    </tr>
+                    <tr>
+                        <td>set-nth($list, $n, $value)</td>
+                        <td>Set $value in $list at position $n</td>
+                        <td><code class="code-inline">set-nth(1, 3, 5, 2, 7)</code> <br>returns (1, 7, 5)</td>
+                    </tr>
+                    <tr>
+                        <td>join($list1, $list2, [$seperator])</td>
+                        <td>Join two lists with the type of seperator. There are three types of seperator : auto (seperator types of first list), comma, space</td>
+                        <td><code class="code-inline">join(1 2 3, 4 5 6)</code><br>returns (1, 2, 3, 4, 5, 6)<br><code class="code-inline">join((1 2 3), (4 5 6), auto)</code><br>returns (1 2 3 4 5 6)<br><code class="code-inline">join((1, 2, 3), (4, 5, 6))</code><br>returns (1, 2, 3, 4, 5, 6)<br><code class="code-inline">join(1 2 3, 4 5 6, space)</code><br>returns (1 2 3 4 5 6)<br></td>
+                    </tr>
+                    <tr>
+                        <td>append($list, $val, [$seperator])</td>
+                        <td>Append $val at the end of the $list.</td>
+                        <td><code class="code-inline">append((1 2 3), 4, comma)</code><br>returns (1, 2, 3, 4)</td>
+                    </tr>
+                    <tr>
+                        <td>zip($lists)</td>
+                        <td>Interleaves the values of the lists provided into a single multi-dimensional list</td>
+                        <td><code class="code-inline">zip((red, green, blue), (10px, 15px, 5px))</code><br>returns ((#ff0000 10px), (#00ff00 15px), (#0000ff 5px))</td>
+                    </tr>
+                    <tr>
+                        <td>index($list, $value)</td>
+                        <td>Returns the element at the index position specified by $value</td>
+                        <td><code class="code-inline">index(1 4 3, 2)</code> <br>returns 4</td>
+                    </tr>
+                    <tr>
+                        <td>list-seperator($list)</td>
+                        <td>Returns list seperator</td>
+                        <td><code class="code-inline">list-seperator(1 2 3)</code><br>returns space<br><code class="code-inline">list-seperator(1, 2, 3)</code><br>returns comma</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <hr>
@@ -189,6 +373,45 @@
                 <p>An array of maps can also be created in SCSS. For Example, </p>
                 <code>$font-weights: ("regular": 400, "medium": 500, "bold": 700);</code>
                 <p>This is can be used as <code>font-weight: map-get($font-weights, bold);</code></p>
+                <span class="note">NOTE: SASS/SCSS Maps are immutable (cannot be changed).</span>
+                <div class="space"></div>
+                <table cellpadding=5 border>
+                    <tr>
+                        <th>Map function</th>
+                        <th>Explaination</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>map-get($map, $key)</td>
+                        <td>Gives value of the $key form the $list</td>
+                        <td><code class="code-inline">map-get(("red": #ff0000, "green": #00ff00), "green")</code> <br>returns #00ff00</td>
+                    </tr>
+                    <tr>
+                        <td>map-merge($map1, $map2)</td>
+                        <td>Merges two maps</td>
+                        <td><code class="code-inline">map-merge(("red": #ff0000, "green": #00ff00), ("blue": #0000ff))</code><br>returns ("red": #ff0000, "green": #00ff00, "blue": #0000ff)</td>
+                    </tr>
+                    <tr>
+                        <td>map-remove($map, $keys)</td>
+                        <td>Returns map without given $keys</td>
+                        <td><code class="code-inline">map-remove(("red": #ff0000, "green": #00ff00), "red")</code> <br>returns ("green": #00ff00)</td>
+                    </tr>
+                    <tr>
+                        <td>map-keys($map)</td>
+                        <td>Returns all the keys of the map</td>
+                        <td><code class="code-inline">map-keys(("red": #ff0000, "green": #00ff00))</code><br>returns ("red", "green")<br></td>
+                    </tr>
+                    <tr>
+                        <td>map-values($map)</td>
+                        <td>Returns all the values of the map</td>
+                        <td><code class="code-inline">map-values(("red": #ff0000, "green": #00ff00))</code><br>returns (#ff0000, #00ff00)<br></td>
+                    </tr>
+                    <tr>
+                        <td>map-has-keys($map, $key)</td>
+                        <td>Returns boolean value after searching for the $key in the map</td>
+                        <td><code class="code-inline">map-keys(("red": #ff0000, "green": #00ff00), "blue")</code><br>returns false</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <hr>
@@ -196,16 +419,100 @@
         <div class="section-body" id="introspection-functions">
             <div class="section-content">
                 <h2 class="section-title"><u>Introspection Functions</u></h2>
-                
+                <span class="note"> NOTE: These are mostly used for debugging.</span>
+                <div class="space"></div>
+                <table cellpadding=5 border>
+                    <tr>
+                        <th>Introspection function</th>
+                        <th>Explaination</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td>variable-exists($name)</td>
+                        <td>Returns boolean value if the variable exists in the current scope</td>
+                        <td><code class="code-inline">$a: 10px;<br>variable-exists($a)</code> <br>returns true</td>
+                    </tr>
+                    <tr>
+                        <td>global-variable-exists($name)</td>
+                        <td>Returns boolean value if the variable exists gloablly</td>
+                        <td><code class="code-inline">$a: 10px;<br>global-variable-exists($a)</code> <br>returns true</td>
+                    </tr>
+                    <tr>
+                        <td>mixin-exists($name)</td>
+                        <td>Returns boolean value if the mixin exists in the current scope</td>
+                        <td><code class="code-inline">@mixin text-color &#123;color: #000;&#125;<br>mixin-exists($text-color)</code> <br>returns true</td>
+                    </tr>
+                    <tr>
+                        <td>inspect($value)</td>
+                        <td>Returns value as represented</td>
+                        <td><code class="code-inline">$a: 10px;<br>inspect($a)</code> <br>returns "10px"</td>
+                    </tr>
+                    <tr>
+                        <td>type-of($value)</td>
+                        <td>Returns type of variable</td>
+                        <td><code class="code-inline">$a: 10px;<br>type-of($a)</code> <br>returns "Number"</td>
+                    </tr>
+                    <tr>
+                        <td>unit($number)</td>
+                        <td>Returns unit of variable</td>
+                        <td><code class="code-inline">$a: 10px;<br>unit($a)</code> <br>returns "px"</td>
+                    </tr>
+                    <tr>
+                        <td>unitless($number)</td>
+                        <td>Returns boolean if variable is unitless</td>
+                        <td><code class="code-inline">$a: 10px;<br>unitless($a)</code> <br>returns false</td>
+                    </tr>
+                    <tr>
+                        <td>comparable($number1, $number2)</td>
+                        <td>Returns boolean value if specified numbers can be added, subtractedor caompared</td>
+                        <td><code class="code-inline">comparable(10px, 20px)</code><br>returns true<br><code class="code-inline">comparable(10px, 20)</code><br>returns true<br><code class="code-inline">comparable(10em, 20px)</code><br>returns false</td>
+                    </tr>
+                </table>
                 <div class="space"></div>
             </div>
         </div>
         <hr>
 
-        <div class="section-body" id="color-functions">
+        <div class="section-body" id="control-directives">
             <div class="section-content">
-                <h2 class="section-title"><u>Color Functions</u></h2>
-                
+                <h2 class="section-title"><u>Control Directives</u></h2>
+                <h4><u>@if statment</u></h4>
+                <code>
+                    $a: 10;<br>
+                    @if($a > 10) &#123;<br>
+                    &nbsp;&nbsp;color: red;<br>
+                    &#125; @else if ($a &lt; 10) &#123;<br>
+                    &nbsp;&nbsp;color: green;<br>
+                    &#125; @else &#125;<br>
+                    &nbsp;&nbsp;color: blue;<br>
+                    &#125;
+                </code>
+                <h4><u>@while statment</u></h4>
+                <code>
+                    $a: 10;<br>
+                    @while($a &lt; 20) &#123;<br>
+                    &nbsp;&nbsp;.item-&#123;#a&#125; &#123;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;$a = $a + 1;<br>
+                    &nbsp;&nbsp;&#125;<br>
+                    &#125;
+                </code>
+                <h4><u>@for statment</u></h4>
+                <p><code class="code-inline">through</code> is >= or &lt;=<br><code class="code-inline">to</code> is = or &lt;</p>
+                <code>
+                    @for $a from 1 though 20 &#123;<br>
+                    &nbsp;&nbsp;.item-&#123;#a&#125; &#123;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;color: green;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;width: $a * 2px;<br>
+                    &nbsp;&nbsp;&#125;<br>
+                    &#125;
+                </code>
+                <h4><u>@each statment</u></h4>
+                <code>
+                    @each $s in (normal, bold, italic) &#123;<br>
+                    &nbsp;&nbsp;.#&#123;$s&#125; &#123;font-weight: $s;&#125;<br>
+                    &#125;<br>
+                </code>
                 <div class="space"></div>
             </div>
         </div>
